@@ -1,18 +1,18 @@
-'''Duplicate a tensorflow graph
+# Duplicate a tensorflow graph
 This is a fork from
 https://stackoverflow.com/questions/37801137/duplicate-a-tensorflow-graph
 
-Q by MBZ:
+## Q by MBZ:
 What is the best way of duplicating a TensorFlow graph and keep it uptodate?
 
 Ideally I want to put the duplicated graph on another device (e.g. from GPU to
 CPU) and then time to time update the copy.
 
-A by rdadolf:
+## A by rdadolf:
 Short answer: You probably want checkpoint files
 (permalink:https://github.com/tensorflow/tensorflow/blob/r1.1/tensorflow/docs_src/programmers_guide/variables.md#checkpoint-files).
 
-Long answer:
+### Long answer:
 
 Let's be clear about the setup here. I'll assume that you have two devices,
 A and B, and you are training on A and running inference on B. Periodically,
@@ -21,10 +21,11 @@ parameters found during training on the other. The tutorial linked above is
 a good place to start. It shows you how tf.train.Saver objects work, and you
 shouldn't need anything more complicated here.
 
-Here is an example:
+### Here is an example:
 
 
-'''
+
+```
 import tensorflow as tf
 
 
@@ -52,12 +53,12 @@ def build_net(graph, device):
             saver = tf.train.Saver()
             return tf.global_variables_initializer(), inputs, labels, output, optimizer, saver
 
+```
 
-'''
 The code for the training program:
-'''
 
 
+```
 def programA_main():
     from tensorflow.examples.tutorials.mnist import input_data
     mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
@@ -72,13 +73,13 @@ def programA_main():
             if step % 100 == 0:
                 saver.save(sess, '/tmp/graph.checkpoint')
                 print('saved checkpoint')
-
+```
 
 '''
 ...and code for an inference program:
 '''
 
-
+```
 def programB_main():
     from tensorflow.examples.tutorials.mnist import input_data
     mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
@@ -100,9 +101,9 @@ def programB_main():
         print('loaded checkpoint')
         out = sess.run(inference_net, feed_dict={inputs: batch[0]})
         print(out[1])
+```
 
 
-'''
 If you fire up the training program and then the inference program, you'll
 see the inference program produces two different outputs (from the same input
 batch). This is a result of it picking up the parameters that the training
@@ -119,7 +120,9 @@ deterministic. There are known non-deterministic elements in TensorFlow
 the hard truth about running on multiple devices.
 
 Good luck!
-'''
+
+```
 if __name__ == '__main__':
     programA_main()
     programB_main()
+```
