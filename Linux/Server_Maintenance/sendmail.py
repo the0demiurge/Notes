@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 import os
+import time
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
@@ -20,6 +21,13 @@ receivers = [('Admin', 'receiver@domain.tld')]
 
 # Mailing messages
 dmesg = os.popen('dmesg').read()
+last = os.popen('last').read()
+bootlog = open('/var/log/boot.log').read()
+apt_hist = open('/var/log/apt/history.log').read()
+auth = open('/var/log/auth.log').read()
+syslog = open('/var/log/syslog').read()
+root_history = open('/root/.bash_history').read()
+
 ifconfig = os.popen('ifconfig').read()
 
 # More mailing options and messages
@@ -33,7 +41,15 @@ sender = {
 mail = {
     'content': ifconfig,
     'subject': 'Server Restarted: {}'.format(server_name),
-    'attachments': [('dmesg.txt', dmesg)],
+    'attachments': [
+        ('dmesg.txt', dmesg),
+        ('last.txt', last),
+        ('boot.log.txt', bootlog),
+        ('apt.history.log.txt', apt_hist),
+        ('auth.log.txt', auth),
+        ('syslog.txt', syslog),
+        ('root_history.txt', root_history),
+    ],
 }
 
 
@@ -63,7 +79,18 @@ def sendmail(sender, receivers, mail):
             message.attach(img)
 
     server = smtplib.SMTP_SSL(sender['smtp_server'], sender['smtp_port'])
-    server.login(sender['address'], sender['password'])
+
+    auth_success = False
+    times = 0
+    while not auth_success and times < 10:
+        try:
+            server.login(sender['address'], sender['password'])
+            auth_success = True
+        except smtplib.SMTPAuthenticationError:
+            print('AUTH ERROR!')
+            time.sleep(10)
+            times += 1
+
     server.sendmail(sender['address'], list(zip(*receivers))[1], message.as_string())
     server.quit()
 
