@@ -1,7 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
+# To add an autostart service, you may move this script to init.d first:
+# `cp $filename /etc/rc.d/init.d`
+# And then, use `chkconfig --add $filename`
+# Or manually link it to /etc/rc.d:
+# `ln -s /etc/rc.d/init.d/$filename /etc/rc.d/rc2.d/S99$filename`
+# `ln -s /etc/rc.d/init.d/$filename /etc/rc.d/rc3.d/S99$filename`
+# `ln -s /etc/rc.d/init.d/$filename /etc/rc.d/rc5.d/S99$filename`
+# `ln -s /etc/rc.d/init.d/$filename /etc/rc.d/rc0.d/K01$filename`
+# `ln -s /etc/rc.d/init.d/$filename /etc/rc.d/rc6.d/K01$filename`
 
+from __future__ import print_function
 import os
+import sys
 import time
 import smtplib
 from email.mime.text import MIMEText
@@ -40,7 +51,7 @@ sender = {
 
 mail = {
     'content': ifconfig,
-    'subject': 'Server Restarted: {}'.format(server_name),
+    'subject': 'Server {}: {}'.format(server_name, ' '.format(sys.argv[1:])),
     'attachments': [
         ('dmesg.txt', dmesg),
         ('last.txt', last),
@@ -86,7 +97,8 @@ def sendmail(sender, receivers, mail):
         try:
             server.login(sender['address'], sender['password'])
             auth_success = True
-        except smtplib.SMTPAuthenticationError:
+        except smtplib.SMTPAuthenticationError as e:
+            print(e)
             print('AUTH ERROR!')
             time.sleep(10)
             times += 1
