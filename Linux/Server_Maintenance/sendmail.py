@@ -31,7 +31,7 @@ receivers = [('Admin', 'receiver@domain.tld')]
 
 
 # Mailing messages
-dmesg = os.popen('dmesg -HT').read()
+dmesg = os.popen('dmesg').read()
 last = os.popen('last').read()
 bootlog = open('/var/log/boot.log').read()
 apt_hist = open('/var/log/apt/history.log').read()
