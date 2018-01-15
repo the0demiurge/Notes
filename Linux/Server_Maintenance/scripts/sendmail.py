@@ -23,7 +23,7 @@ from email.utils import formataddr
 
 
 # Options
-server_name = 'UBUNTU'
+server_name = os.popen('hostname').read()
 send_email = 'sender@domain.tld'
 password = 'password'
 smtp_server = 'smtp.domain.tld'
@@ -33,6 +33,7 @@ receivers = [('Admin', 'receiver@domain.tld')]
 # Mailing messages
 dmesg = os.popen('dmesg -HT').read()
 last = os.popen('last').read()
+lastb = os.popen('lastb').read()
 bootlog = open('/var/log/boot.log').read()
 apt_hist = open('/var/log/apt/history.log').read()
 auth = open('/var/log/auth.log').read()
@@ -55,6 +56,7 @@ mail = {
     'attachments': [
         ('dmesg.txt', dmesg),
         ('last.txt', last),
+        ('btmp.txt', lastb),
         ('boot.log.txt', bootlog),
         ('apt.history.log.txt', apt_hist),
         ('auth.log.txt', auth),
