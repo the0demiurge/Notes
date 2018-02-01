@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -21,6 +22,8 @@
 
 
 <script type="text/javascript" src="data.json"></script>
+//data.json内容
+//var data = {"data":[[74.438,39.006,1],...]}
 
 
 </head>
@@ -47,4 +50,4 @@
   </script>
 </body>
 </html>
-
+```

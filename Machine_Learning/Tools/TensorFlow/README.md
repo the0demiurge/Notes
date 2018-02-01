@@ -1,7 +1,3 @@
-# Table of Contents
-* [列举所有本地设备](#列举所有本地设备)
-* [什么也不做的 op](#什么也不做的-op)
-
 ### 列举所有本地设备
 from [tensorflow github](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/client/device_lib_test.py)
 ```python

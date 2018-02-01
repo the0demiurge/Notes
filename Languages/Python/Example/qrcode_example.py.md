@@ -1,3 +1,4 @@
+```python
 #!/usr/bin/env python
 import qrcode
 
@@ -24,4 +25,4 @@ while True:
     except (EOFError, KeyboardInterrupt):
         print('作者的对象：小胖儿')
         exit(0)
-
+```

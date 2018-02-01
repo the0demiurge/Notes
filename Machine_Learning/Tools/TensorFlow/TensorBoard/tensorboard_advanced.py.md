@@ -1,3 +1,4 @@
+```python
 '''
 Graph and Loss visualization using Tensorboard.
 This example is using the MNIST database of handwritten digits
@@ -108,11 +109,11 @@ with tf.Session() as sess:
 
     # Run the initializer
     sess.run(init)
-
+    
     # op to write logs to Tensorboard
     summary_writer = tf.summary.FileWriter(logs_path,
                                             graph=tf.get_default_graph())
-
+    
     # Training cycle
     for epoch in range(training_epochs):
         avg_cost = 0.
@@ -131,13 +132,14 @@ with tf.Session() as sess:
         # Display logs per epoch step
         if (epoch+1) % display_step == 0:
             print("Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(avg_cost))
-
+    
     print("Optimization Finished!")
-
+    
     # Test model
     # Calculate accuracy
     print("Accuracy:", acc.eval({x: mnist.test.images, y: mnist.test.labels}))
-
+    
     print("Run the command line:\n" \
           "--> tensorboard --logdir=/tmp/tensorflow_logs " \
           "\nThen open http://0.0.0.0:6006/ into your web browser")
+```

@@ -1,3 +1,4 @@
+```python
 from os import system
 import curses
 
@@ -19,3 +20,4 @@ for i in range(times):
     myscreen.refresh()
 myscreen.getch()
 curses.endwin()
+```

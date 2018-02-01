@@ -1,3 +1,4 @@
+```python
 from IPython.display import HTML
 
 HTML('''<script>
@@ -13,3 +14,4 @@ HTML('''<script>
      $( document ).ready(code_toggle);
      </script>
      <form action="javascript:code_toggle()"><input type="submit" value="Click here to toggle on/off the raw code."></form>''')
+```

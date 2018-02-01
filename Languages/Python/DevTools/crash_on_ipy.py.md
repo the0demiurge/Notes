@@ -1,3 +1,4 @@
+```python
 import sys
 
 class ExceptionHook:
@@ -11,8 +12,8 @@ class ExceptionHook:
         return self.instance(*args, **kwargs)
 
 sys.excepthook = ExceptionHook()
-
-# 作者：Rui L
-# 链接：https://www.zhihu.com/question/21572891/answer/26046582
-# 来源：知乎
-# 著作权归作者所有，转载请联系作者获得授权。
+```
+作者：Rui L
+链接：https://www.zhihu.com/question/21572891/answer/26046582
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。

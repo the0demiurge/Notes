@@ -1,3 +1,4 @@
+```python
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 # To add an autostart service, you may move this script to init.d first:
@@ -71,28 +72,28 @@ def sendmail(sender, receivers, mail):
     message['From'] = formataddr((Header(sender['nickname'], 'utf-8').encode(), sender['address']))
     message['To'] = ','.join(map(lambda x: formataddr((Header(x[0], 'utf-8').encode(), x[1])), receivers))
     message['Subject'] = Header(mail['subject'], 'utf-8').encode()
-
+    
     if 'content' in mail:
         message.attach(MIMEText(mail['content'], 'plain', 'utf-8'))
-
+    
     if 'content_html' in mail:
         message.attach(MIMEText(mail['content_html'], 'html', 'utf-8'))
-
+    
     if 'attachments' in mail:
         for attachment in mail['attachments']:
             att = MIMEText(attachment[1], 'base64', 'utf-8')
             att["Content-Type"] = "application/octet-stream"
             att["Content-Disposition"] = 'attachment; filename="{}"'.format(attachment[0])
             message.attach(att)
-
+    
     if 'images' in mail:
         for image in mail['images']:
             img = MIMEImage(image['data'])
             img.add_header('Content-ID', '<{}>'.format(image['Content-ID']))
             message.attach(img)
-
+    
     server = smtplib.SMTP_SSL(sender['smtp_server'], sender['smtp_port'])
-
+    
     auth_success = False
     times = 0
     while not auth_success and times < 10:
@@ -104,10 +105,11 @@ def sendmail(sender, receivers, mail):
             print('AUTH ERROR!')
             time.sleep(10)
             times += 1
-
+    
     server.sendmail(sender['address'], list(zip(*receivers))[1], message.as_string())
     server.quit()
 
 
 if __name__ == '__main__':
     sendmail(sender, receivers, mail)
+```

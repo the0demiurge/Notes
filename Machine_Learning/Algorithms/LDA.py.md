@@ -1,3 +1,4 @@
+```python
 #!/usr/bin/env python3
 from sklearn.datasets import load_breast_cancer
 from tsne import *
@@ -27,9 +28,9 @@ def variance(x, u):
 def lda2(x, y):
     x0, x1 = mat(x[y.T[0] == 0]), mat(x[y.T[0] == 1])
     u0, u1 = x0.mean(axis=0), x1.mean(axis=0)
-
+    
     sigma0, sigma1 = reduce(lambda x, y: x + y, [variance(i, u0) for i in x0]), reduce(lambda x, y: x + y, [variance(i, u1) for i in x1])
-
+    
     w = (u0 - u1).dot(pinv(sigma0 / x0.shape[0] + sigma1 / x1.shape[0]))
     return w
 
@@ -117,3 +118,4 @@ show()
 # $S_\omega = \Sigma_0 + \Sigma_1 $
 
 # \end{document}
+```

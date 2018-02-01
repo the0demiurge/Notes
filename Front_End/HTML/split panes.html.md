@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -12,6 +13,7 @@
 </style>
 </head>
 <body>
+
     <div class="page">
         <div class="header">
             <div id="title">
@@ -29,3 +31,4 @@
     </div>
 </body>
 </html>
+```

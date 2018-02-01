@@ -25,7 +25,7 @@ shouldn't need anything more complicated here.
 
 
 
-```
+```python
 import tensorflow as tf
 
 
@@ -58,7 +58,7 @@ def build_net(graph, device):
 The code for the training program:
 
 
-```
+```python
 def programA_main():
     from tensorflow.examples.tutorials.mnist import input_data
     mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
@@ -79,7 +79,7 @@ def programA_main():
 ...and code for an inference program:
 '''
 
-```
+```python
 def programB_main():
     from tensorflow.examples.tutorials.mnist import input_data
     mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
@@ -121,7 +121,7 @@ the hard truth about running on multiple devices.
 
 Good luck!
 
-```
+```python
 if __name__ == '__main__':
     programA_main()
     programB_main()

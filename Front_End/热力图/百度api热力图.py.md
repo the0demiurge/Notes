@@ -1,3 +1,4 @@
+```python
 import json
 from urllib.request import urlopen, quote
 import requests,csv
@@ -30,3 +31,4 @@ with open(r'E:\\爬虫数据分析\调用百度地图api\各区域房价.csv', '
     #print(str_temp) #也可以通过打印出来，把数据copy到百度热力地图api的相应位置上
 file.write(str_temp) #写入文档
 file.close() #保存
+```

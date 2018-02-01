@@ -1,3 +1,4 @@
+```c++
 #include <iostream>
 
 using namespace std;
@@ -25,3 +26,4 @@ int main(void) {
   //a(data, 5);
   return 0;
 }
+```

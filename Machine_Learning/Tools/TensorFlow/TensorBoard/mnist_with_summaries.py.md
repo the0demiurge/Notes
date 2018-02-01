@@ -1,3 +1,4 @@
+```python
 # Copyright 2015 The TensorFlow Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the 'License');
@@ -213,3 +214,4 @@ if __name__ == '__main__':
       help='Summaries log directory')
   FLAGS, unparsed = parser.parse_known_args()
   tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+```

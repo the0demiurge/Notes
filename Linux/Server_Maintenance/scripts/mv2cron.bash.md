@@ -1,3 +1,4 @@
+```bash
 #!/bin/bash
 # 将$1所指定的脚本分别复制到crontab中不同的备份周期文件夹，并逐个编辑相关备份脚本
 cp $1 /etc/cron.hourly
@@ -12,3 +13,4 @@ ls /etc/cron.hourly
 ls /etc/cron.daily
 ls /etc/cron.weekly
 ls /etc/cron.monthly
+```
