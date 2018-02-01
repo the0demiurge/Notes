@@ -1,3 +1,4 @@
+```python
 #!/usr/bin/env python3
 """Simpliest PG, with no hack in it
 """
@@ -22,12 +23,12 @@ def build_net(x, a, r):
     h3 = slim.layers.fully_connected(h2, 2, activation_fn=tf.identity)
     y = tf.nn.softmax(h3)
     logp = tf.log(y)
-
+    
     # good_probabilities = tf.reduce_sum(tf.multiply(y, a), reduction_indices=[1])
     # # maximize the log probability
     # log_probabilities = tf.log(good_probabilities)
     # loss = -tf.reduce_sum(log_probabilities)
-
+    
     loss = -tf.reduce_sum(
         tf.reduce_sum(
             tf.multiply(tf.multiply(r, logp), a),
@@ -59,7 +60,7 @@ for i in range(40000):
     s = env.reset()
     total_reward = 0
     done = False
-
+    
     bbuf = list()
     for i in range(200):
         # 重复试验收集数据
@@ -91,3 +92,4 @@ for i in range(40000):
             }
             loss_runned, y_runned, _ = sess.run([loss, y, optimizer], feed_dict=feed_dict)
             print('loss: ', loss_runned, 'y', y_runned[0])
+```

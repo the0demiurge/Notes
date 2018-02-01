@@ -1,6 +1,8 @@
+```python
 """This is a fork from https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5
 The reward function is hacked too.
 The shape is exponantial: 
+/\reward
 /\reward
 |
 |       |
@@ -34,7 +36,7 @@ else:
   model = {}
   model['W1'] = np.random.randn(H,D) / np.sqrt(D) # "Xavier" initialization
   model['W2'] = np.random.randn(H) / np.sqrt(H)
-  
+
 grad_buffer = { k : np.zeros_like(v) for k,v in model.iteritems() } # update buffers that add up gradients over a batch
 rmsprop_cache = { k : np.zeros_like(v) for k,v in model.iteritems() } # rmsprop memory
 
@@ -115,17 +117,17 @@ while True:
     epdlogp = np.vstack(dlogps)
     epr = np.vstack(drs)
     xs,hs,dlogps,drs = [],[],[],[] # reset array memory
-
+    
     # compute the discounted reward backwards through time
     discounted_epr = discount_rewards(epr)
     # standardize the rewards to be unit normal (helps control the gradient estimator variance)
     discounted_epr -= np.mean(discounted_epr)
     discounted_epr /= np.std(discounted_epr)
-
+    
     epdlogp *= discounted_epr # modulate the gradient with advantage (PG magic happens right here.)
     grad = policy_backward(eph, epdlogp)
     for k in model: grad_buffer[k] += grad[k] # accumulate grad over batch
-
+    
     # perform rmsprop parameter update every batch_size episodes
     if episode_number % batch_size == 0:
       for k,v in model.iteritems():
@@ -133,7 +135,7 @@ while True:
         rmsprop_cache[k] = decay_rate * rmsprop_cache[k] + (1 - decay_rate) * g**2
         model[k] += learning_rate * g / (np.sqrt(rmsprop_cache[k]) + 1e-5)
         grad_buffer[k] = np.zeros_like(v) # reset batch gradient buffer
-
+    
     # boring book-keeping
     running_reward = reward_sum if running_reward is None else running_reward * 0.99 + reward_sum * 0.01
     print 'resetting env. episode reward total was %f. running mean: %f' % (reward_sum, running_reward)
@@ -144,3 +146,4 @@ while True:
 
   if reward != 0: # Pong has either +1 or -1 reward exactly when game ends.
     print ('ep %d: game finished, reward: %f' % (episode_number, reward)) + ('' if reward == -1 else ' !!!!!!!!')
+```

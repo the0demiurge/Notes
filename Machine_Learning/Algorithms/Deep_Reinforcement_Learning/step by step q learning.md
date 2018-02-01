@@ -33,8 +33,8 @@ The Q-Learning algorithm goes as follows:
     + Get maximum Q value for this next state based on all possible actions.
     + Compute: Q(state, action) = R(state, action) + Gamma \* Max[Q(next state, all actions)]
     + Set the next state as the current state.
-    
-    
+
+
     End Do
 
 End For
@@ -98,16 +98,16 @@ Look at the fourth row of matrix R; it has 3 possible actions: go to state 1, 2 
 
 Now we imagine that we are in state 1.  Look at the second row of reward matrix R (i.e. state 1).  It has 2 possible actions: go to state 3 or state 5.  Then, we compute the Q value:
 
-$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$
+$$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$$
 
-$Q(1, 5) = R(1, 5) + 0.8 \times Max[Q(1, 2), Q(1, 5)] = 0 + 0.8 \times Max(0, 100) = 80$
+$$Q(1, 5) = R(1, 5) + 0.8 \times Max[Q(1, 2), Q(1, 5)] = 0 + 0.8 \times Max(0, 100) = 80$$
 
 We use the updated matrix Q from the last episode.  Q(1, 3) = 0 and Q(1, 5) = 100.  The result of the computation is Q(3, 1) = 80 because the reward is zero.  The matrix Q becomes:
 ![image.png](http://mnemstudio.org/ai/path/images/q_matrix3.gif)
 
 The next state, 1, now becomes the current state.  We repeat the inner loop of the Q learning algorithm because state 1 is not the goal state.
 
-$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$
+$$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$$
 
 Algorithm to utilize the Q matrix:
 
@@ -124,13 +124,13 @@ The algorithm above will return the sequence of states from the initial state to
 
 
 # 多次运行下面的cell可以看每次迭代所得到的Q表更新效果
-采取的更新方案为$\epsilon$-greedy,可以通过调整$\epsilon$实现或上面的greedy，或随机采样。
+采取的更新方案为$$\epsilon$$-greedy,可以通过调整$$\epsilon$$实现或上面的greedy，或随机采样。
 
 For epoch in max_epoches:
 
 1. 随机选取一个state
 2. 在选取的state下选定一个可行的动作（在本例中，不可行的动作回报为"-1")
-3. 按照公式 $Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$计算Q值
+3. 按照公式 $$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$$计算Q值
 4. 采取2中选定的动作，将state更新到下一个state
 5. 如果运动到终点则中断
 
@@ -178,9 +178,9 @@ Now we imagine that we are in state 1.  Look at the second row of reward matrix 
 
 **距离终点很近，Max[Q(next state, all actions)]就会很大**
 
-$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$
+$$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$$
 
-$Q(1, 5) = R(1, 5) + 0.8 \times Max[Q(1, 2), Q(1, 5)] = 0 + 0.8 \times Max(0, 100) = 80$
+$$Q(1, 5) = R(1, 5) + 0.8 \times Max[Q(1, 2), Q(1, 5)] = 0 + 0.8 \times Max(0, 100) = 80$$
 
 We use the updated matrix Q from the last episode.  Q(1, 3) = 0 and Q(1, 5) = 100.  The result of the computation is Q(3, 1) = 80 because the reward is zero.  The matrix Q becomes:
 ![image.png](http://mnemstudio.org/ai/path/images/q_matrix3.gif)

@@ -1,3 +1,4 @@
+```python
 """This is a fork from https://github.com/kvfrans/openai-cartpole/blob/master/cartpole-policygradient.py
 The reward function is differernt, and it is:
 /\r
@@ -65,7 +66,7 @@ def run_episode(env, policy_grad, value_grad, sess, render=False):
     advantages = []
     transitions = []
     update_vals = []
-
+    
     for _ in range(20000):
         env.render(close=not render)
         # calculate policy
@@ -82,7 +83,7 @@ def run_episode(env, policy_grad, value_grad, sess, render=False):
         observation, reward, done, info = env.step(action)
         transitions.append((old_observation, action, reward))
         totalreward += reward
-
+    
         if done:
             break
     for index, trans in enumerate(transitions):
@@ -90,7 +91,7 @@ def run_episode(env, policy_grad, value_grad, sess, render=False):
         这里回报函数和我设计的不一样
         '''
         obs, action, reward = trans
-
+    
         # calculate discounted monte-carlo return
         future_reward = 0
         future_transitions = len(transitions) - index
@@ -100,21 +101,21 @@ def run_episode(env, policy_grad, value_grad, sess, render=False):
             decrease = decrease * 0.97
         obs_vector = np.expand_dims(obs, axis=0)
         currentval = sess.run(vl_calculated, feed_dict={vl_state: obs_vector})[0][0]
-
+    
         # advantage: how much better was this action than normal
         advantages.append(future_reward - currentval)
-
+    
         # update the value function towards new return
         update_vals.append(future_reward)
-
+    
     # update value function
     update_vals_vector = np.expand_dims(update_vals, axis=1)
     sess.run(vl_optimizer, feed_dict={vl_state: states, vl_newvals: update_vals_vector})
     # real_vl_loss = sess.run(vl_loss, feed_dict={vl_state: states, vl_newvals: update_vals_vector})
-
+    
     advantages_vector = np.expand_dims(advantages, axis=1)
     sess.run(pl_optimizer, feed_dict={pl_state: states, pl_advantages: advantages_vector, pl_actions: actions})
-
+    
     return totalreward
 
 
@@ -136,3 +137,4 @@ for _ in range(1000):
     t += reward
 print(t / 1000)
 # env.monitor.close()
+```
