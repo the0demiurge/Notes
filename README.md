@@ -58,8 +58,6 @@ Notes
 │   │   │   ├── nn_mnist.py.md
 │   │   │   └── nn_mnist_static.py.md
 │   │   ├── SupportVectorMachine
-│   │   │   ├── output_3_1.png
-│   │   │   ├── output_8_2.png
 │   │   │   ├── SMO_Simple.ipynb
 │   │   │   └── SMO_Simple.md
 │   │   └── LDA.py.md
@@ -73,10 +71,11 @@ Notes
 │           ├── Distributed_tensorflow.py.md
 │           ├── Duplicate_a_tensorflow_graph.md
 │           └── README.md
+├── book.json
 ├── gitbook-auto-summary.py
 ├── README.md
 ├── SUMMARY.md
-└── tree.sh
+└── toc.sh
 
-26 directories, 47 files
+26 directories, 46 files
 ```
