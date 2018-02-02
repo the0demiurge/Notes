@@ -5,7 +5,7 @@
     * [split panes.html](Front_End/HTML/split panes.html.md)
   - 热力图
     * [FrontEnd.html](Front_End/热力图/FrontEnd.html.md)
-    * [百度api热力图.py](Front_End/热力图/百度api热力图.py.md)
+    * [百度api获取城市坐标.py](Front_End/热力图/百度api获取城市坐标.py.md)
 - Languages
   - C
     - Data Structures

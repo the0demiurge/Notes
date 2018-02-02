@@ -53,7 +53,7 @@ pylab.legend(handles=[patch1, patch2])
 
 # SMO
 
-## Optimize $a_j$
+## Optimize $$a_j$$
 
 $$a_j := aj - \frac{y^{(j)}(E_i-E_j)}{\eta}$$
 
@@ -63,16 +63,16 @@ $$E_k = f(x^{(k)}) - y^{(k)}$$
 
 $$\eta = 2 x^{(i)}\bullet x^{(j)} - x^{(i)}\bullet x^{(i)} - x^{(j)}\bullet x^{(j)} $$
 
-## Clip $a_j$
+## Clip $$a_j$$
 
 $$If y^{(i)} \neq y^{(j)}$$, $$L=max(0, a_j - a_i)$$, $$H = min(C, C + a_j - a_i)$$
 
 $$If y^{(i)} = y^{(j)}$$, $$L=max(0, a_i + a_j - C)$$, $$H = min(C, a_i + a_j)$$
 
-## $a_i$
+## $$a_i$$
 $$a_i:=a_i+y^{(i)}y^{(j)}(a_j^{(old)}-a_j)$$
 
-## $b$
+## $$b$$
 $$b$$ is optimized refering to Machine Learning (Zhou Zhihua, (6.18) P125), Where $$S$$ is subscript of support vector, and we choose the final $$i$$ and $$j$$.
 
 $$b = \frac{1}{|S|}\sum\limits_{s\in S}{(1/y_s-\sum\limits_{k\in S}\alpha_ky_k x_k \bullet x_s)}$$
