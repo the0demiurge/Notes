@@ -194,3 +194,4 @@ GitHub.sublime-settings
 #
 
 # End of https://www.gitignore.io/api/jupyternotebook
+node_modules
