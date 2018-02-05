@@ -30,11 +30,10 @@
   - [Bash](Linux/Bash/README.md)
     * [bash的高级技巧](Linux/Bash/bash的高级技巧.md)
   - Server Maintenance
-    - Scripts
+    - [Scripts](Linux/Server_Maintenance/scripts/README.md)
       * [adduser.sh](Linux/Server_Maintenance/scripts/adduser.sh.md)
       * [backup_server_data.py](Linux/Server_Maintenance/scripts/backup_server_data.py.md)
       * [mv2cron.bash](Linux/Server_Maintenance/scripts/mv2cron.bash.md)
-      * [README.md](Linux/Server_Maintenance/scripts/README.md.md)
       * [sendmail.py](Linux/Server_Maintenance/scripts/sendmail.py.md)
     * [AUTO UPGRADE](Linux/Server_Maintenance/AUTO_UPGRADE.md)
     * [QUOTA](Linux/Server_Maintenance/QUOTA.md)

@@ -42,7 +42,7 @@ Notes
 │       │   ├── adduser.sh.md
 │       │   ├── backup_server_data.py.md
 │       │   ├── mv2cron.bash.md
-│       │   ├── README.md.md
+│       │   ├── README.md
 │       │   └── sendmail.py.md
 │       ├── AUTO_UPGRADE.md
 │       ├── QUOTA.md
