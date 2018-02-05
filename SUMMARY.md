@@ -27,7 +27,7 @@
       * [qq_smtp.py](Languages/Python/sendmail/qq_smtp.py.md)
       * [sendmail.py](Languages/Python/sendmail/sendmail.py.md)
 - Linux
-  - Bash
+  - [Bash](Linux/Bash/README.md)
     * [bash的高级技巧](Linux/Bash/bash的高级技巧.md)
   - Server Maintenance
     - Scripts

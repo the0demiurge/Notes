@@ -14,7 +14,9 @@ Notes
 │   ├── C++
 │   │   ├── Data-Structures
 │   │   │   └── Array-Based Lists
-│   │   │       └── 1-ArrayStack.cc.md
+│   │   │       ├── 1-ArrayStack.cc.md
+│   │   │       ├── a.out
+│   │   │       └── LinkedTable.c
 │   │   └── Gramma
 │   │       └── argv.cc.md
 │   └── Python
@@ -33,7 +35,8 @@ Notes
 │           └── sendmail.py.md
 ├── Linux
 │   ├── Bash
-│   │   └── bash的高级技巧.md
+│   │   ├── bash的高级技巧.md
+│   │   └── README.md
 │   └── Server_Maintenance
 │       ├── scripts
 │       │   ├── adduser.sh.md
@@ -78,5 +81,5 @@ Notes
 ├── SUMMARY.md
 └── toc.sh
 
-26 directories, 47 files
+26 directories, 50 files
 ```
