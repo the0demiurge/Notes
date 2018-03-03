@@ -7,6 +7,7 @@
     "copy-code-button", 
     "graphviz@git+https://github.com/darvasd/gitbook-plugin-graphviz.git"
     ],
+  "ignores": ["_book", "node_modules"],
 
   "plguinsConfig": {
     "uml": {
