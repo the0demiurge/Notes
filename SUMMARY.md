@@ -60,5 +60,6 @@
       - Tensor Board
         * [mnist_with_summaries.py](Machine_Learning/Tools/TensorFlow/TensorBoard/mnist_with_summaries.py.md)
         * [tensorboard_advanced.py](Machine_Learning/Tools/TensorFlow/TensorBoard/tensorboard_advanced.py.md)
+      * [1 Tensor Flow Cheetsheet](Machine_Learning/Tools/TensorFlow/1-TensorFlow Cheetsheet.md)
       * [Distributed_tensorflow.py](Machine_Learning/Tools/TensorFlow/Distributed_tensorflow.py.md)
       * [Duplicate A Tensorflow Graph](Machine_Learning/Tools/TensorFlow/Duplicate_a_tensorflow_graph.md)

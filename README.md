@@ -71,15 +71,16 @@ Notes
 │           ├── TensorBoard
 │           │   ├── mnist_with_summaries.py.md
 │           │   └── tensorboard_advanced.py.md
+│           ├── 1-TensorFlow Cheetsheet.md
 │           ├── Distributed_tensorflow.py.md
 │           ├── Duplicate_a_tensorflow_graph.md
 │           └── README.md
 ├── book.json
+├── cover.jpg
 ├── gitbook-auto-summary.py
-├── package-lock.json
 ├── README.md
 ├── SUMMARY.md
 └── toc.sh
 
-26 directories, 50 files
+26 directories, 51 files
 ```
