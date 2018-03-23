@@ -19,6 +19,7 @@
       * [jupyter_hide_code.py](Languages/Python/DevTools/jupyter_hide_code.py.md)
     - Example
       * [argparse_example.py](Languages/Python/Example/argparse_example.py.md)
+      * [Ctypes](Languages/Python/Example/ctypes.md)
       * [ncurses_example.py](Languages/Python/Example/ncurses_example.py.md)
       * [qrcode_example.py](Languages/Python/Example/qrcode_example.py.md)
     - [Sendmail](Languages/Python/sendmail/README.md)

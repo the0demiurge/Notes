@@ -1,19 +1,8 @@
 # 常用功能
 
-## 滑动平均
+## tf.train.get_or_create_global_step(graph=None)
 
-```python
-tf.train.ExponentialMovingAverage(decay, num_updates=None, zero_debias=False, name='ExponentialMovingAverage')
-'''
-Args:
-  decay: Float.  The decay to use.
-  num_updates: Optional count of number of updates applied to variables.
-  zero_debias: If `True`, zero debias moving-averages that are initialized
-    with tensors.
-  name: String. Optional prefix name to use for the name of ops added in
-    `apply()`.
-'''
-```
+## tf.set_random_seed(seed)
 
 ## 异常检测
 
@@ -110,7 +99,20 @@ Raises:
   ValueError: if any op in list_ops has not be decorated with @add_arg_scope.
 '''
 ```
+## 滑动平均
 
+```python
+tf.train.ExponentialMovingAverage(decay, num_updates=None, zero_debias=False, name='ExponentialMovingAverage')
+'''
+Args:
+  decay: Float.  The decay to use.
+  num_updates: Optional count of number of updates applied to variables.
+  zero_debias: If `True`, zero debias moving-averages that are initialized
+    with tensors.
+  name: String. Optional prefix name to use for the name of ops added in
+    `apply()`.
+'''
+```
 # 变量管理
 
 ## 类型转换
@@ -159,4 +161,3 @@ with tf.variable_cope('name'):
     a = tf.Variable(1, name='a')	# 'name_i/a'	自动 rotate 名称
     b = tf.get_variable('b', ...)	# 'name/b'	名字固定
 ```
-
