@@ -13,7 +13,7 @@ int main(int argc, char** argv){
 ```
 
 ```bash
-gcc -olibapgs.so -shared -fPIC args.c
+gcc -olibargs.so -shared -fPIC args.c
 ```
 
 ### args.py

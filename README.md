@@ -4,35 +4,15 @@ Table of contents:
 
 ```
 Notes
+├── Computer_Science
+│   ├── Calculator_AST.py
+│   └── Calculator_AST.py.md
 ├── Front_End
 │   ├── HTML
 │   │   └── split panes.html.md
 │   └── 热力图
 │       ├── FrontEnd.html.md
 │       └── 百度api获取城市坐标.py.md
-├── Languages
-│   ├── C++
-│   │   ├── Data-Structures
-│   │   │   └── Array-Based Lists
-│   │   │       ├── 1-ArrayStack.cc.md
-│   │   │       ├── a.out
-│   │   │       └── LinkedTable.c
-│   │   └── Gramma
-│   │       └── argv.cc.md
-│   └── Python
-│       ├── DevTools
-│       │   ├── crash_on_ipy.py.md
-│       │   └── jupyter_hide_code.py.md
-│       ├── Example
-│       │   ├── argparse_example.py.md
-│       │   ├── ncurses_example.py.md
-│       │   └── qrcode_example.py.md
-│       └── sendmail
-│           ├── attachment.py.md
-│           ├── pic.py.md
-│           ├── qq_smtp.py.md
-│           ├── README.md
-│           └── sendmail.py.md
 ├── Linux
 │   ├── Bash
 │   │   ├── bash的高级技巧.md
@@ -77,6 +57,25 @@ Notes
 │           └── README.md
 ├── Photography
 │   └── 1-纽约摄影学院三原则.md
+├── Programming_Languages
+│   ├── C++
+│   │   └── Gramma
+│   │       └── argv.cc.md
+│   └── Python
+│       ├── DevTools
+│       │   ├── crash_on_ipy.py.md
+│       │   └── jupyter_hide_code.py.md
+│       ├── Example
+│       │   ├── argparse_example.py.md
+│       │   ├── ctypes.md
+│       │   ├── ncurses_example.py.md
+│       │   └── qrcode_example.py.md
+│       └── sendmail
+│           ├── attachment.py.md
+│           ├── pic.py.md
+│           ├── qq_smtp.py.md
+│           ├── README.md
+│           └── sendmail.py.md
 ├── book.json
 ├── cover.jpg
 ├── gitbook-auto-summary.py
@@ -84,5 +83,6 @@ Notes
 ├── SUMMARY.md
 └── toc.sh
 
-27 directories, 52 files
+26 directories, 52 files
+
 ```

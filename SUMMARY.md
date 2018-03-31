@@ -1,32 +1,13 @@
 # CharlesNotes
 
+- Computer Science
+  * [Calculator_AST.py](Computer_Science/Calculator_AST.py.md)
 - Front End
   - HTML
     * [split panes.html](Front_End/HTML/split panes.html.md)
   - 热力图
     * [FrontEnd.html](Front_End/热力图/FrontEnd.html.md)
     * [百度api获取城市坐标.py](Front_End/热力图/百度api获取城市坐标.py.md)
-- Languages
-  - C
-    - Data Structures
-      - Array Based Lists
-        * [1-ArrayStack.cc](Languages/C++/Data-Structures/Array-Based Lists/1-ArrayStack.cc.md)
-    - Gramma
-      * [argv.cc](Languages/C++/Gramma/argv.cc.md)
-  - Python
-    - Dev Tools
-      * [crash_on_ipy.py](Languages/Python/DevTools/crash_on_ipy.py.md)
-      * [jupyter_hide_code.py](Languages/Python/DevTools/jupyter_hide_code.py.md)
-    - Example
-      * [argparse_example.py](Languages/Python/Example/argparse_example.py.md)
-      * [Ctypes](Languages/Python/Example/ctypes.md)
-      * [ncurses_example.py](Languages/Python/Example/ncurses_example.py.md)
-      * [qrcode_example.py](Languages/Python/Example/qrcode_example.py.md)
-    - [Sendmail](Languages/Python/sendmail/README.md)
-      * [attachment.py](Languages/Python/sendmail/attachment.py.md)
-      * [pic.py](Languages/Python/sendmail/pic.py.md)
-      * [qq_smtp.py](Languages/Python/sendmail/qq_smtp.py.md)
-      * [sendmail.py](Languages/Python/sendmail/sendmail.py.md)
 - Linux
   - [Bash](Linux/Bash/README.md)
     * [bash的高级技巧](Linux/Bash/bash的高级技巧.md)
@@ -66,3 +47,21 @@
       * [Duplicate A Tensorflow Graph](Machine_Learning/Tools/TensorFlow/Duplicate_a_tensorflow_graph.md)
 - Photography
   * [1-纽约摄影学院三原则](Photography/1-纽约摄影学院三原则.md)
+- Programming Languages
+  - C
+    - Gramma
+      * [argv.cc](Programming_Languages/C++/Gramma/argv.cc.md)
+  - Python
+    - Dev Tools
+      * [crash_on_ipy.py](Programming_Languages/Python/DevTools/crash_on_ipy.py.md)
+      * [jupyter_hide_code.py](Programming_Languages/Python/DevTools/jupyter_hide_code.py.md)
+    - Example
+      * [argparse_example.py](Programming_Languages/Python/Example/argparse_example.py.md)
+      * [Ctypes](Programming_Languages/Python/Example/ctypes.md)
+      * [ncurses_example.py](Programming_Languages/Python/Example/ncurses_example.py.md)
+      * [qrcode_example.py](Programming_Languages/Python/Example/qrcode_example.py.md)
+    - [Sendmail](Programming_Languages/Python/sendmail/README.md)
+      * [attachment.py](Programming_Languages/Python/sendmail/attachment.py.md)
+      * [pic.py](Programming_Languages/Python/sendmail/pic.py.md)
+      * [qq_smtp.py](Programming_Languages/Python/sendmail/qq_smtp.py.md)
+      * [sendmail.py](Programming_Languages/Python/sendmail/sendmail.py.md)
