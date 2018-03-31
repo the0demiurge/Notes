@@ -1,4 +1,4 @@
-```pynton
+```python
 """Calculator, worte in AST in python
 """
 # This could be implemented as string-based big-number calcaulation
