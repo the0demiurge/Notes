@@ -36,6 +36,7 @@
       * [SMO Simple](Machine_Learning/Algorithms/SupportVectorMachine/SMO_Simple.md)
     * [LDA.py](Machine_Learning/Algorithms/LDA.py.md)
   - Tools
+    - [Py Torch](Machine_Learning/Tools/PyTorch/README.md)
     - Sci Kit Learn
       * [tsne.py](Machine_Learning/Tools/SciKit-Learn/tsne.py.md)
     - [Tensor Flow](Machine_Learning/Tools/TensorFlow/README.md)
