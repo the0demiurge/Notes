@@ -9,7 +9,7 @@ sudo cp ~/.userscripts/.users /root/.config
 sleep 1
 echo 'password')|sudo passwd $1 
 echo "使用passwd改密码，初始密码为password"
-sudo edquota -p charles $1
-sudo xfs_quota -x -c "limit -u bsoft=50G bhard=100G $1" /home
-echo 'export CUDA_VISIBLE_DEVICES=0'|tee -a /home/$1/.bashrc
+sudo edquota -p $USER $1
+sudo mkdir /data/
+sudo echo 'export CUDA_VISIBLE_DEVICES=0'|tee -a /home/$1/.bashrc
 ```
