@@ -1,7 +1,7 @@
 # CharlesNotes
 
 - Computer Science
-  - Data Structure Repr
+  - [Data Structure Repr](Computer_Science/DataStructureRepr/README.md)
     * [BinaryTreeNode.py](Computer_Science/DataStructureRepr/BinaryTreeNode.py.md)
   * [Calculator_AST.py](Computer_Science/Calculator_AST.py.md)
   * [sort.py](Computer_Science/sort.py.md)
