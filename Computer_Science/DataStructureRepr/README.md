@@ -1,6 +1,6 @@
 # Introduction
 
-I opened this project to show datastructures by hacking `__repr_` function of Python.
+I opened this project to show datastructures by hacking `__repr__` function of Python.
 
 Follow my work at [GitHUb](https://github.com/the0demiurge/DataStructureRepr)
 
