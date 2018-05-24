@@ -69,23 +69,27 @@ class FullBinaryTreeHeap(object):
     def data(self):
         return self.__heap.copy()
 
-    def tree(self, i=None):
+    @property
+    def tree(self):
+        return self.__tree()
+
+    def __tree(self, i=None):
         if not self.__heap:
             return BinaryTreeNode()
         if i is None:
             i = 0
         root = BinaryTreeNode(self.__heap[i])
         if 2 * i + 1 < len(self.__heap):
-            root.left = self.tree(2 * i + 1)
+            root.left = self.__tree(2 * i + 1)
         if 2 * i + 2 < len(self.__heap):
-            root.right = self.tree(2 * i + 2)
+            root.right = self.__tree(2 * i + 2)
         return root
 
     def copy(self):
         return FullBinaryTreeHeap(self.__heap, self.__is_largest)
 
     def __repr__(self):
-        return repr(self.tree())
+        return repr(self.tree)
 
     def __len__(self):
         return self.__heap.__len__()
