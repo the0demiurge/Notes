@@ -81,7 +81,8 @@ Notes
 │           ├── ctypes.md
 │           ├── keyboard-mouse.md
 │           ├── ncurses_example.py.md
-│           └── qrcode_example.py.md
+│           ├── qrcode_example.py.md
+│           └── socket.md
 ├── book.json
 ├── cover.jpg
 ├── gitbook-auto-summary.py
@@ -90,5 +91,5 @@ Notes
 ├── SUMMARY.md
 └── toc.sh
 
-28 directories, 61 files
+28 directories, 62 files
 ```
