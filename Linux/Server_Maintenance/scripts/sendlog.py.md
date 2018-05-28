@@ -1,3 +1,5 @@
+# /sbin/sendlog, 700
+
 ```python
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
@@ -113,3 +115,17 @@ def sendmail(sender, receivers, mail):
 if __name__ == '__main__':
     sendmail(sender, receivers, mail)
 ```
+# /usr/lib/systemd/system/sendlog.service
+
+```toml
+[Unit]
+Description=Send system logs using email, requires python
+
+[Service]
+
+Type=oneshot
+ExecStart=/sbin/sendlog STARTED
+ExecStop=/sbin/sendlog STOPPED
+Restart=on-failure
+```
+

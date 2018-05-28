@@ -10,7 +10,13 @@ Fail2Ban 可以监视各种协议，包括 SSH、HTTP 和 SMTP。默认情况下
 
 有关安装和配置 Fail2Ban 的完整说明，请参阅我们的指南：[使用 Fail2ban 保护服务器](https://www.linode.com/docs/security/using-fail2ban-for-security)。
 
-## 禁止Ping
+### 常用命令
+
+- fail2ban-client status: 查看有哪些 jail 和状态
+- fail2ban-client status jail: 查看 jail 状态
+- fail2ban-client set jail unbanip ip-address
+
+## 禁止 Ping（禁止 Ping 并不见得利大于弊）
 
 - 临时禁止 Ping:
 
