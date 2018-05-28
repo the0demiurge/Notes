@@ -106,7 +106,7 @@ Notes
 │           ├── qrcode_example.py.md
 │           └── socket.md
 ├── gitbook-auto-summary.py
-├── HEADER.md
+├── HEADER
 ├── README.md
 ├── SUMMARY.md
 └── toc.sh
