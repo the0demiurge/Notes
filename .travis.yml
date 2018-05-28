@@ -21,8 +21,7 @@ install:
 # 构建脚本
 script:
     # 自定义输出目录 gitbook build src dest
-  - toc.sh
-  - cp -r books _book
+  - toc.sh build
 
 # 分支白名单
 branches:
