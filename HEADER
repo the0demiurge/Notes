@@ -6,7 +6,6 @@ Book Source: [CharlesNotes](https://github.com/the0demiurge/Notes)
 
 # Download Offline Version
 
-- [PDF](https://raw.githubusercontent.com/the0demiurge/Notes/gh-pages/books/CharlesNotes.pdf)
 - [EPUB](https://raw.githubusercontent.com/the0demiurge/Notes/gh-pages/books/CharlesNotes.epub)
 - [MOBI](https://raw.githubusercontent.com/the0demiurge/Notes/gh-pages/books/CharlesNotes.mobi)
 
