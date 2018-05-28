@@ -1,5 +1,9 @@
 ```
 Notes
+├── build
+│   ├── CharlesNotes.epub
+│   ├── CharlesNotes.mobi
+│   └── CharlesNotes.pdf
 ├── Computer_Science
 │   ├── DataStructureRepr
 │   │   ├── BinaryTreeNode.py.md
@@ -83,13 +87,10 @@ Notes
 │           ├── ncurses_example.py.md
 │           ├── qrcode_example.py.md
 │           └── socket.md
-├── book.json
-├── cover.jpg
 ├── gitbook-auto-summary.py
-├── npm-debug.log
 ├── README.md
 ├── SUMMARY.md
 └── toc.sh
 
-28 directories, 62 files
+29 directories, 62 files
 ```

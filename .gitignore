@@ -217,3 +217,5 @@ _book
 
 
 # End of https://www.gitignore.io/api/gitbook
+package-lock.json
+books/
