@@ -105,11 +105,11 @@ Notes
 │           ├── ncurses_example.py.md
 │           ├── qrcode_example.py.md
 │           └── socket.md
+├── build.sh
 ├── gitbook-auto-summary.py
 ├── HEADER
 ├── README.md
-├── SUMMARY.md
-└── toc.sh
+└── SUMMARY.md
 
 29 directories, 63 files
 ```
