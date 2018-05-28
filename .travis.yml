@@ -10,6 +10,8 @@ cache:
 
 before_install:
   - export TZ='Asia/Shanghai' # 更改时区
+  - sudo apt-get -qq update
+  - sudo apt-get install -y calibre
 
 # 依赖安装
 install:
@@ -37,7 +39,5 @@ deploy:
   # 将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起
   local_dir: _book
   fqdn: $CUSTOM_DOMAIN
-  name: $GIT_NAME
-  email: $GIT_EMAIL
   on:
     branch: master

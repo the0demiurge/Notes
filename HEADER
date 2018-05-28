@@ -6,9 +6,9 @@ Book Source: [CharlesNotes](https://github.com/the0demiurge/Notes)
 
 # Download Offline Version
 
-- [PDF](https://raw.githubusercontent.com/the0demiurge/the0demiurge.github.io/master/books/CharlesNotes.pdf)
-- [EPUB](https://raw.githubusercontent.com/the0demiurge/the0demiurge.github.io/master/books/CharlesNotes.epub)
-- [MOBI](https://raw.githubusercontent.com/the0demiurge/the0demiurge.github.io/master/books/CharlesNotes.mobi)
+- [PDF](https://raw.githubusercontent.com/the0demiurge/Notes/gh-pages/books/CharlesNotes.pdf)
+- [EPUB](https://raw.githubusercontent.com/the0demiurge/Notes/gh-pages/books/CharlesNotes.epub)
+- [MOBI](https://raw.githubusercontent.com/the0demiurge/Notes/gh-pages/books/CharlesNotes.mobi)
 
 # How to Write Notes Likes This?
 

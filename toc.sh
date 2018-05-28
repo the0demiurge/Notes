@@ -15,4 +15,6 @@ if [ ! -z $1 ];then
     gitbook mobi . books/CharlesNotes.mobi
     gitbook build
     cp -r books _book
+    rm _book/.gitignore
 fi
+echo 'OK'
