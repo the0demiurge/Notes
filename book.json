@@ -1,18 +1,23 @@
 {
   "title": "CharlesNotes",
   "author": "Charles Xu",
+
   "plugins": [
-    "katex", 
-    "uml", 
-    "copy-code-button", 
-    "graphviz@git+https://github.com/darvasd/gitbook-plugin-graphviz.git"
+    "katex",
+    "uml",
+    "copy-code-button",
+    "graphviz@git+https://github.com/darvasd/gitbook-plugin-graphviz.git",
+    "disqus"
     ],
   "ignores": ["_book", "node_modules"],
 
-  "plguinsConfig": {
-    "uml": {
-      "format": "svg",
-      "engine": "dot"
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "notes-pythonic-life"
     }
+  },
+
+  "pdf": {
+    "fontFamily": "SimSun"
   }
 }

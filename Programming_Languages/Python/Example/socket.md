@@ -14,7 +14,7 @@ sock.listen(5)
 
 conn, addr = sock.accept()
 data = conn.recv(1000)
-print(data.decode('uft-8'))
+print(data.decode('utf-8'))
 conn.send(b'''HTTP/2 200 OK\nContent-Type: text/plain; charset=utf-8\n\n'''+data)
 conn.close()
 
