@@ -22,6 +22,7 @@
     * [AUTO UPGRADE](Linux/Server_Maintenance/AUTO_UPGRADE.md)
     * [QUOTA](Linux/Server_Maintenance/QUOTA.md)
     * [SECURITY](Linux/Server_Maintenance/SECURITY.md)
+  * [Arch Linux Installation](Linux/Arch Linux Installation.md)
 - Machine Learning
   - Algorithms
     - Deep Reinforcement Learning
@@ -39,6 +40,7 @@
     * [LDA.py](Machine_Learning/Algorithms/LDA.py.md)
   - Tools
     - [Py Torch](Machine_Learning/Tools/PyTorch/README.md)
+      * [Example](Machine_Learning/Tools/PyTorch/Example.md)
     - Sci Kit Learn
       * [tsne.py](Machine_Learning/Tools/SciKit-Learn/tsne.py.md)
     - [Tensor Flow](Machine_Learning/Tools/TensorFlow/README.md)
@@ -51,9 +53,10 @@
 - Photography
   * [1-纽约摄影学院三原则](Photography/1-纽约摄影学院三原则.md)
 - Programming Languages
-  - C
+  - [C](Programming_Languages/C++/README.md)
     - Gramma
       * [argv.cc](Programming_Languages/C++/Gramma/argv.cc.md)
+    - [STL](Programming_Languages/C++/STL/README.md)
   - Python
     - Dev Tools
       * [crash_on_ipy.py](Programming_Languages/Python/DevTools/crash_on_ipy.py.md)
