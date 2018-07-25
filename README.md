@@ -4,6 +4,8 @@ This is my notes, powered by GitBook, GitHub Pages, Travis CI.
 
 Book Source: [CharlesNotes](https://github.com/the0demiurge/Notes)
 
+Online Reading: [notes.pythonic.life](https://notes.pythonic.life)
+
 # Download Offline Version
 
 - [EPUB](https://raw.githubusercontent.com/the0demiurge/Notes/gh-pages/books/CharlesNotes.epub)
@@ -22,10 +24,6 @@ Notes
 │   ├── CharlesNotes.mobi
 │   └── CharlesNotes.pdf
 ├── Computer_Science
-│   ├── DataStructureRepr
-│   │   ├── BinaryTreeNode.py.md
-│   │   ├── README.md
-│   │   └── TreeNode.py.md
 │   ├── Calculator_AST.py
 │   ├── Calculator_AST.py.md
 │   ├── FullBinaryTreeHeap.py.md
@@ -100,15 +98,18 @@ Notes
 │           │   └── sendmail.py.md
 │           ├── argparse_example.py.md
 │           ├── ctypes.md
+│           ├── cython.md
 │           ├── keyboard-mouse.md
 │           ├── ncurses_example.py.md
 │           ├── qrcode_example.py.md
 │           └── socket.md
+├── Quantitative_Investment
+│   └── 基本概念.md
 ├── build.sh
 ├── gitbook-auto-summary.py
 ├── HEADER
 ├── README.md
 └── SUMMARY.md
 
-29 directories, 63 files
+29 directories, 62 files
 ```

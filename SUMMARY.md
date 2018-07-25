@@ -1,9 +1,6 @@
 # CharlesNotes
 
 - Computer Science
-  - [Data Structure Repr](Computer_Science/DataStructureRepr/README.md)
-    * [BinaryTreeNode.py](Computer_Science/DataStructureRepr/BinaryTreeNode.py.md)
-    * [TreeNode.py](Computer_Science/DataStructureRepr/TreeNode.py.md)
   * [Calculator_AST.py](Computer_Science/Calculator_AST.py.md)
   * [FullBinaryTreeHeap.py](Computer_Science/FullBinaryTreeHeap.py.md)
   * [sort.py](Computer_Science/sort.py.md)
@@ -69,7 +66,10 @@
         * [sendmail.py](Programming_Languages/Python/Example/sendmail/sendmail.py.md)
       * [argparse_example.py](Programming_Languages/Python/Example/argparse_example.py.md)
       * [Ctypes](Programming_Languages/Python/Example/ctypes.md)
+      * [Cython](Programming_Languages/Python/Example/cython.md)
       * [Keyboard Mouse](Programming_Languages/Python/Example/keyboard-mouse.md)
       * [ncurses_example.py](Programming_Languages/Python/Example/ncurses_example.py.md)
       * [qrcode_example.py](Programming_Languages/Python/Example/qrcode_example.py.md)
       * [Socket](Programming_Languages/Python/Example/socket.md)
+- Quantitative Investment
+  * [基本概念](Quantitative_Investment/基本概念.md)
