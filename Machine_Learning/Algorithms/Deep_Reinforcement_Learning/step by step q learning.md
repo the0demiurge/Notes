@@ -1,5 +1,5 @@
+# painless q learning
 
-# painless q learning 
 机器人寻路，目标为走到户外（5）
 
 原文链接：http://mnemstudio.org/path-finding-q-learning-tutorial.htm
@@ -90,6 +90,7 @@ Q(1, 5) = R(1, 5) + 0.8 \* Max[Q(5, 1), Q(5, 4), Q(5, 5)] = 100 + 0.8 \* 0 = 100
 Since matrix Q is still initialized to zero, Q(5, 1), Q(5, 4), Q(5, 5), are all zero.  The result of this computation for Q(1, 5) is 100 because of the instant reward from R(5, 1).
 
 The next state, 5, now becomes the current state.  Because 5 is the goal state, we've finished one episode.  Our agent's brain now contains an updated matrix Q as:
+
 ![image.png](q_matrix2.gif)
 
 For the next episode, we start with a randomly chosen initial state.  This time, we have state 3 as our initial state.
@@ -103,6 +104,7 @@ $$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all acti
 $$Q(1, 5) = R(1, 5) + 0.8 \times Max[Q(1, 2), Q(1, 5)] = 0 + 0.8 \times Max(0, 100) = 80$$
 
 We use the updated matrix Q from the last episode.  Q(1, 3) = 0 and Q(1, 5) = 100.  The result of the computation is Q(3, 1) = 80 because the reward is zero.  The matrix Q becomes:
+
 ![image.png](q_matrix3.gif)
 
 The next state, 1, now becomes the current state.  We repeat the inner loop of the Q learning algorithm because state 1 is not the goal state.
@@ -183,6 +185,7 @@ $$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all acti
 $$Q(1, 5) = R(1, 5) + 0.8 \times Max[Q(1, 2), Q(1, 5)] = 0 + 0.8 \times Max(0, 100) = 80$$
 
 We use the updated matrix Q from the last episode.  Q(1, 3) = 0 and Q(1, 5) = 100.  The result of the computation is Q(3, 1) = 80 because the reward is zero.  The matrix Q becomes:
+
 ![image.png](q_matrix3.gif)
 
 # 一个episode：
@@ -241,4 +244,5 @@ for i in range(200):
     2, 3, 1, 5, 
 
 # 地图：
+
 ![image.png](modeling_environment_clip_image002a.gif)
