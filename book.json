@@ -4,7 +4,6 @@
 
   "plugins": [
     "katex",
-    "uml",
     "copy-code-button",
     "graphviz@git+https://github.com/darvasd/gitbook-plugin-graphviz.git",
     "disqus"
