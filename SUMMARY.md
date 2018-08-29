@@ -11,7 +11,7 @@
     * [FrontEnd.html](Front_End/热力图/FrontEnd.html.md)
     * [百度api获取城市坐标.py](Front_End/热力图/百度api获取城市坐标.py.md)
 - Interview
-  * [Self Introduction](Interview/Self_Introduction.md)
+  * [Interviewee](Interview/Interviewee.md)
 - Linux
   - [Bash](Linux/Bash/README.md)
     * [bash的高级技巧](Linux/Bash/bash的高级技巧.md)
@@ -76,5 +76,6 @@
       * [ncurses_example.py](Programming_Languages/Python/Example/ncurses_example.py.md)
       * [qrcode_example.py](Programming_Languages/Python/Example/qrcode_example.py.md)
       * [Socket](Programming_Languages/Python/Example/socket.md)
+      * [动态修改幻灯片内容](Programming_Languages/Python/Example/动态修改幻灯片内容.md)
 - Quantitative Investment
   * [基本概念](Quantitative_Investment/基本概念.md)
