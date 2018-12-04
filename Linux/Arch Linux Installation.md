@@ -96,6 +96,14 @@ options root=/dev/sdb2
 options resume=/dev/sdb3
 ```
 
+change `/etc/mkinitcpio.conf`
+
+```
+52:HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
+```
+
+
+
 #  安装后的配置
 
 - 安装 git, fish-shell, tmux, curl, wget
@@ -108,14 +116,26 @@ options resume=/dev/sdb3
 bluetooth
 cronie
 fail2ban
-gdm
-i2prouter
-NetworkManager
 nmb
 org.cups.cupsd
 pkgfile-update.timer
 preload
-smb
 sshd
+atd
+gpm
+wicd
+#systemd-resolved
+#systemd-networkd
+```
+
+- trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`ter-powerline-v16n`
+- `/etc/lightdm/lightdm-gtk-greeter.conf`
+
+```toml
+[greeter]
+background = /home/charles/.cache/wallpaper/dialog-image.jpg
+theme-name = Arc-Flatabulous-Dark
+icon-theme-name = Papirus-Dark
+screensaver-timeout = 10
 ```
 
