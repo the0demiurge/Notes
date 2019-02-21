@@ -15,8 +15,11 @@
       "shortName": "notes-pythonic-life"
     }
   },
-
   "pdf": {
     "fontFamily": "SimSun"
+  },
+  "graphviz": {
+      "format": "svg",
+      "engine": "dot"
   }
 }

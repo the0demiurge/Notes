@@ -19,6 +19,11 @@ You can read my blog: [最好的电子笔记本：GitBook + Typora](https://the0
 
 ```
 Notes
+├── Academic
+│   ├── README.md
+│   ├── 论文写作.md
+│   ├── 论文阅读.md
+│   └── 论文阅读流程图.dot
 ├── books
 │   ├── CharlesNotes.epub
 │   ├── CharlesNotes.mobi
@@ -36,6 +41,7 @@ Notes
 │       ├── FrontEnd.html.md
 │       └── 百度api获取城市坐标.py.md
 ├── Interview
+│   ├── 2018ST实习收获.md
 │   └── Interviewee.md
 ├── Linux
 │   ├── Bash
@@ -108,6 +114,7 @@ Notes
 │           ├── cython.md
 │           ├── keyboard-mouse.md
 │           ├── ncurses_example.py.md
+│           ├── pandas.md
 │           ├── qrcode_example.py.md
 │           ├── socket.md
 │           └── 动态修改幻灯片内容.md
@@ -119,5 +126,5 @@ Notes
 ├── README.md
 └── SUMMARY.md
 
-31 directories, 68 files
+32 directories, 74 files
 ```
