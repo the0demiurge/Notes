@@ -1,8 +1,8 @@
 digraph paper_reading{
     node[shape=box]
-    // resolution=480
+    resolution=480
     fontname=SimHei
-    // dpi=320
+    dpi=320
     splines=ortho
 
     start[label="用 keywords 及 review papers 找出最相关的 30～40 篇论文，\n并略读 Abstract 及 Introduction 判断这些文献的相关性与类别"]
