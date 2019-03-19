@@ -129,6 +129,7 @@ wicd
 ```
 
 - trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`ter-powerline-v16n`
+- `sudo groupadd users;sudo usermod $USER -aG users`
 - `/etc/lightdm/lightdm-gtk-greeter.conf`
 
 ```toml
@@ -137,5 +138,27 @@ background = /home/charles/.cache/wallpaper/dialog-image.jpg
 theme-name = Arc-Flatabulous-Dark
 icon-theme-name = Papirus-Dark
 screensaver-timeout = 10
+```
+
+- `/etc/polkit-1/rules.d/85-suspend.rules`
+
+```
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.login1.suspend" &&
+        subject.isInGroup("users")) {
+        return polkit.Result.YES;
+    }
+});
+```
+
+- `/etc/polkit-1/rules.d/86-mount.rules`
+
+```
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.udisks2.filesystem-mount-system" &&
+        subject.isInGroup("users")) {
+        return polkit.Result.YES;
+    }
+});
 ```
 

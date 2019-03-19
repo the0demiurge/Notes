@@ -66,6 +66,7 @@ Notes
 │   │   │   │   ├── kvfrans-ddpg.py.md
 │   │   │   │   ├── my simple PG.py.md
 │   │   │   │   └── replay_buffer.py.md
+│   │   │   ├── README.md
 │   │   │   ├── step by step q learning.ipynb
 │   │   │   └── step by step q learning.md
 │   │   ├── NeuralNetwork
@@ -123,8 +124,7 @@ Notes
 ├── build.sh
 ├── gitbook-auto-summary.py
 ├── HEADER
-├── README.md
-└── SUMMARY.md
+└── README.md
 
 32 directories, 74 files
 ```

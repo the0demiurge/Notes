@@ -1,7 +1,7 @@
 # 将 py 编译为可执行文件
 
 ```bash
-cython --emded -3 main.py -o main.c
+cython --embed -3 main.py -o main.c
 gcc $(python-config --cflags) $(python-config --ldflags) ./main.c -o main
 ```
 
