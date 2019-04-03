@@ -4,7 +4,7 @@
 # 用法： adduser username 张三
 sudo useradd $1 -s /bin/bash -m 
 echo $1 $2 $(date) >> ~/.users
-sudo cp ~/.users /root/.config
+echo $1 $2 $(date) |sudo tee -a ~/.users /root/.config
 (echo 'password'
 sleep 1
 echo 'password')|sudo passwd $1 
