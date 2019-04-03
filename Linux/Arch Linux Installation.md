@@ -53,9 +53,6 @@ add below to `/etc/hosts`
 # See hosts(5) for details.
 127.0.0.1 localhost.localdomain localhost
 #::1 localhost.localdomain localhost
-127.0.0.1 license.sublimehq.com
-127.0.0.1 45.55.255.55
-127.0.0.1 45.55.41.223
 ```
 
 ```bash
@@ -129,7 +126,7 @@ wicd
 ```
 
 - trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`ter-powerline-v16n`
-- `sudo groupadd users;sudo usermod $USER -aG users`
+- `sudo groupadd users;sudo usermod $USER -aG users`
 - `/etc/lightdm/lightdm-gtk-greeter.conf`
 
 ```toml
