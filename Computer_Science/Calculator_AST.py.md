@@ -50,13 +50,6 @@ class TreeNode(object):
 
 
 def split_atomic(string):
-    """
-    @brief      Splits expression to atoms.
-
-    @param      string  The string expression
-
-    @return     list[tuple("TYPE", 'value')]
-    """
     # removing useless parens
     while string.startswith('(') and string.endswith(')'):
         string = string[1:-1]
@@ -95,14 +88,6 @@ def split_atomic(string):
 
 
 def ast(atoms):
-    """
-    @brief      Receives atoms and return an Abstract Syntax Tree
-    for a calculator
-
-    @param      atoms  The atoms splitted by split_atomic
-
-    @return     AST Tree Node
-    """
     if len(atoms) is 0:
         return
     # Remove useless parens
