@@ -34,6 +34,10 @@ operations = {
     '/': [2, DIV],
     '^': [3, POW]
 }
+parens = {
+    '(': 1,
+    ')': -1
+}
 
 
 class TreeNode(object):
@@ -78,7 +82,7 @@ def lexer(string):
             tail -= 1
         # elif operators or parentheses
         elif string[tail] in {'*', '/', '^', '(', ')'}:
-            symb = 'PAREN' if string[tail] in {'(', ')'} else 'SYMB'
+            symb = 'PAREN' if string[tail] in parens else 'SYMB'
             if numeric and string[tail] == '(':
                 result.append(('SYMB', '*'))
             numeric = True if string[tail] == ')' else False
@@ -88,15 +92,11 @@ def lexer(string):
 
 
 def parser(tokens):
-    parens = {
-        '(': 1,
-        ')': -1
-    }
-    if len(tokens) == 0:
-        return
     # Remove useless parens
     remove_enclosing_parans_flag = True
     while remove_enclosing_parans_flag:
+        if len(tokens) == 0:
+            return
         remove_enclosing_parans_flag = remove_enclosing_parans_flag and (tokens[0][1] == '(' and tokens[-1][1] == ')')
         depth = 0
         for TYPE, TOKEN in tokens[:-1]:
@@ -122,7 +122,10 @@ def parser(tokens):
                 min_priority_index, min_priority = i, operations[TOKEN][0]
 
     if min_priority_index is None:
-        return TreeNode(tokens[0][1])
+        if tokens[0][1] in parens or tokens[0][1] in operations:
+            return
+        else:
+            return TreeNode(tokens[0][1])
 
     left = parser(tokens[:min_priority_index])
     right = parser(tokens[min_priority_index + 1:])
@@ -174,5 +177,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 ```
