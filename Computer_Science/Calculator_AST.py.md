@@ -2,26 +2,28 @@
 """Calculator, worte in AST in python
 """
 # This could be implemented as string-based big-number calcaulation
+from ast import literal_eval
+from math import inf
 
 
 def ADD(x, y):
-    return str(eval(x) + eval(y))
+    return str(literal_eval(x) + literal_eval(y))
 
 
 def SUB(x, y):
-    return str(eval(x) - eval(y))
+    return str(literal_eval(x) - literal_eval(y))
 
 
 def POW(x, y):
-    return str(eval(x) ** eval(y))
+    return str(literal_eval(x) ** literal_eval(y))
 
 
 def MUL(x, y):
-    return str(eval(x) * eval(y))
+    return str(literal_eval(x) * literal_eval(y))
 
 
 def DIV(x, y):
-    return str(eval(x) / eval(y))
+    return str(literal_eval(x) / literal_eval(y))
 
 
 operations = {
@@ -49,10 +51,8 @@ class TreeNode(object):
         return '(' + left + repr(self.val) + right + ')'
 
 
-def split_atomic(string):
+def lexer(string):
     # removing useless parens
-    while string.startswith('(') and string.endswith(')'):
-        string = string[1:-1]
     result = list()
     if not string:
         return result
@@ -65,11 +65,11 @@ def split_atomic(string):
             numeric = False
             result.append(('SYMB', string[tail]))
         # elif numbers or '+' '-' are numbers' symbol
-        elif (string[tail].isdecimal() or string[tail] is '.') or (string[tail] in {'+', '-'} and not numeric):
+        elif (string[tail].isdecimal() or string[tail] == '.') or (string[tail] in {'+', '-'} and not numeric):
             numeric = True
             head = tail
             tail += 1
-            while tail < len(string) and (string[tail].isdecimal() or string[tail] is '.'):
+            while tail < len(string) and (string[tail].isdecimal() or string[tail] == '.'):
                 tail += 1
             num = string[head:tail]
             if num in {'+', '-'}:
@@ -79,46 +79,54 @@ def split_atomic(string):
         # elif operators or parentheses
         elif string[tail] in {'*', '/', '^', '(', ')'}:
             symb = 'PAREN' if string[tail] in {'(', ')'} else 'SYMB'
-            if numeric and string[tail] is '(':
+            if numeric and string[tail] == '(':
                 result.append(('SYMB', '*'))
-            numeric = True if string[tail] is ')' else False
+            numeric = True if string[tail] == ')' else False
             result.append((symb, string[tail]))
         tail += 1
     return result
 
 
-def ast(atoms):
-    if len(atoms) is 0:
-        return
-    # Remove useless parens
-    if atoms[0][1] is '(' and atoms[-1][1] is ')':
-        atoms = atoms[1:-1]
-
+def parser(tokens):
     parens = {
         '(': 1,
         ')': -1
     }
-    paren_amounts = 0
-    min_prior = 10
-    min_prior_index = None
+    if len(tokens) == 0:
+        return
+    # Remove useless parens
+    remove_enclosing_parans_flag = True
+    while remove_enclosing_parans_flag:
+        remove_enclosing_parans_flag = remove_enclosing_parans_flag and (tokens[0][1] == '(' and tokens[-1][1] == ')')
+        depth = 0
+        for TYPE, TOKEN in tokens[:-1]:
+            depth += parens.get(TOKEN, 0)
+            if depth == 0:
+                remove_enclosing_parans_flag = remove_enclosing_parans_flag and (depth != 0)
+                break
+        if remove_enclosing_parans_flag:
+            tokens = tokens[1:-1]
+
+    depth = 0
+    min_priority = inf
+    min_priority_index = None
 
     # find the operator out of parentheses with smallest priority
-    for i, data in enumerate(atoms):
-        TYPE, TOKEN = data
+    for i, (TYPE, TOKEN) in enumerate(tokens):
         # judge weather in parentheses or not
-        if TYPE is 'PAREN':
-            paren_amounts += parens[TOKEN]
+        if TYPE == 'PAREN':
+            depth += parens[TOKEN]
 
-        elif TYPE is 'SYMB' and paren_amounts is 0:
-            if operations[TOKEN][0] < min_prior:
-                min_prior_index, min_prior = i, operations[TOKEN][0]
+        elif TYPE == 'SYMB' and depth == 0:
+            if operations[TOKEN][0] < min_priority:
+                min_priority_index, min_priority = i, operations[TOKEN][0]
 
-    if min_prior_index is None:
-        return TreeNode(atoms[0][1])
+    if min_priority_index is None:
+        return TreeNode(tokens[0][1])
 
-    left = ast(atoms[:min_prior_index])
-    right = ast(atoms[min_prior_index + 1:])
-    return TreeNode(atoms[min_prior_index][1], left, right)
+    left = parser(tokens[:min_priority_index])
+    right = parser(tokens[min_priority_index + 1:])
+    return TreeNode(tokens[min_priority_index][1], left, right)
 
 
 def solve(ast_root, DEBUG=False):
@@ -139,7 +147,8 @@ def solve(ast_root, DEBUG=False):
             return operations[ast_root.val][1](solve(ast_root.left), solve(ast_root.right))
 
 
-def calculator(string): return solve(ast(split_atomic(string)))
+def calculator(string):
+    return solve(parser(lexer(string)))
 
 
 def main():
@@ -153,10 +162,10 @@ def main():
                 continue
 
             if DEBUG:
-                print('Atoms      :', list(zip(*split_atomic(string)))[1])
-                print('Tree       :', repr(ast(split_atomic(string))))
-                # print('PyResult   :', eval(string.replace('^', '**')))
-                print('MyResult   :', solve(ast(split_atomic(string)), DEBUG))
+                print('Atoms      :', list(zip(*lexer(string)))[1])
+                print('Tree       :', repr(parser(lexer(string))))
+                print('PyResult   :', eval(string.replace('^', '**')))
+                print('MyResult   :', solve(parser(lexer(string)), DEBUG))
             else:
                 print('Result:', calculator(string))
     except (EOFError, KeyboardInterrupt):
@@ -165,4 +174,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 ```
