@@ -3,7 +3,7 @@ from dsr import BinaryTreeNode
 
 
 class FullBinaryTreeHeap(object):
-    def __init__(self, data=None,  is_largest=True):
+    def __init__(self, data=None, is_largest=True):
         self.__is_largest = is_largest
         if is_largest:
             self.__judgement = lambda x, y: x < y
@@ -57,10 +57,13 @@ class FullBinaryTreeHeap(object):
             self.shift_down(0)
         return ret
 
-    def replace(self, i, data):
-        self.__heap[i] = data
-        self.shift_up(i)
-        self.shift_down(i)
+    def replace(self, i, value):
+        original_value = self.__heap[i]
+        self.__heap[i] = value
+        if self.__judgement(original_value, value):
+            self.shift_up(i)
+        else:
+            self.shift_down(i)
 
     def heapify(self):
         for i in range(len(self.__heap) // 2 - 1, -1, -1):
@@ -99,4 +102,5 @@ class FullBinaryTreeHeap(object):
         iterator = self.copy()
         while len(iterator) > 0:
             yield iterator.pop()
+
 ```

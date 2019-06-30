@@ -56,10 +56,13 @@ class FullBinaryTreeHeap(object):
             self.shift_down(0)
         return ret
 
-    def replace(self, i, data):
-        self.__heap[i] = data
-        self.shift_up(i)
-        self.shift_down(i)
+    def replace(self, i, value):
+        original_value = self.__heap[i]
+        self.__heap[i] = value
+        if self.__judgement(original_value, value):
+            self.shift_up(i)
+        else:
+            self.shift_down(i)
 
     def heapify(self):
         for i in range(len(self.__heap) // 2 - 1, -1, -1):
