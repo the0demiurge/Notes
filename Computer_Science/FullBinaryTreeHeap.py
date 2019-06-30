@@ -1,9 +1,8 @@
-```python
 from dsr import BinaryTreeNode
 
 
 class FullBinaryTreeHeap(object):
-    def __init__(self, data=None,  is_largest=True):
+    def __init__(self, data=None, is_largest=True):
         self.__is_largest = is_largest
         if is_largest:
             self.__judgement = lambda x, y: x < y
@@ -99,4 +98,3 @@ class FullBinaryTreeHeap(object):
         iterator = self.copy()
         while len(iterator) > 0:
             yield iterator.pop()
-```
