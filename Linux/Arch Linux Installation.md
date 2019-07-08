@@ -107,6 +107,7 @@ change `/etc/mkinitcpio.conf`
 - 安装 gnome
 - 安装 [CharlesScripts](https://github.com/the0demiurge/CharlesScripts)
 - 安装/删除软件 `inst (inst), yao (yao)`
+- `timedatectl set-ntp true`
 - 开启相应服务
 
 ```
@@ -119,6 +120,7 @@ change `/etc/mkinitcpio.conf`
 ├── dbus-org.freedesktop.NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
 ├── dbus-org.freedesktop.nm-dispatcher.service -> /usr/lib/systemd/system/NetworkManager-dispatcher.service
 ├── dbus-org.freedesktop.resolve1.service -> /usr/lib/systemd/system/systemd-resolved.service
+├── dbus-org.freedesktop.timesync1.service -> /usr/lib/systemd/system/systemd-timesyncd.service
 ├── display-manager.service -> /usr/lib/systemd/system/lightdm.service
 ├── getty.target.wants
 │   └── getty@tty1.service -> /usr/lib/systemd/system/getty@.service
@@ -132,7 +134,6 @@ change `/etc/mkinitcpio.conf`
 │   ├── NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
 │   ├── org.cups.cupsd.path -> /usr/lib/systemd/system/org.cups.cupsd.path
 │   ├── pkgfile-update.timer -> /usr/lib/systemd/system/pkgfile-update.timer
-│   ├── preload.service -> /usr/lib/systemd/system/preload.service
 │   ├── remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
 │   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
 │   ├── systemd-resolved.service -> /usr/lib/systemd/system/systemd-resolved.service
@@ -147,14 +148,18 @@ change `/etc/mkinitcpio.conf`
 ├── sockets.target.wants
 │   ├── avahi-daemon.socket -> /usr/lib/systemd/system/avahi-daemon.socket
 │   └── org.cups.cupsd.socket -> /usr/lib/systemd/system/org.cups.cupsd.socket
+├── sysinit.target.wants
+│   └── systemd-timesyncd.service -> /usr/lib/systemd/system/systemd-timesyncd.service
 ├── systemd-rfkill.service -> /dev/null
-└── systemd-rfkill.socket -> /dev/null
+├── systemd-rfkill.socket -> /dev/null
+└── timers.target.wants
+    └── fstrim.timer -> /usr/lib/systemd/system/fstrim.timer
 
-7 directories, 31 files
+9 directories, 33 files
 ```
 
 - trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`ter-powerline-v16n`
-- `sudo groupadd users;sudo usermod $USER -aG users`
+- Add group users; Add $USER to `wheel, audio, users, realtime`
 - `/etc/lightdm/lightdm-gtk-greeter.conf`
 
 ```toml
