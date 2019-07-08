@@ -104,10 +104,21 @@ change `/etc/mkinitcpio.conf`
 #  安装后的配置
 
 - 安装 git, fish-shell, tmux, curl, wget
-- 安装 gnome
+
+- 为了防止Btrfs格式文件系统损坏，设置`/etc/default/tlp`: 
+
+```
+SATA_LINKPWR_ON_BAT=max_performance
+```
+
+- 安装 Xfce4
+
 - 安装 [CharlesScripts](https://github.com/the0demiurge/CharlesScripts)
+
 - 安装/删除软件 `inst (inst), yao (yao)`
+
 - `timedatectl set-ntp true`
+
 - 开启相应服务
 
 ```
