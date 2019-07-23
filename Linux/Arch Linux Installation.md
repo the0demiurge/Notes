@@ -9,22 +9,31 @@
 
 `mkfs.fat -F32 /dev/sdb1`
 
-|  sd  | flags |   size   | mount point | file system |
-| :--: | :---: | :------: | :---------: | :---------: |
-| sdb1 |  efi  | 550 Mib  |    /boot    |    FAT32    |
-| sdb2 |       | 94.8 Gib |      /      |    BTRFS    |
-| sdb3 | swap  | 16.5 Gib |             |             |
+|  sd  | flags |   size   |   mount point   | file system |
+| :--: | :---: | :------: | :-------------: | :---------: |
+| sda1 |       | 711 Gib  | /home/harddrive |    NTFS     |
+| sda2 |       | 207 Gib  |      /home      |     XFS     |
+| sda3 |       |  15 Gib  |      /var       |     XFS     |
+| sdb1 |  efi  | 550 Mib  |      /boot      |    FAT32    |
+| sdb2 |       | 94.8 Gib |        /        |    BTRFS    |
+| sdb3 | swap  | 16.5 Gib |     [SWAP]      |    SWAP     |
 
 # 挂载
 
 ```bash
-mount /dev/sdb2 /mnt
 cd /mnt
+mount /dev/sdb2 /mnt
 
-mkdir /mnt/boot /mnt/home
+mkdir -p /mnt/boot /mnt/home /mnt/var
 
 mount /dev/sdb1 /mnt/boot
 mount /dev/sda2 /mnt/home
+mount /dev/sda3 /mnt/var
+
+mkdir -p /mnt/home/harddrive
+
+mount /dev/sda1 /mnt/home/harddrive
+
 mkswap /dev/sdb3
 swapon /dev/sdb3
 ```
@@ -105,7 +114,7 @@ change `/etc/mkinitcpio.conf`
 
 - 安装 git, fish-shell, tmux, curl, wget
 
-- 为了防止Btrfs格式文件系统损坏，设置`/etc/default/tlp`: 
+- 为了防止Btrfs格式文件系统损坏，设置`/etc/default/tlp`:
 
 ```
 SATA_LINKPWR_ON_BAT=max_performance
@@ -124,7 +133,7 @@ SATA_LINKPWR_ON_BAT=max_performance
 ```
 /etc/systemd/system
 ├── bluetooth.target.wants
-│   └── bluetooth.service -> /usr/lib/systemd/system/bluetooth.service
+│   └── bluetooth.service -> /usr/lib/systemd/system/bluetooth.service
 ├── dbus-fi.w1.wpa_supplicant1.service -> /usr/lib/systemd/system/wpa_supplicant.service
 ├── dbus-org.bluez.service -> /usr/lib/systemd/system/bluetooth.service
 ├── dbus-org.freedesktop.Avahi.service -> /usr/lib/systemd/system/avahi-daemon.service
@@ -134,33 +143,33 @@ SATA_LINKPWR_ON_BAT=max_performance
 ├── dbus-org.freedesktop.timesync1.service -> /usr/lib/systemd/system/systemd-timesyncd.service
 ├── display-manager.service -> /usr/lib/systemd/system/lightdm.service
 ├── getty.target.wants
-│   └── getty@tty1.service -> /usr/lib/systemd/system/getty@.service
+│   └── getty@tty1.service -> /usr/lib/systemd/system/getty@.service
 ├── multi-user.target.wants
-│   ├── atd.service -> /usr/lib/systemd/system/atd.service
-│   ├── avahi-daemon.service -> /usr/lib/systemd/system/avahi-daemon.service
-│   ├── avahi-dnsconfd.service -> /usr/lib/systemd/system/avahi-dnsconfd.service
-│   ├── cronie.service -> /usr/lib/systemd/system/cronie.service
-│   ├── fail2ban.service -> /usr/lib/systemd/system/fail2ban.service
-│   ├── gpm.service -> /usr/lib/systemd/system/gpm.service
-│   ├── NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
-│   ├── org.cups.cupsd.path -> /usr/lib/systemd/system/org.cups.cupsd.path
-│   ├── pkgfile-update.timer -> /usr/lib/systemd/system/pkgfile-update.timer
-│   ├── remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
-│   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
-│   ├── systemd-resolved.service -> /usr/lib/systemd/system/systemd-resolved.service
-│   ├── tlp.service -> /usr/lib/systemd/system/tlp.service
-│   └── wpa_supplicant.service -> /usr/lib/systemd/system/wpa_supplicant.service
+│   ├── atd.service -> /usr/lib/systemd/system/atd.service
+│   ├── avahi-daemon.service -> /usr/lib/systemd/system/avahi-daemon.service
+│   ├── avahi-dnsconfd.service -> /usr/lib/systemd/system/avahi-dnsconfd.service
+│   ├── cronie.service -> /usr/lib/systemd/system/cronie.service
+│   ├── fail2ban.service -> /usr/lib/systemd/system/fail2ban.service
+│   ├── gpm.service -> /usr/lib/systemd/system/gpm.service
+│   ├── NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
+│   ├── org.cups.cupsd.path -> /usr/lib/systemd/system/org.cups.cupsd.path
+│   ├── pkgfile-update.timer -> /usr/lib/systemd/system/pkgfile-update.timer
+│   ├── remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
+│   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
+│   ├── systemd-resolved.service -> /usr/lib/systemd/system/systemd-resolved.service
+│   ├── tlp.service -> /usr/lib/systemd/system/tlp.service
+│   └── wpa_supplicant.service -> /usr/lib/systemd/system/wpa_supplicant.service
 ├── network-online.target.wants
-│   └── NetworkManager-wait-online.service -> /usr/lib/systemd/system/NetworkManager-wait-online.service
+│   └── NetworkManager-wait-online.service -> /usr/lib/systemd/system/NetworkManager-wait-online.service
 ├── printer.target.wants
-│   └── org.cups.cupsd.service -> /usr/lib/systemd/system/org.cups.cupsd.service
+│   └── org.cups.cupsd.service -> /usr/lib/systemd/system/org.cups.cupsd.service
 ├── sleep.target.wants
-│   └── tlp-sleep.service -> /usr/lib/systemd/system/tlp-sleep.service
+│   └── tlp-sleep.service -> /usr/lib/systemd/system/tlp-sleep.service
 ├── sockets.target.wants
-│   ├── avahi-daemon.socket -> /usr/lib/systemd/system/avahi-daemon.socket
-│   └── org.cups.cupsd.socket -> /usr/lib/systemd/system/org.cups.cupsd.socket
+│   ├── avahi-daemon.socket -> /usr/lib/systemd/system/avahi-daemon.socket
+│   └── org.cups.cupsd.socket -> /usr/lib/systemd/system/org.cups.cupsd.socket
 ├── sysinit.target.wants
-│   └── systemd-timesyncd.service -> /usr/lib/systemd/system/systemd-timesyncd.service
+│   └── systemd-timesyncd.service -> /usr/lib/systemd/system/systemd-timesyncd.service
 ├── systemd-rfkill.service -> /dev/null
 ├── systemd-rfkill.socket -> /dev/null
 └── timers.target.wants
@@ -202,4 +211,3 @@ polkit.addRule(function(action, subject) {
     }
 });
 ```
-
