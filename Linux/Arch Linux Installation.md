@@ -73,10 +73,6 @@ visudo
 
 # 配置启动项
 
-```bash
-bootctl install
-```
-
 add to `/etc/pacman.d/hooks/systemd-boot.hook`
 
 ```toml
@@ -108,7 +104,11 @@ change `/etc/mkinitcpio.conf`
 52:HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
 ```
 
+安装启动项
 
+```bash
+bootctl install
+```
 
 #  安装后的配置
 
