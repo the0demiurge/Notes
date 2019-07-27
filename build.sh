@@ -1,6 +1,6 @@
 #!/bin/bash
 #python3 ./gitbook-auto-summary.py . -o
-book sm -i node_modules
+book sm -i node_modules -s 'num-' -d
 
 cat HEADER|tee README.md
 echo "\`\`\`" |tee -a README.md

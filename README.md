@@ -19,8 +19,6 @@ You can read my blog: [最好的电子笔记本：GitBook + Typora](https://the0
 
 ```
 Notes
-├── 10-Sundry
-│   └── DPT-RP1 Config.md
 ├── 1-Computer_Science
 │   ├── Calculator_AST.py
 │   ├── Calculator_AST.py.md
@@ -121,14 +119,12 @@ Notes
 │   └── 1-纽约摄影学院三原则.md
 ├── 9-Quantitative_Investment
 │   └── 基本概念.md
-├── books
-│   ├── CharlesNotes.epub
-│   ├── CharlesNotes.mobi
-│   └── CharlesNotes.pdf
+├── a-Sundry
+│   └── DPT-RP1 Config.md
 ├── build.sh
 ├── gitbook-auto-summary.py
 ├── HEADER
 └── README.md
 
-33 directories, 77 files
+32 directories, 74 files
 ```
