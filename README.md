@@ -19,16 +19,9 @@ You can read my blog: [最好的电子笔记本：GitBook + Typora](https://the0
 
 ```
 Notes
-├── Academic
-│   ├── README.md
-│   ├── 论文写作.md
-│   ├── 论文阅读.md
-│   └── 论文阅读流程图.dot
-├── books
-│   ├── CharlesNotes.epub
-│   ├── CharlesNotes.mobi
-│   └── CharlesNotes.pdf
-├── Computer_Science
+├── 10-Sundry
+│   └── DPT-RP1 Config.md
+├── 1-Computer_Science
 │   ├── Calculator_AST.py
 │   ├── Calculator_AST.py.md
 │   ├── dsr.py
@@ -36,16 +29,34 @@ Notes
 │   ├── FullBinaryTreeHeap.py.md
 │   ├── sort.py
 │   └── sort.py.md
-├── Front_End
-│   ├── HTML
-│   │   └── split panes.html.md
-│   └── 热力图
-│       ├── FrontEnd.html.md
-│       └── 百度api获取城市坐标.py.md
-├── Interview
-│   ├── 2018ST实习收获.md
-│   └── Interviewee.md
-├── Linux
+├── 2-Programming_Languages
+│   ├── C++
+│   │   ├── Gramma
+│   │   │   └── argv.cc.md
+│   │   ├── STL
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── Python
+│       ├── DevTools
+│       │   ├── crash_on_ipy.py.md
+│       │   └── jupyter_hide_code.py.md
+│       └── Example
+│           ├── sendmail
+│           │   ├── attachment.py.md
+│           │   ├── pic.py.md
+│           │   ├── qq_smtp.py.md
+│           │   ├── README.md
+│           │   └── sendmail.py.md
+│           ├── argparse_example.py.md
+│           ├── ctypes.md
+│           ├── cython.md
+│           ├── keyboard-mouse.md
+│           ├── ncurses_example.py.md
+│           ├── pandas.md
+│           ├── qrcode_example.py.md
+│           ├── socket.md
+│           └── 动态修改幻灯片内容.md
+├── 3-Linux
 │   ├── Bash
 │   │   ├── bash的高级技巧.md
 │   │   └── README.md
@@ -60,7 +71,7 @@ Notes
 │   │   ├── QUOTA.md
 │   │   └── SECURITY.md
 │   └── Arch Linux Installation.md
-├── Machine_Learning
+├── 4-Machine_Learning
 │   ├── Algorithms
 │   │   ├── Deep_Reinforcement_Learning
 │   │   │   ├── Policy_Gradient
@@ -92,39 +103,28 @@ Notes
 │           ├── Distributed_tensorflow.py.md
 │           ├── Duplicate_a_tensorflow_graph.md
 │           └── README.md
-├── Photography
+├── 5-Front_End
+│   ├── HTML
+│   │   └── split panes.html.md
+│   └── 热力图
+│       ├── FrontEnd.html.md
+│       └── 百度api获取城市坐标.py.md
+├── 6-Academic
+│   ├── README.md
+│   ├── 论文写作.md
+│   ├── 论文阅读.md
+│   └── 论文阅读流程图.dot
+├── 7-Interview
+│   ├── 2018ST实习收获.md
+│   └── Interviewee.md
+├── 8-Photography
 │   └── 1-纽约摄影学院三原则.md
-├── Programming_Languages
-│   ├── C++
-│   │   ├── Gramma
-│   │   │   └── argv.cc.md
-│   │   ├── STL
-│   │   │   └── README.md
-│   │   └── README.md
-│   └── Python
-│       ├── DevTools
-│       │   ├── crash_on_ipy.py.md
-│       │   └── jupyter_hide_code.py.md
-│       └── Example
-│           ├── sendmail
-│           │   ├── attachment.py.md
-│           │   ├── pic.py.md
-│           │   ├── qq_smtp.py.md
-│           │   ├── README.md
-│           │   └── sendmail.py.md
-│           ├── argparse_example.py.md
-│           ├── ctypes.md
-│           ├── cython.md
-│           ├── keyboard-mouse.md
-│           ├── ncurses_example.py.md
-│           ├── pandas.md
-│           ├── qrcode_example.py.md
-│           ├── socket.md
-│           └── 动态修改幻灯片内容.md
-├── Quantitative_Investment
+├── 9-Quantitative_Investment
 │   └── 基本概念.md
-├── Sundry
-│   └── DPT-RP1 Config.md
+├── books
+│   ├── CharlesNotes.epub
+│   ├── CharlesNotes.mobi
+│   └── CharlesNotes.pdf
 ├── build.sh
 ├── gitbook-auto-summary.py
 ├── HEADER
