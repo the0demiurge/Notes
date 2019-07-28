@@ -28,5 +28,10 @@
 
 # 打印页面设置
 
-- Width: 204.7 mm, 8.625 in
-- Height: 273.1 mm, 11.505 in
+- Width: 207 mm, 8.15 in
+- Height: 276.12 mm, 10.87 in
+
+# 屏幕比例
+
+- Width: 5x5x23
+- Height: 13x59
