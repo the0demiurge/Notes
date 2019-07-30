@@ -128,12 +128,12 @@ SATA_LINKPWR_ON_BAT=max_performance
 
 - `timedatectl set-ntp true`
 
-- 开启相应服务
+- 开启并配置相应服务（部分配置应参考[CharlesScripts](https://github.com/the0demiurge/CharlesScripts/tree/master/charles/installation.d/conf.d)中的自动配置脚本，比如tlp）
 
 ```
 /etc/systemd/system
 ├── bluetooth.target.wants
-│   └── bluetooth.service -> /usr/lib/systemd/system/bluetooth.service
+│   └── bluetooth.service -> /usr/lib/systemd/system/bluetooth.service
 ├── dbus-fi.w1.wpa_supplicant1.service -> /usr/lib/systemd/system/wpa_supplicant.service
 ├── dbus-org.bluez.service -> /usr/lib/systemd/system/bluetooth.service
 ├── dbus-org.freedesktop.Avahi.service -> /usr/lib/systemd/system/avahi-daemon.service
@@ -143,39 +143,40 @@ SATA_LINKPWR_ON_BAT=max_performance
 ├── dbus-org.freedesktop.timesync1.service -> /usr/lib/systemd/system/systemd-timesyncd.service
 ├── display-manager.service -> /usr/lib/systemd/system/lightdm.service
 ├── getty.target.wants
-│   └── getty@tty1.service -> /usr/lib/systemd/system/getty@.service
+│   └── getty@tty1.service -> /usr/lib/systemd/system/getty@.service
 ├── multi-user.target.wants
-│   ├── atd.service -> /usr/lib/systemd/system/atd.service
-│   ├── avahi-daemon.service -> /usr/lib/systemd/system/avahi-daemon.service
-│   ├── avahi-dnsconfd.service -> /usr/lib/systemd/system/avahi-dnsconfd.service
-│   ├── cronie.service -> /usr/lib/systemd/system/cronie.service
-│   ├── fail2ban.service -> /usr/lib/systemd/system/fail2ban.service
-│   ├── gpm.service -> /usr/lib/systemd/system/gpm.service
-│   ├── NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
-│   ├── org.cups.cupsd.path -> /usr/lib/systemd/system/org.cups.cupsd.path
-│   ├── pkgfile-update.timer -> /usr/lib/systemd/system/pkgfile-update.timer
-│   ├── remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
-│   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
-│   ├── systemd-resolved.service -> /usr/lib/systemd/system/systemd-resolved.service
-│   ├── tlp.service -> /usr/lib/systemd/system/tlp.service
-│   └── wpa_supplicant.service -> /usr/lib/systemd/system/wpa_supplicant.service
+│   ├── atd.service -> /usr/lib/systemd/system/atd.service
+│   ├── avahi-daemon.service -> /usr/lib/systemd/system/avahi-daemon.service
+│   ├── avahi-dnsconfd.service -> /usr/lib/systemd/system/avahi-dnsconfd.service
+│   ├── cronie.service -> /usr/lib/systemd/system/cronie.service
+│   ├── dnscrypt-proxy.service -> /usr/lib/systemd/system/dnscrypt-proxy.service
+│   ├── fail2ban.service -> /usr/lib/systemd/system/fail2ban.service
+│   ├── gpm.service -> /usr/lib/systemd/system/gpm.service
+│   ├── NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
+│   ├── org.cups.cupsd.path -> /usr/lib/systemd/system/org.cups.cupsd.path
+│   ├── pkgfile-update.timer -> /usr/lib/systemd/system/pkgfile-update.timer
+│   ├── remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
+│   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
+│   ├── systemd-resolved.service -> /usr/lib/systemd/system/systemd-resolved.service
+│   ├── tlp.service -> /usr/lib/systemd/system/tlp.service
+│   └── wpa_supplicant.service -> /usr/lib/systemd/system/wpa_supplicant.service
 ├── network-online.target.wants
-│   └── NetworkManager-wait-online.service -> /usr/lib/systemd/system/NetworkManager-wait-online.service
+│   └── NetworkManager-wait-online.service -> /usr/lib/systemd/system/NetworkManager-wait-online.service
 ├── printer.target.wants
-│   └── org.cups.cupsd.service -> /usr/lib/systemd/system/org.cups.cupsd.service
+│   └── org.cups.cupsd.service -> /usr/lib/systemd/system/org.cups.cupsd.service
 ├── sleep.target.wants
-│   └── tlp-sleep.service -> /usr/lib/systemd/system/tlp-sleep.service
+│   └── tlp-sleep.service -> /usr/lib/systemd/system/tlp-sleep.service
 ├── sockets.target.wants
-│   ├── avahi-daemon.socket -> /usr/lib/systemd/system/avahi-daemon.socket
-│   └── org.cups.cupsd.socket -> /usr/lib/systemd/system/org.cups.cupsd.socket
+│   ├── avahi-daemon.socket -> /usr/lib/systemd/system/avahi-daemon.socket
+│   └── org.cups.cupsd.socket -> /usr/lib/systemd/system/org.cups.cupsd.socket
 ├── sysinit.target.wants
-│   └── systemd-timesyncd.service -> /usr/lib/systemd/system/systemd-timesyncd.service
+│   └── systemd-timesyncd.service -> /usr/lib/systemd/system/systemd-timesyncd.service
 ├── systemd-rfkill.service -> /dev/null
 ├── systemd-rfkill.socket -> /dev/null
 └── timers.target.wants
     └── fstrim.timer -> /usr/lib/systemd/system/fstrim.timer
 
-9 directories, 33 files
+9 directories, 34 files
 ```
 
 - trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`ter-powerline-v16n`
