@@ -179,7 +179,7 @@ SATA_LINKPWR_ON_BAT=max_performance
 9 directories, 34 files
 ```
 
-- trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`ter-powerline-v16n`
+- trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`FONT="ter-powerline-v16n"`
 - Add group users; Add $USER to `wheel, audio, users, realtime`
 - `/etc/lightdm/lightdm-gtk-greeter.conf`
 
