@@ -42,7 +42,7 @@ swapon /dev/sdb3
 
 ```bash
 tmux
-pacstrap /mnt base  # arch-install-scripts
+pacstrap /mnt base linux-lts  # arch-install-scripts
 genfstab -L /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
