@@ -87,15 +87,32 @@ When=PostTransaction
 Exec=/usr/bin/bootctl update
 ```
 
-add to `/boot/loader/entries/archlinux.conf`
+add to `/boot/loader/entries/`
 
+linux-lts.conf
 ```
-title Charles Xu's Arch Linux
-linux /vmlinuz-linux
+title Charles Xu's Arch Linux LTS
+linux /vmlinuz-linux-lts
 initrd /intel-ucode.img
-initrd /initramfs-linux.img
+initrd /initramfs-linux-lts.img
 options root=/dev/sdb2
 options resume=/dev/sdb3
+```
+linux-lts-fallback.conf
+```
+title Charles Xu's Arch Linux LTS Fallback
+linux /vmlinuz-linux-lts
+initrd /intel-ucode.img
+initrd /initramfs-linux-lts-fallback.img
+options root=/dev/sdb2
+options resume=/dev/sdb3
+```
+
+add to `/boot/loader/loader.conf`
+```
+default linux-lts
+timeout 3
+editor 0
 ```
 
 change `/etc/mkinitcpio.conf`
@@ -141,13 +158,16 @@ SATA_LINKPWR_ON_BAT=max_performance
 ├── dbus-org.freedesktop.nm-dispatcher.service -> /usr/lib/systemd/system/NetworkManager-dispatcher.service
 ├── dbus-org.freedesktop.resolve1.service -> /usr/lib/systemd/system/systemd-resolved.service
 ├── dbus-org.freedesktop.timesync1.service -> /usr/lib/systemd/system/systemd-timesyncd.service
-├── display-manager.service -> /usr/lib/systemd/system/lightdm.service
+├── display-manager.service -> /usr/lib/systemd/system/lxdm.service
 ├── getty.target.wants
 │   └── getty@tty1.service -> /usr/lib/systemd/system/getty@.service
+├── graphical.target.wants
+│   └── udisks2.service -> /usr/lib/systemd/system/udisks2.service
 ├── multi-user.target.wants
 │   ├── atd.service -> /usr/lib/systemd/system/atd.service
 │   ├── avahi-daemon.service -> /usr/lib/systemd/system/avahi-daemon.service
 │   ├── avahi-dnsconfd.service -> /usr/lib/systemd/system/avahi-dnsconfd.service
+│   ├── blueman-mechanism.service -> /usr/lib/systemd/system/blueman-mechanism.service
 │   ├── cronie.service -> /usr/lib/systemd/system/cronie.service
 │   ├── dnscrypt-proxy.service -> /usr/lib/systemd/system/dnscrypt-proxy.service
 │   ├── fail2ban.service -> /usr/lib/systemd/system/fail2ban.service
@@ -158,14 +178,12 @@ SATA_LINKPWR_ON_BAT=max_performance
 │   ├── remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
 │   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
 │   ├── systemd-resolved.service -> /usr/lib/systemd/system/systemd-resolved.service
-│   ├── tlp.service -> /usr/lib/systemd/system/tlp.service
+│   ├── v2ray.service -> /usr/lib/systemd/system/v2ray.service
 │   └── wpa_supplicant.service -> /usr/lib/systemd/system/wpa_supplicant.service
 ├── network-online.target.wants
 │   └── NetworkManager-wait-online.service -> /usr/lib/systemd/system/NetworkManager-wait-online.service
 ├── printer.target.wants
 │   └── org.cups.cupsd.service -> /usr/lib/systemd/system/org.cups.cupsd.service
-├── sleep.target.wants
-│   └── tlp-sleep.service -> /usr/lib/systemd/system/tlp-sleep.service
 ├── sockets.target.wants
 │   ├── avahi-daemon.socket -> /usr/lib/systemd/system/avahi-daemon.socket
 │   └── org.cups.cupsd.socket -> /usr/lib/systemd/system/org.cups.cupsd.socket
@@ -176,7 +194,7 @@ SATA_LINKPWR_ON_BAT=max_performance
 └── timers.target.wants
     └── fstrim.timer -> /usr/lib/systemd/system/fstrim.timer
 
-9 directories, 34 files
+9 directories, 35 files
 ```
 
 - trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`FONT="ter-powerline-v16n"`
