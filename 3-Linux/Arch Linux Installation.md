@@ -153,10 +153,8 @@ SATA_LINKPWR_ON_BAT=max_performance
 │   └── bluetooth.service -> /usr/lib/systemd/system/bluetooth.service
 ├── dbus-fi.w1.wpa_supplicant1.service -> /usr/lib/systemd/system/wpa_supplicant.service
 ├── dbus-org.bluez.service -> /usr/lib/systemd/system/bluetooth.service
-├── dbus-org.freedesktop.Avahi.service -> /usr/lib/systemd/system/avahi-daemon.service
 ├── dbus-org.freedesktop.NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
 ├── dbus-org.freedesktop.nm-dispatcher.service -> /usr/lib/systemd/system/NetworkManager-dispatcher.service
-├── dbus-org.freedesktop.resolve1.service -> /usr/lib/systemd/system/systemd-resolved.service
 ├── dbus-org.freedesktop.timesync1.service -> /usr/lib/systemd/system/systemd-timesyncd.service
 ├── display-manager.service -> /usr/lib/systemd/system/lxdm.service
 ├── getty.target.wants
@@ -165,8 +163,6 @@ SATA_LINKPWR_ON_BAT=max_performance
 │   └── udisks2.service -> /usr/lib/systemd/system/udisks2.service
 ├── multi-user.target.wants
 │   ├── atd.service -> /usr/lib/systemd/system/atd.service
-│   ├── avahi-daemon.service -> /usr/lib/systemd/system/avahi-daemon.service
-│   ├── avahi-dnsconfd.service -> /usr/lib/systemd/system/avahi-dnsconfd.service
 │   ├── blueman-mechanism.service -> /usr/lib/systemd/system/blueman-mechanism.service
 │   ├── cronie.service -> /usr/lib/systemd/system/cronie.service
 │   ├── dnscrypt-proxy.service -> /usr/lib/systemd/system/dnscrypt-proxy.service
@@ -177,7 +173,6 @@ SATA_LINKPWR_ON_BAT=max_performance
 │   ├── pkgfile-update.timer -> /usr/lib/systemd/system/pkgfile-update.timer
 │   ├── remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
 │   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
-│   ├── systemd-resolved.service -> /usr/lib/systemd/system/systemd-resolved.service
 │   ├── v2ray.service -> /usr/lib/systemd/system/v2ray.service
 │   └── wpa_supplicant.service -> /usr/lib/systemd/system/wpa_supplicant.service
 ├── network-online.target.wants
@@ -185,7 +180,6 @@ SATA_LINKPWR_ON_BAT=max_performance
 ├── printer.target.wants
 │   └── org.cups.cupsd.service -> /usr/lib/systemd/system/org.cups.cupsd.service
 ├── sockets.target.wants
-│   ├── avahi-daemon.socket -> /usr/lib/systemd/system/avahi-daemon.socket
 │   └── org.cups.cupsd.socket -> /usr/lib/systemd/system/org.cups.cupsd.socket
 ├── sysinit.target.wants
 │   └── systemd-timesyncd.service -> /usr/lib/systemd/system/systemd-timesyncd.service
@@ -194,7 +188,7 @@ SATA_LINKPWR_ON_BAT=max_performance
 └── timers.target.wants
     └── fstrim.timer -> /usr/lib/systemd/system/fstrim.timer
 
-9 directories, 35 files
+    9 directories, 29 files
 ```
 
 - trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`FONT="ter-powerline-v16n"`
