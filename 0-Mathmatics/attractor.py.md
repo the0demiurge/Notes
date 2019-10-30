@@ -1,3 +1,4 @@
+```python
 import MATLAB  # pyMATLABstyle
 import math
 
@@ -83,14 +84,21 @@ class Multiscroll(Particle):
 
 if __name__ == "__main__":
 
-    def plot_attractor(attractor):
-        fig, ax = MATLAB.fig3d()
+    fig, ax = MATLAB.fig3d()
+
+    def plot_attractor(ax, attractor):
         p = attractor()
         data = [p.step() for i in range(500000)]
         ax.plot3D(*(zip(*data)), linewidth=0.5)
         MATLAB.tight_layout()
 
     for attractor in (Lorenz, Rossler, Multiscroll):
-        plot_attractor(attractor)
+        plot_attractor(ax, attractor)
 
     MATLAB.show()
+```
+![Lorenz](Lorenz.png)
+
+![Lorenz](Rossler.png)
+
+![Multiscroll](Multiscroll.png)
