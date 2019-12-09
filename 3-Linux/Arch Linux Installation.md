@@ -151,19 +151,18 @@ SATA_LINKPWR_ON_BAT=max_performance
 /etc/systemd/system
 ├── bluetooth.target.wants
 │   └── bluetooth.service -> /usr/lib/systemd/system/bluetooth.service
-├── dbus-fi.w1.wpa_supplicant1.service -> /usr/lib/systemd/system/wpa_supplicant.service
 ├── dbus-org.bluez.service -> /usr/lib/systemd/system/bluetooth.service
-├── dbus-org.freedesktop.NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
 ├── dbus-org.freedesktop.nm-dispatcher.service -> /usr/lib/systemd/system/NetworkManager-dispatcher.service
 ├── dbus-org.freedesktop.timesync1.service -> /usr/lib/systemd/system/systemd-timesyncd.service
 ├── display-manager.service -> /usr/lib/systemd/system/lxdm.service
 ├── getty.target.wants
 │   └── getty@tty1.service -> /usr/lib/systemd/system/getty@.service
 ├── graphical.target.wants
+│   ├── bumblebeed.service -> /usr/lib/systemd/system/bumblebeed.service
 │   └── udisks2.service -> /usr/lib/systemd/system/udisks2.service
 ├── multi-user.target.wants
 │   ├── atd.service -> /usr/lib/systemd/system/atd.service
-│   ├── blueman-mechanism.service -> /usr/lib/systemd/system/blueman-mechanism.service
+│   ├── btrfs-scrub@root.timer -> /usr/lib/systemd/system/btrfs-scrub@.timer
 │   ├── cronie.service -> /usr/lib/systemd/system/cronie.service
 │   ├── dnscrypt-proxy.service -> /usr/lib/systemd/system/dnscrypt-proxy.service
 │   ├── fail2ban.service -> /usr/lib/systemd/system/fail2ban.service
@@ -173,8 +172,7 @@ SATA_LINKPWR_ON_BAT=max_performance
 │   ├── pkgfile-update.timer -> /usr/lib/systemd/system/pkgfile-update.timer
 │   ├── remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
 │   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
-│   ├── v2ray.service -> /usr/lib/systemd/system/v2ray.service
-│   └── wpa_supplicant.service -> /usr/lib/systemd/system/wpa_supplicant.service
+│   └── v2ray.service -> /usr/lib/systemd/system/v2ray.service
 ├── network-online.target.wants
 │   └── NetworkManager-wait-online.service -> /usr/lib/systemd/system/NetworkManager-wait-online.service
 ├── printer.target.wants
@@ -183,12 +181,12 @@ SATA_LINKPWR_ON_BAT=max_performance
 │   └── org.cups.cupsd.socket -> /usr/lib/systemd/system/org.cups.cupsd.socket
 ├── sysinit.target.wants
 │   └── systemd-timesyncd.service -> /usr/lib/systemd/system/systemd-timesyncd.service
-├── systemd-rfkill.service -> /dev/null
-├── systemd-rfkill.socket -> /dev/null
 └── timers.target.wants
-    └── fstrim.timer -> /usr/lib/systemd/system/fstrim.timer
+    ├── e2scrub_all.timer -> /usr/lib/systemd/system/e2scrub_all.timer
+    ├── fstrim.timer -> /usr/lib/systemd/system/fstrim.timer
+    └── xfs_scrub_all.timer -> /usr/lib/systemd/system/xfs_scrub_all.timer
 
-    9 directories, 29 files
+9 directories, 27 files
 ```
 
 - trizen powerline-console-fonts后，编辑`/etc/vconsole.conf`，加入`FONT="ter-powerline-v16n"`
