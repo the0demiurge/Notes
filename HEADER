@@ -6,14 +6,16 @@ Book Source: [CharlesNotes](https://github.com/the0demiurge/Notes)
 
 Online Reading: [notes.pythonic.life](https://notes.pythonic.life)
 
-# Download Offline Version
+Building status: [![Build Status](Notes.svg)](https://travis-ci.org/the0demiurge/Notes)
+
+## Download Offline Version
 
 - [EPUB](https://raw.githubusercontent.com/the0demiurge/Notes/gh-pages/books/CharlesNotes.epub)
 - [MOBI](https://raw.githubusercontent.com/the0demiurge/Notes/gh-pages/books/CharlesNotes.mobi)
 
-# How to Write Notes Likes This?
+## How to Write Notes Likes This?
 
 You can read my blog: [最好的电子笔记本：GitBook + Typora](https://the0demiurge.blogspot.jp/2018/02/gitbooktypora.html).
 
-# Files List
+## Files List
 
