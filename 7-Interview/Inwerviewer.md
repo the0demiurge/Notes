@@ -1,3 +1,15 @@
+# 面试总结
+
+## 编程随想：[俺的招聘经验](https://program-think.blogspot.com/2011/03/hiring-experience-0.html#index)
+
+1. [面试 vs 笔试](https://program-think.blogspot.com/2011/03/hiring-experience-1.html)
+2. [考察技术 vs 考察非技术](https://program-think.blogspot.com/2011/03/hiring-experience-2.html)
+3. [开放性问题 vs 封闭性问题](https://program-think.blogspot.com/2011/05/hiring-experience-3.html)
+4. [通过笔试答题能看出啥？](https://program-think.blogspot.com/2011/11/hiring-experience-4.html)
+5. [面试前的准备工作](https://program-think.blogspot.com/2012/12/hiring-experience-5.html)
+6. 面谈的技巧
+7. (未完待续)
+
 ## 问题总结
 
 1. 强化学习
