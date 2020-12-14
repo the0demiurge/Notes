@@ -1,6 +1,10 @@
 # 面试总结
 
-## 编程随想：[俺的招聘经验](https://program-think.blogspot.com/2011/03/hiring-experience-0.html#index)
+## 编程随想：招聘系列
+
+[招聘的误区](https://program-think.blogspot.com/2009/04/defect-of-hire.html)
+
+[俺的招聘经验](https://program-think.blogspot.com/2011/03/hiring-experience-0.html#index)
 
 1. [面试 vs 笔试](https://program-think.blogspot.com/2011/03/hiring-experience-1.html)
 2. [考察技术 vs 考察非技术](https://program-think.blogspot.com/2011/03/hiring-experience-2.html)
@@ -61,7 +65,8 @@
 8. 非技术类：
    - （解决问题能力）有过哪些重大困难，如何解决
    - （兴趣）生活中用编程做了哪些有趣的东西
-   - （学习能力）如何学习一个从没接触过的编程语言
+   - （学习能力）如何学习一个从没接触过的编程语言，有过哪些快速学习的经历
+   - （团队协作）在团队中怎么分工
 
 
 
