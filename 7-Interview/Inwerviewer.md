@@ -30,12 +30,15 @@
 2. Linux
    - 用了多久
    - 主要使用哪些发行版
-   - 权限，用户
+   - 权限，用户(chmod, chown)
    - 环境变量，写到各种地方的区别和原理
-   - apt, df, du, wc, uniq, ps, top, lsblk
+   - apt
+   - grep, sed, awk, wc, uniq, history
+   - find, du, df, lsblk
+   - ps, top
    - mount, umount
-   - 系统管理组件，systemctl, rc, init
-   - 启动项，grub/systemd-boot
+   - 系统管理组件：systemctl, rc, init, crontab
+   - 启动项：grub/systemd-boot
 3. 操作系统
    - 进程/线程区别
    - 进程/线程通信
