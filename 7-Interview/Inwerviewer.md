@@ -78,7 +78,7 @@
    - 排序，稳定性，时空复杂度，复杂度推导
    - 链表（反转，找环，Y形链表）
    - 动态规划（求一下最长公共字符串），回溯（八皇后）
-   - qsort/mergesort/bubblesort/二分查找/找中位数/topK/第K大数
+   - [qsort/mergesort](../1-Computer_Science/sort.py.md)/bubblesort/[二分查找](https://github.com/python/cpython/blob/master/Lib/bisect.py)/找中位数/topK/第K大数
 8. 非技术类：
    - （解决问题能力）遇到过过哪些很难的问题，如何解决
    - （学习能力）如何学习一个从没接触过的编程语言，有过哪些快速学习的经历
