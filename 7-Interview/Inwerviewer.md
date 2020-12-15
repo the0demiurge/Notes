@@ -30,19 +30,19 @@
 2. Linux
    - 用了多久
    - 主要使用哪些发行版
-   - 权限，用户(chmod, chown)
+   - 权限，用户(chmod, chown), 比如644的权限，文件夹的 x 权限
    - 环境变量，写到各种地方的区别和原理
    - apt
-   - grep, sed, awk, wc, uniq, history
-   - find, du, df, lsblk
-   - ps, top
-   - mount, umount
+   - 文本处理：grep, sed, awk, wc, uniq, history
+   - 文件处理：find, du, df, lsblk
+   - 进程：ps, top
+   - 外置存储：mount, umount
    - 系统管理组件：systemctl, rc, init, crontab
    - 启动项：grub/systemd-boot
 3. 操作系统
    - 进程/线程区别
    - 进程/线程通信
-   - python进程/线程
+   - python进程/线程（GIL）
    - 堆区和栈区
 4. 软件工程
    - git, git workflow
@@ -53,9 +53,9 @@
 5. python/shell
    - Bash里面 字符串单双引号区别
    - python 优缺点
-   - 装饰器
+   - 装饰器的功能和实现
    - GIL
-   - with
+   - with 的实现
    - functools
    - collections
    - logging
@@ -63,20 +63,20 @@
    - r''
    - sort
 6. C++开发
-   - 开发规范：hh, cc
+   - 开发规范：头文件写接口，cc 文件写实现
    - 用什么编译器编译命令
    - 库函数
-   - shared object
+   - 编译出 shared object 的方法
    - makefile
 7. 数据结构与算法
    - 矩阵运算（行列式，正定，逆，转置，特征值，解方程等等）
    - 排序，稳定性，时空复杂度，复杂度推导
    - 链表（反转，找环，Y形链表）
    - 动态规划（求一下最长公共字符串），回溯（八皇后）
-   - 或者快排/二分查找/找中位数
+   - qsort/mergesort/bubblesort/二分查找/找中位数/topK/第K大数
 8. 非技术类：
-   - （解决问题能力）有过哪些重大困难，如何解决
+   - （解决问题能力）遇到过过哪些很难的问题，如何解决
    - （学习能力）如何学习一个从没接触过的编程语言，有过哪些快速学习的经历
    - （学习能力）读过哪些书，书中有哪些令人印象深刻的内容
-   - （兴趣）生活中用编程做了哪些有趣的东西
-   - （团队协作）在团队中怎么分工
+   - （兴趣）生活中用编程做了哪些有趣的事情
+   - （团队协作）在团队中怎么分工和合作
