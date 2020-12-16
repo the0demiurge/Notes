@@ -75,7 +75,9 @@
    - makefile
 7. 数据结构与算法
    - 矩阵运算（行列式，正定，逆，转置，特征值，解方程等等）
+   - 递归（树，斐波那契数列）
    - 排序，稳定性，时空复杂度，复杂度推导
+   - DFS, BFS
    - 链表（反转，找环，Y形链表）
    - 动态规划（求一下最长公共字符串），回溯（八皇后）
    - [qsort/mergesort](../1-Computer_Science/sort.py.md)/bubblesort/[二分查找](https://github.com/python/cpython/blob/master/Lib/bisect.py)/找中位数/topK/第K大数
