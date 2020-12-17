@@ -58,14 +58,14 @@
 5. python/shell
    - Bash里面 字符串单双引号区别
    - python 优缺点
-   - 装饰器的功能和实现
    - GIL
+   - break 能跳出几重循环
+   - 装饰器的功能和实现
    - with 的实现
    - functools
    - collections
    - logging
    - re
-   - r''
    - sort
 6. C++开发
    - 开发规范：头文件写接口，cc 文件写实现
