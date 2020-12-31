@@ -6,7 +6,7 @@ Book Source: [CharlesNotes](https://github.com/the0demiurge/Notes)
 
 Online Reading: [notes.pythonic.life](https://notes.pythonic.life)
 
-Building status: [![Build Status](Notes.svg)](https://travis-ci.org/the0demiurge/Notes)
+Building status: [![Build Status](https://www.travis-ci.org/the0demiurge/Notes.svg?branch=master)](https://www.travis-ci.org/the0demiurge/Notes)
 
 ## Download Offline Version
 
@@ -138,10 +138,8 @@ Notes
 ├── z-Sundry
 │   └── DPT-RP1\ Config.md
 ├── HEADER
-├── Notes.svg
 ├── README.md
-├── build.sh
-└── gitbook-auto-summary.py
+└── build.sh
 
-35 directories, 97 files
+35 directories, 95 files
 ```
