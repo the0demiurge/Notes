@@ -6,7 +6,7 @@ Book Source: [CharlesNotes](https://github.com/the0demiurge/Notes)
 
 Online Reading: [notes.pythonic.life](https://notes.pythonic.life)
 
-Building status: [![Build Status](https://www.travis-ci.org/the0demiurge/Notes.svg?branch=master)](https://www.travis-ci.org/the0demiurge/Notes)
+![GitBook-Legacy to GitHub Pages](https://github.com/the0demiurge/Notes/workflows/GitBook-Legacy%20to%20GitHub%20Pages/badge.svg)
 
 ## Download Offline Version
 
