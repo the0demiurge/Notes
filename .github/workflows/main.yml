@@ -1,0 +1,39 @@
+name: GitBook-Legacy to GitHub Pages
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+env:
+  TZ: "Asia/Shanghai"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+
+      - name: Install dependency
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get install -y xvfb calibre tree
+          npm install gitbook-cli -g
+          npm install gitbook-summary -g
+          gitbook install
+
+      - name: Trigger personal build script
+        run: ./build.sh build
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: _book
+          fqdn: ${{secrets.CUSTOM_DOMAIN}}
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
