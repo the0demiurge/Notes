@@ -43,34 +43,39 @@ Notes
 │   ├── swap.cc
 │   ├── swap.md
 │   └── swap.py
-├── 2-Programming_Languages
-│   ├── C++
-│   │   ├── Gramma
-│   │   │   ├── argv.cc.md
-│   │   │   └── inherit.cc.md
-│   │   ├── STL
+├── 2-Programming
+│   ├── Language
+│   │   ├── C++
+│   │   │   ├── Gramma
+│   │   │   │   ├── argv.cc.md
+│   │   │   │   └── inherit.cc.md
+│   │   │   ├── STL
+│   │   │   │   └── README.md
 │   │   │   └── README.md
-│   │   └── README.md
-│   ├── Python
-│   │   ├── DevTools
-│   │   │   ├── crash_on_ipy.py.md
-│   │   │   └── jupyter_hide_code.py.md
-│   │   └── Example
-│   │       ├── sendmail
-│   │       │   ├── README.md
-│   │       │   ├── attachment.py.md
-│   │       │   ├── pic.py.md
-│   │       │   ├── qq_smtp.py.md
-│   │       │   └── sendmail.py.md
-│   │       ├── argparse_example.py.md
-│   │       ├── ctypes.md
-│   │       ├── cython.md
-│   │       ├── keyboard-mouse.md
-│   │       ├── ncurses_example.py.md
-│   │       ├── pandas.md
-│   │       ├── qrcode_example.py.md
-│   │       ├── socket.md
-│   └── Regular\ Expression.md
+│   │   ├── Python
+│   │   │   ├── DevTools
+│   │   │   │   ├── crash_on_ipy.py.md
+│   │   │   │   └── jupyter_hide_code.py.md
+│   │   │   └── Example
+│   │   │       ├── sendmail
+│   │   │       │   ├── README.md
+│   │   │       │   ├── attachment.py.md
+│   │   │       │   ├── pic.py.md
+│   │   │       │   ├── qq_smtp.py.md
+│   │   │       │   └── sendmail.py.md
+│   │   │       ├── argparse_example.py.md
+│   │   │       ├── ctypes.md
+│   │   │       ├── cython.md
+│   │   │       ├── keyboard-mouse.md
+│   │   │       ├── ncurses_example.py.md
+│   │   │       ├── pandas.md
+│   │   │       ├── qrcode_example.py.md
+│   │   │       ├── socket.md
+│   │   └── Regular\ Expression.md
+│   └── Software_Engineering
+│       └── Design
+│           ├── Factory_Pattern.md
+│           └── README.md
 ├── 3-Linux
 │   ├── Bash
 │   │   ├── README.md
@@ -137,9 +142,10 @@ Notes
 │   └── Terms.md
 ├── z-Sundry
 │   └── DPT-RP1\ Config.md
+├── CNAME
 ├── HEADER
 ├── README.md
 └── build.sh
 
-35 directories, 95 files
+38 directories, 98 files
 ```
