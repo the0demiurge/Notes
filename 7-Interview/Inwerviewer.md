@@ -50,7 +50,7 @@
    - apt
    - 文本处理：grep, sed, awk, wc, uniq, history
    - 文件处理：find, du, df, lsblk
-   - 进程：ps, top
+   - 进程：ps, top, fg, bg
    - 外置存储：mount, umount
    - 系统管理组件：systemctl, rc, init, crontab
    - 启动项：grub/systemd-boot
