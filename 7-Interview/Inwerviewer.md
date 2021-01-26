@@ -33,8 +33,7 @@
    - On-policy, off-policy
    - Actor-critic
    - 前沿算法
-   - 强化学习有效的原理
-   - 强化学习不收敛的原因
+   - 收敛性的理论分析，各种因素对收敛性的影像，reward scale对收敛性的理论影响
    - 神经网络用梯度下降收敛到局部最优怎么办
    - 样本不平衡，reward稀疏
    - 过拟合
@@ -95,6 +94,7 @@
    - 链表（反转，找环，Y形链表）
    - 动态规划（求一下最长公共字符串），回溯（八皇后）
    - [qsort/mergesort](../1-Computer_Science/sort.py.md)/bubblesort/[二分查找](https://github.com/python/cpython/blob/master/Lib/bisect.py)/找中位数/topK/第K大数
+   - 筛法
 9. 非技术类：
    - （解决问题能力）遇到过过哪些很难的问题，如何解决
    - （学习能力）如何学习一个从没接触过的学科或者编程语言，有过哪些快速学习的经历
