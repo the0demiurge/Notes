@@ -21,76 +21,67 @@ You can read my blog: [最好的电子笔记本：GitBook + Typora](https://the0
 
 ```
 Notes
-├── 0-Mathmatics
+├── A0-Mathmatics
 │   ├── attractor.py
 │   └── attractor.py.md
-├── 1-Computer_Science
-│   ├── Bit_Manipulation.md
-│   ├── Calculator_AST.py
-│   ├── Calculator_AST.py.md
-│   ├── DFS-BFS.md
-│   ├── Diffie_Hellman_Key_Exchange.md
-│   ├── Diffie_Hellman_Key_Exchange.py
-│   ├── Dynamic_Programming.md
-│   ├── Eight_Queen.py
-│   ├── Eight_Queen.py.md
-│   ├── FullBinaryTreeHeap.py
-│   ├── FullBinaryTreeHeap.py.md
-│   ├── dsr.py
-│   ├── longest_common_substr.cc
-│   ├── sort.py
-│   ├── sort.py.md
-│   ├── swap.cc
-│   ├── swap.md
-│   └── swap.py
-├── 2-Programming
-│   ├── Language
-│   │   ├── C++
-│   │   │   ├── Gramma
-│   │   │   │   ├── argv.cc.md
-│   │   │   │   └── inherit.cc.md
-│   │   │   ├── STL
-│   │   │   │   └── README.md
-│   │   │   └── README.md
-│   │   ├── Python
-│   │   │   ├── DevTools
-│   │   │   │   ├── crash_on_ipy.py.md
-│   │   │   │   └── jupyter_hide_code.py.md
-│   │   │   └── Example
-│   │   │       ├── sendmail
-│   │   │       │   ├── README.md
-│   │   │       │   ├── attachment.py.md
-│   │   │       │   ├── pic.py.md
-│   │   │       │   ├── qq_smtp.py.md
-│   │   │       │   └── sendmail.py.md
-│   │   │       ├── argparse_example.py.md
-│   │   │       ├── ctypes.md
-│   │   │       ├── cython.md
-│   │   │       ├── keyboard-mouse.md
-│   │   │       ├── ncurses_example.py.md
-│   │   │       ├── pandas.md
-│   │   │       ├── qrcode_example.py.md
-│   │   │       ├── socket.md
-│   │   └── Regular\ Expression.md
-│   └── Software_Engineering
-│       └── Design
-│           ├── Factory_Pattern.md
-│           └── README.md
-├── 3-Linux
-│   ├── Bash
-│   │   ├── README.md
-│   ├── Server_Maintenance
-│   │   ├── scripts
-│   │   │   ├── README.md
-│   │   │   ├── backup_server_data.py.md
-│   │   │   ├── charles-adduser.sh.md
-│   │   │   ├── mv2cron.bash.md
-│   │   │   └── sendlog.py.md
-│   │   ├── AUTO_UPGRADE.md
-│   │   ├── QUOTA.md
-│   │   └── SECURITY.md
-│   └── Arch\ Linux\ Installation.md
-├── 4-Machine_Learning
+├── A1-Computer_Science
+│   ├── Algorithm
+│   │   ├── Bit_Manipulation.md
+│   │   ├── Calculator_AST.py
+│   │   ├── Calculator_AST.py.md
+│   │   ├── DFS-BFS.md
+│   │   ├── Diffie_Hellman_Key_Exchange.md
+│   │   ├── Diffie_Hellman_Key_Exchange.py
+│   │   ├── Dynamic_Programming.md
+│   │   ├── Eight_Queen.py
+│   │   ├── Eight_Queen.py.md
+│   │   ├── FullBinaryTreeHeap.py
+│   │   ├── FullBinaryTreeHeap.py.md
+│   │   ├── dsr.py
+│   │   ├── longest_common_substr.cc
+│   │   ├── sort.py
+│   │   ├── sort.py.md
+│   │   ├── swap.cc
+│   │   ├── swap.md
+│   │   └── swap.py
+│   └── Programming
+│       ├── Front_End
+│       │   ├── HTML
+│       │   │   └── split\ panes.html.md
+│       │       ├── FrontEnd.html.md
+│       ├── Language
+│       │   ├── C++
+│       │   │   ├── Gramma
+│       │   │   │   ├── argv.cc.md
+│       │   │   │   └── inherit.cc.md
+│       │   │   ├── STL
+│       │   │   │   └── README.md
+│       │   │   └── README.md
+│       │   ├── Python
+│       │   │   ├── DevTools
+│       │   │   │   ├── crash_on_ipy.py.md
+│       │   │   │   └── jupyter_hide_code.py.md
+│       │   │   └── Example
+│       │   │       ├── sendmail
+│       │   │       │   ├── README.md
+│       │   │       │   ├── attachment.py.md
+│       │   │       │   ├── pic.py.md
+│       │   │       │   ├── qq_smtp.py.md
+│       │   │       │   └── sendmail.py.md
+│       │   │       ├── argparse_example.py.md
+│       │   │       ├── ctypes.md
+│       │   │       ├── cython.md
+│       │   │       ├── keyboard-mouse.md
+│       │   │       ├── ncurses_example.py.md
+│       │   │       ├── pandas.md
+│       │   │       ├── qrcode_example.py.md
+│       │   │       ├── socket.md
+│       │   └── Regular\ Expression.md
+│       └── Software_Engineering
+│           └── Design
+│               ├── Factory_Pattern.md
+│               └── README.md
+├── A2-Machine_Learning
 │   ├── Algorithms
 │   │   ├── Deep_Reinforcement_Learning
 │   │   │   ├── Policy_Gradient
@@ -125,27 +116,45 @@ Notes
 │           ├── Distributed_tensorflow.py.md
 │           ├── Duplicate_a_tensorflow_graph.md
 │           └── README.md
-├── 5-Front_End
-│   ├── HTML
-│   │   └── split\ panes.html.md
-│       ├── FrontEnd.html.md
-├── 6-Academic
-│   ├── README.md
-├── 7-Interview
-│   ├── Inwerviewer.md
-│   └── README.md
-├── 8-Photography
-├── 9-Quantitative_Investment
-├── a-Traffic_Control
+├── A3-Linux
+│   ├── Bash
+│   │   ├── README.md
+│   ├── Server_Maintenance
+│   │   ├── scripts
+│   │   │   ├── README.md
+│   │   │   ├── backup_server_data.py.md
+│   │   │   ├── charles-adduser.sh.md
+│   │   │   ├── mv2cron.bash.md
+│   │   │   └── sendlog.py.md
+│   │   ├── AUTO_UPGRADE.md
+│   │   ├── QUOTA.md
+│   │   └── SECURITY.md
+│   └── Arch\ Linux\ Installation.md
+├── B-Economics
+│   └── Quantitative_Investment
+├── B-Management
+│   ├── HumanResource
+│   │   └── Interview
+│   │       ├── Inwerviewer.md
+│   │       └── README.md
+│   └── ManagementByObject
+│       ├── OKR.md
+│       ├── README.md
+│       ├── SMART.md
+│       └── Self-Control.md
+├── C-Traffic_Control
 │   ├── Objects.md
 │   ├── README.md
 │   └── Terms.md
-├── z-Sundry
+├── X-Photography
+├── Y-Academic
+│   ├── README.md
+├── Z-Sundry
 │   └── DPT-RP1\ Config.md
 ├── CNAME
 ├── HEADER
 ├── README.md
 └── build.sh
 
-38 directories, 98 files
+43 directories, 102 files
 ```
