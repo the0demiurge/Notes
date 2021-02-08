@@ -2,7 +2,7 @@
 
 ## 经济学十大原理
 
-个人如何做出决策
+个人如何制定决策
 
 1. People face trade-offs：选择是可微分的
 2. The cost of something is what you give up to get it：成本计算应当遍历所有选项
