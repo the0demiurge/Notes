@@ -1,21 +1,10 @@
-# Ornstein–Uhlenbeck process
+# 强化学习
 
-```python
-from random import gauss
+## 强化学习训练指标
 
-class OrnsteinUhlenbeckProcess(object):
-    # Ornstein–Uhlenbeck process
-    def __init__(self, dt, theta, sigma, nums=1):
-        self.x = [0] * nums
-        self.dt = dt
-        self.theta = theta
-        self.sigma = sigma
-        self.nums = nums
-
-    def __call__(self):
-        dx = [-self.theta * self.x[i] * self.dt + self.sigma * gauss(0, 1) for i in range(self.nums)]
-        self.x = [self.x[i] + dx[i] for i in range(self.nums)]
-        return self.x
-
-```
-
+- 采样动作分布
+- Entropy
+- Q-function Loss
+- Q-function vs Return
+- Q1-Q2
+- Reward vs Return
