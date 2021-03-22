@@ -31,18 +31,21 @@
       - On-policy, off-policy, 优劣
       - AC, Value-based, PG, 优劣
       - tricks, tricks有效的原因
-      - 收敛性的理论分析，各种因素对收敛性的影像，reward scale对收敛性的理论影响
+      - nstep dqn为什么可以work，理论上和公式不相符(by gxy)
+      - 为什么强化学习中batchnorm和dropout很少见(by gxy)
+      - 收敛性的理论分析，各种因素对收敛性的影响，reward scale/正负对算法的理论影响(merged from gxy)
+      - gae与td lambda的关系 为什么用gae(by gxy)
       - POMDP 有哪些类型和常见解决方法
       - RL 有哪些弱点和局限
    2. 工程经验
       - 状态/动作/回报怎么设计
+      5. 如何判断训练是否正常(by gxy)
       - 使用什么指标评估效果，有baseline算法吗
-      - reward shaping
       - 样本不平衡，reward稀疏
       - 过拟合
       - 调过哪些参数，哪些参数分别有什么影响
-   - 不收敛的原因有哪些，如何解决
-   
+      - 不收敛的原因有哪些，如何解决
+
 3. Linux
    - 用了多久
    - 主要使用哪些发行版
