@@ -63,8 +63,9 @@
    - 进程/线程区别
    - 进程/线程通信
    - python进程/线程（GIL）
-   - 堆区和栈区
-
+   - python进程启动方式区别
+- 堆区和栈区
+   
 5. 软件工程
    - git, git workflow
    - 如何设计整个代码架构（比如边写边改边抽象；提前设计好接口-自顶向下法或自底向上法等）
@@ -73,7 +74,7 @@
    - 代码规范化
    - 单元测试
 - 开源协议知道哪些
-   
+  
 6. python/shell
    - Bash里面 字符串单双引号区别
    - python 优缺点
@@ -82,17 +83,18 @@
    - mutable
    - ==, is
    - 装饰器的功能和实现
-   - with 的实现
+   - 上下文管理器，with 的实现
    - functools
    - collections
    - logging
    - yield
    - re
    - sort
+   - Asyncio
    - 一切都是对象的理解
    - inspect，dir
-   - 垃圾回收
-
+- 垃圾回收
+   
 7. C++开发
    - 开发规范：头文件写接口，cc 文件写实现
    - 用什么编译器编译命令
