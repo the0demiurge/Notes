@@ -47,8 +47,7 @@
       - 不收敛的原因有哪些，如何解决
 
 3. Linux
-   - 用了多久
-   - 主要使用哪些发行版
+   - Bash里面 字符串单双引号区别
    - 权限，用户(chmod, chown), 比如644的权限，文件夹的 x 权限
    - 环境变量，写到各种地方的区别和原理
    - apt
@@ -58,7 +57,7 @@
    - 外置存储：mount, umount
    - 系统管理组件：systemctl, rc, init, crontab
    - 启动项：grub/systemd-boot
-
+   
 4. 操作系统
    - 进程/线程区别
    - 进程/线程通信
@@ -74,23 +73,18 @@
    - 单元测试
    - 开源协议知道哪些
 6. python/shell
-   - Bash里面 字符串单双引号区别
    - python 优缺点
    - GIL
-   - break 能跳出几重循环
    - mutable
    - ==, is
-   - 装饰器的功能和实现
-   - 上下文管理器，with 的实现
-   - functools
-   - collections
-   - logging
-   - yield
+   - 上下文管理器：with 的实现；装饰器的功能和实现
+   - functools, logging, collections
+   - yield, nonlocal, break
    - re
    - sort
    - Asyncio
    - 一切都是对象的理解
-   - inspect，dir
+   - inspect, dir
    - 垃圾回收
 7. C++开发
    - 开发规范：头文件写接口，cc 文件写实现
@@ -101,7 +95,6 @@
 - 内存/资源泄漏
    - 安全（内存/线程，以及不安全的函数）
    - makefile
-   
 8. 数据结构与算法
    - 矩阵运算（行列式，正定，逆，转置，特征值，解方程等等）
    - 递归（树，斐波那契数列）
