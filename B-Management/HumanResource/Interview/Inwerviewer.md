@@ -35,6 +35,7 @@
       - 为什么强化学习中batchnorm和dropout很少见(by gxy)
       - 收敛性的理论分析，各种因素对收敛性的影响，reward scale/正负对算法的理论影响(merged from gxy)
       - gae与td lambda的关系 为什么用gae(by gxy)
+      - Over-estimated Q values
       - POMDP 有哪些类型和常见解决方法
       - RL 有哪些弱点和局限
    2. 工程经验
@@ -45,7 +46,7 @@
       - 过拟合
       - 调过哪些参数，哪些参数分别有什么影响
       - 不收敛的原因有哪些，如何解决
-
+   
 3. Linux
    - Bash里面 字符串单双引号区别
    - 权限，用户(chmod, chown), 比如644的权限，文件夹的 x 权限
