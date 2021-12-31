@@ -5,7 +5,7 @@ book sm -i node_modules -s '-' -d
 cat HEADER|tee README.md
 echo "\`\`\`" |tee -a README.md
 echo "Notes" |tee -a README.md
-tree --dirsfirst -I '__pycache__|node_modules|*.png|*.gif|_book|*.json|*.jpg'|grep -v '^\.$'|tee -a README.md
+tree -n --dirsfirst -I '__pycache__|node_modules|*.png|*.gif|_book|*.json|*.jpg'|grep -v '^\.$'|tee -a README.md
 echo "\`\`\`" |tee -a README.md
 
 if [ ! -z $1 ];then
