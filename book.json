@@ -4,7 +4,7 @@
     "plugins": [
         "katex",
         "copy-code-button",
-        "graphviz@git+https://github.com/darvasd/gitbook-plugin-graphviz.git",
+        "viz",
         "disqus",
         "expandable-chapters",
         "edit-link-plus"
@@ -16,17 +16,10 @@
     "pluginsConfig": {
         "disqus": {
             "shortName": "notes-pythonic-life"
+        },
+        "edit-link-plus": {
+            "base": "https://github.com/the0demiurge/Notes/blob/master/",
+            "label": "View Source"
         }
-    },
-    "pdf": {
-        "fontFamily": "SimSun"
-    },
-    "graphviz": {
-        "format": "svg",
-        "engine": "dot"
-    },
-    "edit-link-plus": {
-        "base": "https://github.com/the0demiurge/Notes/blob/master/",
-        "label": "View Source"
     }
 }
