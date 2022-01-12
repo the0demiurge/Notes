@@ -20,7 +20,7 @@ jobs:
       - name: Install dependency
         run: |
           sudo apt-get -qq update
-          sudo apt-get install -y tree
+          sudo apt-get install -y tree calibre xvfb
           npm install gitbook-cli -g
           npm install gitbook-summary -g
           npm install svgexport -g
