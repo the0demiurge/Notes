@@ -25,24 +25,24 @@
    - base 哪里
 2. 强化学习
    1. 算法理解
-      - 使用什么算法，算法细节，输入输出，网络设计
-      - Model-based, model-free
+      - 用过什么算法，为什么选择该算法，算法细节，输入输出，网络设计
       - On-policy, off-policy, 优劣
       - AC, Value-based, PG, 优劣
+      - Model-based, model-free
       - tricks, tricks有效的原因
       - nstep dqn为什么可以work，理论上和公式不相符(by gxy)
       - 为什么强化学习中batchnorm和dropout很少见(by gxy)
       - 收敛性的理论分析，各种因素对收敛性的影响，reward scale/正负对算法的理论影响(merged from gxy)
       - gae与td lambda的关系 为什么用gae(by gxy)
-      - Over-estimated Q values
+      - Over-estimated Q values 问题、原因和缓解方法
       - POMDP 有哪些类型和常见解决方法
       - RL 有哪些弱点和局限
    2. 工程经验
       - 状态/动作/回报怎么设计
       - 如何判断训练是否正常(by gxy)
       - 使用什么指标评估效果，有baseline算法吗
-      - 样本不平衡，reward稀疏
-      - 过拟合
+      - 样本不平衡（大部分动作都不好），reward稀疏
+      - 过拟合到环境怎么办
       - 调过哪些参数，哪些参数分别有什么影响
       - 不收敛的原因有哪些，如何解决
 3. 运筹优化
@@ -55,21 +55,20 @@
    - 代理模型原理
    - 随机优化/鲁棒优化
 4. Linux
-   - Bash里面 字符串单双引号区别
    - 权限，用户(chmod, chown), 比如644的权限，文件夹的 x 权限
-   - 环境变量，写到各种地方的区别和原理
-   - apt
    - 文本处理：grep, sed, awk, wc, uniq, history
    - 文件处理：find, du, df, lsblk
    - 进程：ps, top, fg, bg
    - 外置存储：mount, umount
+   - 环境变量，写到各种地方的区别和原理
    - 系统管理组件：systemctl, rc, init, crontab
    - 启动项：grub/systemd-boot
+   - Bash里面 字符串单双引号区别
 5. 操作系统
    - 进程/线程区别
    - 进程/线程通信
    - python进程/线程（GIL）
-   - python进程启动方式区别
+   - linux 有哪些进程启动方式
    - 堆区和栈区
 6. 软件工程
    - git, git workflow
@@ -83,37 +82,39 @@
    - python 优缺点
    - GIL
    - mutable
-   - ==, is
-   - 上下文管理器：with 的实现；装饰器的功能和实现
+   - ==, is 区别；运算符重载
+   - 上下文管理器：with 的实现；装饰器的功能和实现，用装饰器实现上下文管理器的库contextlib
    - functools, logging, collections
    - yield, nonlocal, break
    - re
-   - sort
+   - sort 函数用的什么算法
    - Asyncio
-   - 一切都是对象的理解
+   - 一切都是对象的理解，a+b运算在cpython的实现中做了哪些操作
    - inspect, dir
    - 垃圾回收
 8. C++开发
    - 开发规范：头文件写接口，cc 文件写实现
    - 用什么编译器编译命令
-   - 库函数
+   - STL，sort 函数使用的什么算法
    - Autopointer
-   - segfault
-   - 内存/资源泄漏
-   - 安全（内存/线程，以及不安全的函数）
+   - segfault 原因，如何debug
+   - 内存/资源泄漏的原因，实现一个内存泄漏代码
+   - 安全（内存/线程，以及不安全的函数strcpy，C++容易写出哪些安全问题）
    - makefile
 9. 数据结构与算法
+   - 打印螺旋下三角
    - 多路归并
-   - 股票交易问题
-   - 序列化
-   - 矩阵运算（行列式，正定，逆，转置，特征值，解方程等等）
+   - 股票交易问题（每日股价已知，规定买入卖出次数，最大化收益）
    - 递归（树，斐波那契数列）
    - 排序，稳定性，时空复杂度，复杂度推导
-   - DFS, BFS
    - 链表（反转，找环，Y形链表）
    - 动态规划（求一下最长公共字符串），回溯（八皇后）
    - [qsort/mergesort](../1-Computer_Science/sort.py.md)/bubblesort/[二分查找](https://github.com/python/cpython/blob/master/Lib/bisect.py)/找中位数/topK/第K大数
-   - 筛法
+   - 质数筛法
+   - DFS, BFS
+   - 把字典中内容序列化为list
+   - 矩阵运算（行列式，正定，逆，转置，特征值，解方程等等）
+   - 数学运算（求反函数，CDF和PDF转换）
 10. 数学
    - 硬币问题-几何分布（投掷不均匀硬币，设计一种公平试验让两个人胜率相等。平均多少次能结束该试验）
    - 1/k 概率的试验运行 k 次，求中奖率。如果k趋于无穷，中奖率多少
