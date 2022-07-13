@@ -1,0 +1,3 @@
+- `ffmpeg -i input.mp4 -qscale 0 output.avi` 转换格式
+- `-qscale 0` 不降低视频质量
+- `-filter_complex hstack/vstack` 横向/纵向拼接

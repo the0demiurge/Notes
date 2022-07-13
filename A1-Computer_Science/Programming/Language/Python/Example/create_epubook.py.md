@@ -19,7 +19,7 @@ def create_epubook(
 ):
     '''
     chapters = [
-        (chapter, section, title, html_content),
+        (chapter, section, html_content),
     ]
     cover_img = (filename, content)
     images = {filename: content}
@@ -75,12 +75,12 @@ img  {
 
     # sections
     sec_toc: list = [(epub.Section('placeholder'), list())]
-    for i, (chapter, section, section_title, content) in enumerate(chapters):
+    for i, (chapter, section, content) in enumerate(chapters):
         filename = f"{i}.xhtml"
 
         if chapter != sec_toc[-1][0].title:
             sec_toc.append((epub.Section(chapter, filename), list()))
-        item = epub.EpubHtml(title=' '.join((section, section_title)), file_name=filename, content=content)
+        item = epub.EpubHtml(title=section, file_name=filename, content=content)
 
         sec_toc[-1][-1].append(item)
 
@@ -106,12 +106,12 @@ if __name__ == '__main__':
         'title',
         'author',
         [
-            ('c1', 's1', 'title for s1', '<p>s1 content</p><img src="1.svg"/>'),
-            ('c1', 's2', 'title for s1', '<p>s2 content</p><img src="static/2.svg"/>'),
-            ('c1', 's3', 'title for s1', '<p>s3 content</p>'),
-            ('c2', 's1', 'title for s1', '<p>s1 content</p>'),
-            ('c2', 's2', 'title for s1', '<p>s2 content</p>'),
-            ('c2', 's3', 'title for s1', '<p>s3 content</p>'),
+            ('c1', 'title for s1', '<p>s1 content</p><img src="1.svg"/>'),
+            ('c1', 'title for s1', '<p>s2 content</p><img src="static/2.svg"/>'),
+            ('c1', 'title for s1', '<p>s3 content</p>'),
+            ('c2', 'title for s1', '<p>s1 content</p>'),
+            ('c2', 'title for s1', '<p>s2 content</p>'),
+            ('c2', 'title for s1', '<p>s3 content</p>'),
         ],
         path,
         introduction=('介绍', '<p>introduction content</p>'),
