@@ -76,7 +76,7 @@ img  {
     # sections
     sec_toc: list = [(epub.Section('placeholder'), list())]
     for i, (chapter, section, content) in enumerate(chapters):
-        filename = f"{i}.xhtml"
+        filename = f"chapter_{i}.xhtml"
 
         if chapter != sec_toc[-1][0].title:
             sec_toc.append((epub.Section(chapter, filename), list()))
