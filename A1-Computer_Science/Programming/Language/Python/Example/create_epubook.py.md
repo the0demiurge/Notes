@@ -1,5 +1,5 @@
 ```python
-from typing import Tuple, Union
+from typing import List, Tuple, Union
 
 from ebooklib import epub
 
@@ -10,9 +10,9 @@ def create_epubook(
     chapters: list,
     save_path,
     *,
-    cover_img: Tuple[str, Union[bytes, str]] = None,
+    cover_img: Tuple[str, str, Union[bytes, str]] = None,
     introduction: Tuple[str, str] = None,
-    images: dict = None,
+    images: List[Tuple[str, str, Union[bytes, str]]] = None,
     identifier=None,
     lang='zh',
     css=None,
@@ -21,10 +21,14 @@ def create_epubook(
     chapters = [
         (chapter, section, html_content),
     ]
-    cover_img = (filename, content)
-    images = {filename: content}
+    cover_img = (filename, media_type, content)
+    images = [(filename, media_type, content)]
     introduction = (title, html_content)
     '''
+
+    if not chapters:
+        raise ValueError('chapters must not be empty')
+
     book = epub.EpubBook()
 
     # add metadata
@@ -51,12 +55,14 @@ img  {
     book.add_item(style)
 
     if cover_img is not None:
-        book.set_cover(*cover_img, False)
+        filename, media_type, content = cover_img
+        book.set_cover(**{'file_name': filename, 'content': content}, create_page=False)
 
     # images
     if images:
-        for filename, img_content in images.items():
-            item = epub.EpubImage(file_name=filename, content=img_content)
+        for filename, media_type, content in images:
+            payload = {'file_name': filename, 'media_type': media_type, 'content': content}
+            item = epub.EpubImage(**{k: v for k, v in payload.items() if v is not None})
             book.add_item(item)
 
     spine = []
@@ -115,10 +121,10 @@ if __name__ == '__main__':
         ],
         path,
         introduction=('介绍', '<p>introduction content</p>'),
-        cover_img=('cover.svg', img),
+        cover_img=('cover.svg', None, img),
         images={
-            '1.svg': img,
-            'static/2.svg': img,
+            ('1.svg', None, img),
+            ('static/2.svg', None, img),
         }
     )
     print('saved at', path)
