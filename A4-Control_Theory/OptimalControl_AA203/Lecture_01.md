@@ -8,8 +8,8 @@ $$
 
 其中：
 
-- a history of control inputs $u_{t}$  during interval $[t_0, t_f]$ is called a *control history*
-- a history of state values $x_{t}$  during interval $[t_0, t_f]$ is called a *state* trajectory
+- a history of control inputs $$u_{t}$$  during interval $$[t_0, t_f]$$ is called a *control history*
+- a history of state values $$x_{t}$$  during interval $$[t_0, t_f]$$ is called a *state* trajectory
 
 ## 最优控制例子
 
@@ -20,8 +20,7 @@ $$
 \ddot{s}(t)=a(t)
 $$
 
-
-控制目标：使其状态从$\mathbf{x}_0=[5,0]\rightarrow u_s=[0, 0]$。状态空间表达式（状态转移模型）为：
+控制目标：使其状态从 $$\mathbf{x}_0=[5,0]\rightarrow u_s=[0, 0]$$ 。状态空间表达式（状态转移模型）为：
 $$
 \begin{bmatrix}
 \dot s \\ \dot v
@@ -42,13 +41,15 @@ a
 \end{bmatrix}
 $$
 
-### PD 控制器
+### 比例控制器
 
 线性负反馈：
+
 $$
 a=-k_p(s-s_{u_s})-k_d(v-v_{u_s})
 $$
-解微分方程，得到时域响应，即可分析得知当$k_p,k_d>0$时可收敛到设定值。
+
+解微分方程，得到时域响应，即可分析得知当 $$k_p,k_d \gt 0 $$ 时可收敛到设定值。
 
 ### 最优控制器
 
