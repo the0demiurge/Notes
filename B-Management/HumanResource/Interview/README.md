@@ -1,4 +1,5 @@
 # STAR 回答方向
+
 - **S**ituation:情境
 - **T**ask:任务
 - **A**ction:行为/想法
