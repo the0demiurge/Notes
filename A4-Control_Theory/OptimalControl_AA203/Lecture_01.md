@@ -3,7 +3,7 @@
 ## 状态空间描述
 
 $$
-\boldsymbol{\dot{x}}(t)=\boldsymbol{f}(\boldsymbol{x}(t), \boldsymbol{u}(t), t)
+\mathbf{\dot{x}}(t)=\mathbf{f}(\mathbf{x}(t), \mathbf{u}(t), t)
 $$
 
 其中：
@@ -21,9 +21,8 @@ $$
 $$
 
 
-控制目标：使其状态从$\boldsymbol{x}_0=[5,0]\rightarrow u_s=[0, 0]$。状态空间表达式（状态转移模型）为：
+控制目标：使其状态从$\mathbf{x}_0=[5,0]\rightarrow u_s=[0, 0]$。状态空间表达式（状态转移模型）为：
 $$
-\begin{gathered}
 \begin{bmatrix}
 \dot s \\ \dot v
 \end{bmatrix}
@@ -41,7 +40,6 @@ s\\v
 \begin{bmatrix}
 a
 \end{bmatrix}
-\end{gathered}
 $$
 
 ### PD 控制器
@@ -56,11 +54,14 @@ $$
 
 这里的例子中的最优控制比较简单，直接建立最优化模型，开环控制，求解每个时间步的$u$。
 $$
-min\int_0^{t_f}{\norm{\boldsymbol{x}(t)}_2^2 +\norm{\boldsymbol{u}(t)}_2^2}\\
+min\int_0^{t_f}{\lVert\mathbf{x}(t)\rVert_2^2 +\lVert\mathbf{u}(t)\rVert_2^2}
+$$
+
+$$
 \begin{array}{rrl}
-s.t.&\boldsymbol{\dot{x}}(t)=&A\boldsymbol{x}(t)+B\boldsymbol{u}(t)\\
-&\boldsymbol{\dot{x}}(0)=&\boldsymbol{x}_0\\
-&\boldsymbol{\dot{x}}(t_f)=&\boldsymbol{x}_f
+s.t.&\mathbf{\dot{x}}(t)=&A\mathbf{x}(t)+B\mathbf{u}(t)\\
+&\mathbf{\dot{x}}(0)=&\mathbf{x}_0\\
+&\mathbf{\dot{x}}(t_f)=&\mathbf{x}_f
 \end{array}
 $$
 
@@ -77,8 +78,7 @@ constraints = [x[0]==x_0, x[t_f]=x_f]
 
 for t in [t0 .. tf], do:
 	cost = cost + norm(x[t] - x_f)
-	x[t+1] == dynamics(x[t], u[t]) -add> constraint
+	x[t+1] == dynamics(x[t], u[t]) -add-to-> constraint
 
 solver.solve()
 ```
-

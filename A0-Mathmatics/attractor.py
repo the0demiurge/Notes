@@ -1,5 +1,6 @@
-import MATLAB  # pyMATLABstyle
 import math
+
+import MATLAB  # pyMATLABstyle
 
 
 class Particle(object):
