@@ -1,7 +1,10 @@
 # LDA
 $$
-\omega = S^{-1}_\omega(\mu_0 - \mu_1)\\
-S^{-1}_\omega = V\Sigma^{-1}U^T\\
+\omega = S^{-1}_\omega(\mu_0 - \mu_1)
+$$
+
+$$
+S^{-1}_\omega = V\Sigma^{-1}U^T
 $$
 
 使用奇异值分解，实际$$S^{-1}$$直接用pinv就行(psedu invert)
