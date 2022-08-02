@@ -157,6 +157,8 @@ Notes
 ├── A4-Control_Theory
 │   └── OptimalControl_AA203
 │       ├── Lecture_01.md
+│       ├── Lecture_02.md
+│       ├── mrac.pdf
 │       └── README.md
 ├── B-Economics
 │   ├── Principle
@@ -199,5 +201,5 @@ Notes
 ├── README.md
 └── SUMMARY.md
 
-53 directories, 124 files
+53 directories, 126 files
 ```

@@ -111,6 +111,7 @@
 - A 4 Control Theory
   - [Optimal Control AA 203](A4-Control_Theory/OptimalControl_AA203/README.md)
     * [Lecture 01](A4-Control_Theory/OptimalControl_AA203/Lecture_01.md)
+    * [Lecture 02](A4-Control_Theory/OptimalControl_AA203/Lecture_02.md)
 - B Economics
   - [Principle](B-Economics/Principle/README.md)
   - Quantitative Investment
