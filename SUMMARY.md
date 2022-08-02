@@ -2,6 +2,7 @@
 
 - A 0 Mathmatics
   * [attractor.py](A0-Mathmatics/attractor.py.md)
+  * [Matrix Calculus](A0-Mathmatics/Matrix_Calculus.md)
 - A 1 Computer Science
   - Algorithm
     * [Bit Manipulation](A1-Computer_Science/Algorithm/Bit_Manipulation.md)

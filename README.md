@@ -23,7 +23,8 @@ You can read my blog: [最好的电子笔记本：GitBook + Typora](https://the0
 Notes
 ├── A0-Mathmatics
 │   ├── attractor.py
-│   └── attractor.py.md
+│   ├── attractor.py.md
+│   └── Matrix_Calculus.md
 ├── A1-Computer_Science
 │   ├── Algorithm
 │   │   ├── Bit_Manipulation.md
@@ -198,5 +199,5 @@ Notes
 ├── README.md
 └── SUMMARY.md
 
-53 directories, 123 files
+53 directories, 124 files
 ```
