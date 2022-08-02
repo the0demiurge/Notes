@@ -21,3 +21,12 @@
        - $${\displaystyle {\frac {\partial y}{\partial \mathbf {X} }}={\begin{bmatrix}{\frac {\partial y}{\partial x_{11}}}&{\frac {\partial y}{\partial x_{21}}}&\cdots &{\frac {\partial y}{\partial x_{p1}}}\\{\frac {\partial y}{\partial x_{12}}}&{\frac {\partial y}{\partial x_{22}}}&\cdots &{\frac {\partial y}{\partial x_{p2}}}\\\vdots &\vdots &\ddots &\vdots \\{\frac {\partial y}{\partial x_{1q}}}&{\frac {\partial y}{\partial x_{2q}}}&\cdots &{\frac {\partial y}{\partial x_{pq}}}\\\end{bmatrix}}}$$
        - 标量函数*f*(**X**)关于矩阵**X**在方向**Y**的**方向导数**可写成
        $${\displaystyle \nabla _{\mathbf {Y} }f= {tr} \left({\frac {\partial f}{\partial \mathbf {X} }}\mathbf {Y} \right)}$$
+
+
+## 常用结论
+
+如下结论按照分母记法给出。
+
+- $$\frac{\partial \mathbf{x}^T \mathbf{A}}{\partial \mathbf{x}} = \frac{\partial \mathbf{A}^T\mathbf{x}}{\partial \mathbf{x}}=\mathbf{A}$$
+- $$\frac{\partial\mathbf{x}^T\mathbf{x}}{\partial\mathbf{x}}=\mathbf{x}$$
+- 对于方阵$$\mathbf{B}$$，有$$\frac{\partial\mathbf{x}^T\mathbf{B}\mathbf{x}}{\partial\mathbf{x}}=\left(\mathbf{B}+\mathbf{B}^T\right)\mathbf{x}$$
