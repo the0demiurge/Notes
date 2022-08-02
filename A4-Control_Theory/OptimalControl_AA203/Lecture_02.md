@@ -37,3 +37,8 @@ $$
 
 ppt里面例子推导很有问题，完全看不懂，所以这里参考[这篇博客](https://blog.csdn.net/weixin_42143018/article/details/103952406)或者[PDF](mrac.pdf)的内容进行介绍。
 
+在控制过程中同时更新系统变量。
+
+### MIAC: Model Identification Adaptive Control
+
+持续收集数据并更新模型参数，可以直接用反馈控制等，结构简单，适用性广，很容易和各种控制算法结合，不过比较缺乏稳定性保证，尤其在数据量少的时候会比较有问题。
