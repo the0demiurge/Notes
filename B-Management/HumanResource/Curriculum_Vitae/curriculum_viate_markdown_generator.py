@@ -66,8 +66,7 @@ class CVGenerator(object):
         self.lang = lang
         self.private = private
         self.education_misc = education_misc
-        if private:
-            self._hide_sensitive()
+        self._process_sensitive(private)
         self.translation = {
             'zh': {
                 'contact': '联系方式',
@@ -128,12 +127,14 @@ class CVGenerator(object):
 
     @property
     def education(self):
-        if not self.cv_info['education']:
-            return []
         table_header = self.translation['education_table_header']
         education_info = list()
         for education in self.cv_info['education']:
+            if education.get('ignored', False):
+                continue
             education_info.append([education[key] for key in ['time', 'university', 'degree', 'major', 'edu_misc']])
+        if not education_info:
+            return []
         if not self.education_misc:
             table_header = table_header[:-1]
             education_info = [i[:-1] for i in education_info]
@@ -147,12 +148,19 @@ class CVGenerator(object):
 
     @property
     def work(self):
+        found = False
         result = [f"## {self.translation['work']}", '']
         for work in self.cv_info['work']:
+            if work.get('ignored', False):
+                continue
+            found = True
             result.extend((f"### {work['company']} {work['position']} {self._align_right(work['time'])}", ''))
             for proj in work['projects']:
                 result.extend(self._project(proj, 4))
-        return result
+        if found:
+            return result
+        else:
+            return []
 
     @property
     def internship(self):
@@ -168,9 +176,11 @@ class CVGenerator(object):
 
     @property
     def misc(self):
+        if not self.cv_info.get('misc', None):
+            return []
         result = ['## ' + self.translation['misc'], '']
         for item in self.cv_info['misc']:
-            result.append('- ' + str(item))
+            result.append('- ' + item)
         result.append('')
         return result
 
@@ -201,25 +211,61 @@ class CVGenerator(object):
         if isinstance(items, int):
             items = ['----'] * items
         if isinstance(items, (list, tuple)):
-            return '| ' + ' | '.join([str(i) for i in items]) + ' |'
+            return '| ' + ' | '.join([i for i in items]) + ' |'
 
-    def _hide_sensitive(self):
+    def _process_sensitive(self, private=True):
         sensitive_keys = {
             'name', 'name_en', 'tel', 'region', 'region_en',
             'time', 'university', 'major', 'degree', 'edu_misc', 'company', 'position',
         }
 
+        def remove_private(string, precedent='@private', prefix='(', suffix=')', replace='PRIVATE', private=True):
+            while precedent + prefix in string:
+                start = string.find(precedent + prefix)
+                pointer = start + len(precedent + prefix)
+                level = 1
+                end = None
+                while pointer < len(string):
+                    if string[pointer] == prefix:
+                        level += 1
+                    elif string[pointer] == suffix:
+                        level -= 1
+                    if level == 0:
+                        end = pointer + 1
+                        break
+                    pointer += 1
+                if end is not None:
+                    before, middle, after = string.partition(string[start:end])
+                    if private:
+                        string = before + replace + after
+                    else:
+                        string = before + middle.partition(precedent + prefix)[-1].rpartition(suffix)[0] + after
+                else:
+                    raise SyntaxError((string, start))
+            return string
+
         def traverse(info):
             if isinstance(info, dict):
+                result = dict()
                 for k, v in info.items():
-                    if k in sensitive_keys:
-                        info[k] = k.upper()
+                    if isinstance(v, dict) and v.get('ignored', False):
+                        continue
+                    if private and k in sensitive_keys:
+                        result[k] = k.upper()
                     else:
-                        traverse(v)
+                        result[k] = traverse(v)
+                return result
             if isinstance(info, list):
+                result = list()
                 for v in info:
-                    traverse(v)
-        traverse(self.cv_info)
+                    if isinstance(v, dict) and v.get('ignored', False):
+                        continue
+                    result.append(traverse(v))
+                return result
+            if isinstance(info, str):
+                return remove_private(info, private=private)
+            return str(info)
+        self.cv_info = traverse(self.cv_info)
 
     def _project(self, info, level=4):
         result = list()
@@ -227,14 +273,14 @@ class CVGenerator(object):
         title_items = list()
         for key in ('company', 'time'):
             if info.get(key, None):
-                title_items.append(str(info[key]))
+                title_items.append(info[key])
         if title_items:
             title += self._align_right(' '.join(title_items))
         result.extend([title, ''])
         for key in ('situation', 'task', 'action', 'result'):
             if not info.get(key, None):
                 continue
-            result.append(f"- **{key[0].upper()}:** " + str(info[key]))
+            result.append(f"- **{key[0].upper()}:** " + info[key])
         for line in info.get('appendix', list()):
             result.append('- ' + line)
         result.append('')
@@ -243,10 +289,17 @@ class CVGenerator(object):
     def _common_project_list(self, name, header_level=2, proj_level=4):
         if not self.cv_info.get(name, None):
             return []
+        found = False
         result = ['#' * header_level + ' ' + self.translation[name], '']
         for proj in self.cv_info[name]:
+            if not proj.get('ignored', False):
+                continue
+            found = True
             result.extend(self._project(proj, proj_level))
-        return result
+        if found:
+            return result
+        else:
+            return []
 
 
 cv_example = {
@@ -275,11 +328,11 @@ cv_example = {
             'position': '佛学院主教',
             'projects': [
                 {
-                    'proj_name': '简历自动生成工具',
-                    'situation': '找工作',
+                    'proj_name': '@private(简历)自动生成工具',
+                    'situation': '找@private(工作)',
                     'task': '做个产品',
                     'action': '设计、编码、测试',
-                    'result': '发布产品',
+                    'result': '发布产品，产品地址是@private([url](https://ss.pythonic.life))',
                     'appendix': ['github.com/the0demiurge'],
                 }
             ]
@@ -330,6 +383,7 @@ cv_example = {
             ]
         },
         {
+            'ignored': True,
             'title': 'engineering',
             'items': [
                 'lang',
