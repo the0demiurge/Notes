@@ -1,0 +1,29 @@
+body {
+    margin: auto;
+    padding: 1cm;
+    width: 21cm;
+    /* height: 29.7cm; */
+    /* border: 1px #D3D3D3 solid; */
+    background: white;
+    font-family: Arial;
+}
+table{
+    width: 80%;
+    margin: auto;
+
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    border-left: solid 2px white;
+    border-right: solid 2px white;
+    border-collapse: collapse;
+
+    text-align: center;
+    vertical-align: center;
+}
+tr{
+    border-bottom: solid 1px black;
+}
+td, th{
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
