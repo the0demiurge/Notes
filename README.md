@@ -168,10 +168,13 @@ Notes
 │       └── 基本概念.md
 ├── B-Management
 │   ├── HumanResource
-│   │   ├── Curriculum Vitae
-│   │   │   └── 2022
-│   │   │       ├── en.md
-│   │   │       └── zh.md
+│   │   ├── Curriculum_Vitae
+│   │   │   ├── 2022
+│   │   │   │   ├── en.md
+│   │   │   │   └── zh.md
+│   │   │   ├── curriculum_viate_markdown_generator.py
+│   │   │   ├── cv.css
+│   │   │   └── README.md
 │   │   └── Interview
 │   │       ├── 2018ST实习收获.md
 │   │       ├── 2020面试总结.md
@@ -201,5 +204,5 @@ Notes
 ├── README.md
 └── SUMMARY.md
 
-53 directories, 126 files
+53 directories, 129 files
 ```

@@ -241,6 +241,8 @@ class CVGenerator(object):
         return result
 
     def _common_project_list(self, name, header_level=2, proj_level=4):
+        if not self.cv_info.get(name, None):
+            return []
         result = ['#' * header_level + ' ' + self.translation[name], '']
         for proj in self.cv_info[name]:
             result.extend(self._project(proj, proj_level))

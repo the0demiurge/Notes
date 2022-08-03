@@ -119,10 +119,10 @@
     * [基本概念](B-Economics/Quantitative_Investment/基本概念.md)
 - B Management
   - Human Resource
-    - Curriculum Vitae
+    - [Curriculum Vitae](B-Management/HumanResource/Curriculum_Vitae/README.md)
       - 2022
-        * [En](B-Management/HumanResource/Curriculum%20Vitae/2022/en.md)
-        * [Zh](B-Management/HumanResource/Curriculum%20Vitae/2022/zh.md)
+        * [En](B-Management/HumanResource/Curriculum_Vitae/2022/en.md)
+        * [Zh](B-Management/HumanResource/Curriculum_Vitae/2022/zh.md)
     - [Interview](B-Management/HumanResource/Interview/README.md)
       * [2018ST实习收获](B-Management/HumanResource/Interview/2018ST实习收获.md)
       * [2020面试总结](B-Management/HumanResource/Interview/2020面试总结.md)
