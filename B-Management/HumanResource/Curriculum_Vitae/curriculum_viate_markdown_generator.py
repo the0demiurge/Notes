@@ -148,19 +148,12 @@ class CVGenerator(object):
 
     @property
     def work(self):
-        found = False
         result = [f"## {self.translation['work']}", '']
         for work in self.cv_info['work']:
-            if work.get('ignored', False):
-                continue
-            found = True
             result.extend((f"### {work['company']} {work['position']} {self._align_right(work['time'])}", ''))
             for proj in work['projects']:
                 result.extend(self._project(proj, 4))
-        if found:
-            return result
-        else:
-            return []
+        return result
 
     @property
     def internship(self):
@@ -220,6 +213,7 @@ class CVGenerator(object):
         }
 
         def remove_private(string, precedent='@private', prefix='(', suffix=')', replace='PRIVATE', private=True):
+            string = string.replace(precedent + ' ', precedent)
             while precedent + prefix in string:
                 start = string.find(precedent + prefix)
                 pointer = start + len(precedent + prefix)
@@ -264,7 +258,7 @@ class CVGenerator(object):
                 return result
             if isinstance(info, str):
                 return remove_private(info, private=private)
-            return str(info)
+            return str(info) if info else info
         self.cv_info = traverse(self.cv_info)
 
     def _project(self, info, level=4):
@@ -289,18 +283,10 @@ class CVGenerator(object):
     def _common_project_list(self, name, header_level=2, proj_level=4):
         if not self.cv_info.get(name, None):
             return []
-        found = False
         result = ['#' * header_level + ' ' + self.translation[name], '']
         for proj in self.cv_info[name]:
-            if not proj.get('ignored', False):
-                continue
-            found = True
             result.extend(self._project(proj, proj_level))
-        if found:
-            return result
-        else:
-            return []
-
+        return result
 
 cv_example = {
     'contact': {
