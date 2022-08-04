@@ -101,5 +101,5 @@
 - **善于总结**，在线笔记: [notes.pythonic.life](https://notes.pythonic.life)。
 - **Geek 精神**，使用编程改善生活：[CharlesScripts](https://github.com/the0demiurge/CharlesScripts), 本项目获得 **982 Star** 与 **734 Fork**; 包括本简历也是使用[这个工具](https://notes.pythonic.life/B-Management/HumanResource/Curriculum_Vitae/)生成。
 - **个人博客:** [the0demiurge.blogspot.com](https://the0demiurge.blogspot.com/)
-- **Google Scholar:** [scholar.google.com/citations?user=wHEQKhoAAAAJ](https://scholar.google.com/citations?user=wHEQKhoAAAAJ)
+- **Google Scholar:** PRIVATE
 
