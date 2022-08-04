@@ -1,22 +1,105 @@
-# {name}
+# NAME
 
 ## 联系方式
 
-| Email                     | TEL   | GitHub({github_followers} followers)                       |
-| ------------------------- | ----- | ---------------------------------------------------------- |
-| [{email}](mailto:{email}) | {tel} | [github.com/the0demiurge](https://github.com/the0demiurge) |
+| Email | TEL | GitHub(374 followers) |
+| ---- | ---- | ---- |
+| [charl3s.xu@gmail.com](mailto:charl3s.xu@gmail.com) | TEL | [github.com/the0demiurge](https://github.com/the0demiurge/) |
 
-<p align=right>地址：中国-上海市</p>
+<span style="float:right;">REGION</span>
 
-## 教育经历<span style=float:right>test</span>a
+## 教育经历
 
-| 时间           | 学校      | 学历      | 专业     | 备注            |
-| -------------- | --------- | --------- | -------- | --------------- |
-| {school_time1} | {school1} | {degree1} | {major1} | {edu_appendix1} |
-| {school_time2} | {school2} | {degree2} | {major2} | {edu_appendix2} |
+| 时间 | 学校 | 学历 | 专业 |
+| ---- | ---- | ---- | ---- |
+| TIME | UNIVERSITY | DEGREE | MAJOR |
+| TIME | UNIVERSITY | DEGREE | MAJOR |
 
 ## 工作经历
 
-<h3>{companyf}<span style="float:right">{timef}</span></h3>
+### COMPANY POSITION <span style="float:right;">TIME</span>
 
-STAR: {github_star,the0demiurge,ShadowSocksShare} ,FORK: {github_fork,the0demiurge,ShadowSocksShare}
+#### 信号控制：强化学习算法落地应用研究
+
+- **S:** 基于道路交通状况动态调整信号灯时间、相位差可以大幅提升通行效率。目前学术界基于 AI 的控制算法大多基于强假设，没有考虑到感知范围、感知精度、感知延迟等等问题，难以落地。
+- **T:** ***1.*** 预研使用**强化学习落地**信号灯控制的可能性，在现实条件多种场景超越传统方法；***2.*** 使用**专家经验**帮助 RL 训练；***3.*** 探索使用 RL 在不同交通场景之间**泛化**的可行性。
+- **A:** ***1.*** 基于感知和控制现状，设计和构建与现实一致的 RL 环境 (state, action, reward)；***2.*** 实现传统控制算法作为 baseline；***3.*** 调试 RL 算法和环境，使得 RL 的性能超越传统方法；***4.*** 使用**信息熵**理论解决专家经验中样本分布不平衡问题，使 RL 成功模仿专家经验预训练，显著提升训练效率；***5.*** 设计可泛化的 RL 模型，解决当前基于 RL 的交通控制模型无法泛化的问题。
+- **R:** 已发表:PRIVATE; 另有可泛化性的论文已投，在审稿中。
+
+#### 车路协同：协作式车速引导预研
+
+- **S:** 自动驾驶 L2 到 L4 车路协同应用中，协作式车速引导是一项很重要的应用，欧盟 C-ROADS 项目中定义了 [GLOSA](https://www.c-roads-germany.de/english/c-its-services/glosa/)，国内 V2X Day2 协议中也定义了车速建议信息。
+- **T:** 预研协作式车速引导功能，降低自动驾驶车能耗，提升驾驶舒适度。
+- **A:** ***1.*** 实现多种能耗模型(HBEFA, SUMO/Energy, VT-CPFM)；***2.*** 复现 GLOSA 和 Eco-CACC，使用**最优控制**优化加速度，进行纵向车辆轨迹规划。
+- **R:** 本项目正在进行中，阶段性结果为单车以行程时间提升 68% 的代价下能耗降低 19%；渗透率 10% 时，CAV 电耗降低 9% 同时 MV 油耗升高 22%。
+
+#### 信号控制：城市交通信号控制系统
+
+- **S:** 城市交通信号灯控制系统是智慧城市交警业务中的重要组成成分，当前视觉感知数据对信号灯控制系统有着巨大的促进作用。
+- **T:** 设计并实现可靠的大规模信号灯控制系统的控制算法模块，使得在各种条件下都能可靠地提升交通通行效率，避免拥堵。
+- **A:** ***1.*** 方案选择：使用**聚类**将不同交通特性的交通数据分组并自动打标签（每个标签对应一个信号方案编号），使用**有监督算法**学习交通特性到标签的映射；***2.*** 时段划分：使用**有序聚类**将全天交通数据划分若干时段；***3.*** 优化算法：基于交通流模型，使用 **MILP** 建模求解交通单点、干线优化问题，使用**启发式算法**建模求解拥堵上下游协调控制问题；***4.*** 可靠性：将交通仿真工具嵌入评测模块，设计并实现 Fallback 逻辑屏蔽较差信号方案。
+- **R:** 发布PRIVATE 三个 sdk，在PRIVATE实地评测中达到显著优于人类专家手动调整的结果。
+- 发表专利PRIVATE。
+
+#### 车路协同：协作式优先通行
+
+- **S:** 存在交车、救护车、特勤等优先通行需求，随着 MEC 边缘计算设备的雷视融合感知和车载 OBU 设备的部署，可以省掉专用优先车辆检测设备。
+- **T:** 实现协作式优先通行算法，补齐优先通行能力。
+- **A:** 对于检测到的抖动数据进行**轨迹平滑**，**离线轨迹分析**获取**车辆信息画像**；设计并实现绿灯延长、红灯早断、相位补偿三种控制策略。
+- **R:** 发布协作式优先通行sdk，并在PRIVATE 落地验证。
+
+## 实习经历
+
+#### 大数据模型自动核保<span style="float:right;">COMPANY TIME</span>
+
+- **S:** PRIVATE 金融大数据项目中与百度、IBM 等公司竞标，使用人工核保数据构建可靠的自动核保系统，替代人工工作量。
+- **T:** 在与客户沟通过程中深入理解客户本质需求，设计并实现基于数据挖掘的核保系统，赢得竞标。
+- **A:** 设计特征、评测指标、模型结构，使用**Logistic Regression, Random Forest、LightGBM等**模型训练、微调；bad case 分析并改进特征；用 C++ 将模型封装为 sdk。
+- **R:** ***1.*** 完成 PoC，赢得竞标；***2.*** 完成项目一期，在 53 万条数据集上以 95% 精度减少 15% 人工工作量。
+- PRIVATE
+
+## 学校项目
+
+#### 基于强化学习的材料反应力场参数优化<span style="float:right;">TIME</span>
+
+- **S:** 材料学的反应力场是个有大量参数的函数，传统用遗传算法优化成本很高（常花费数月时间）。
+- **T:** 探索基于强化学习的启发式优化求解器，提升相似材料的反应力场参数优化速度。
+- **A:** 提出相似材料具有相似优化目标函数假说，设计并实现 RL 环境，设计多种特征与控制方式，实现强化学习算法和传统优化算法，设计实验并证明了 RL 启发式优化的有效性。
+- **R:** ***1.*** 在相似材料的优化性能上取得了与专业反应力场优化软件GarfField相当的水平，大幅超越共轭梯度法、模拟退火算法；***2.*** 取得软件著作权。
+
+## 业余项目
+
+#### 爬虫网站项目：ShadowSocksShare<span style="float:right;">TIME</span>
+
+- **S:** 项目创建时互联网上还没有免费的 ss 订阅服务，需要手动从免费分享站中查找 ss 信息并填写到软件中，复杂度较高。
+- **A:** 自学爬虫、HTML、Javascript 等，使用正则表达式等方法筛选并解析在线网站内容，并编写网站前后端，部署到 Heroku、OpenShift、GAE 等平台。
+- **R:** 本项目获得 **350** 次共计 **¥1871.91** 捐款，并在 GitHub 开源获得 **3.1k Star** 与 **1.1k Fork**。
+- 项目链接：[ss.pythonic.life](https://ss.pythonic.life)
+
+## 技能
+
+- **数学 / 算法**
+  - **深度学习：** 系统性掌握 **强化学习**，了解检测跟踪、NLP、推荐系统；熟练使用 **PyTorch**，熟悉深度学习优化算法原理
+  - **机器学习：** 掌握或了解监督（**树模型**、Logistic 回归）、无监督（**聚类**、关联分析）、半监督、概率图模型、对比学习；熟练使用数据分析工具（**pandas**, **numpy**, **matplotlib**）
+  - **数据结构与算法**，复杂性理论，A-star 等
+- **专业技能**
+  - **运筹优化：** MILP (ortools)，启发式优化 (GA/SA/CEM)，凸优化 (cvxpy)
+  - **控制论：**线性系统，系统辨识，最优控制
+  - **交通：**交通波理论，韦伯斯特模型，LTM模型，绿波模型
+- **工程技能**
+  - **编程语言：** **精通Python**，熟悉C/C++、bash、MATLAB、Makefile
+  - **Linux：**从2016年至今使用ArchLinux/Ubuntu作为主力系统，管理过7台深度学习服务器，拥有一台VPS
+  - **软件工程**(git, CI, Dockerfile, 代码规范性)，**计算机网络**(http, OSI)
+  - **网站全栈：**HTML，Javascript，Flask，MongoDB，NGINX，APACHE2
+  - **网络爬虫：**requests, bs4, selenium, [食其家问卷回答工具](https://sukiya.dvorak.science/)
+
+## 自我评价
+
+- **身体强壮**，有锻炼习惯，有条件时常组织远足和骑行，很少生病。
+- **合作能力：** ***1.*** 与实习生合作完成RL利用专家经验和泛化性研究；***2.*** 信号控制项目与产品侧沟通产品设计，与工程侧联调，确保整个项目流程走通；***3.*** 车路协同项目与MEC产品侧、RoboX等上下游沟通协调资源，共同规划产品设计。
+- **学习能力：** 自学网站建设、材料学、交通工程理论、自动驾驶等，快速上手并逐渐深入掌握多种领域
+- **善于总结**，在线笔记: [notes.pythonic.life](https://notes.pythonic.life)。
+- **Geek 精神**，使用编程改善生活：[CharlesScripts](https://github.com/the0demiurge/CharlesScripts), 本项目获得 **982 Star** 与 **734 Fork**; 包括本简历也是使用[这个工具](https://notes.pythonic.life/B-Management/HumanResource/Curriculum_Vitae/)生成。
+- **个人博客:** [the0demiurge.blogspot.com](https://the0demiurge.blogspot.com/)
+- **Google Scholar:** [scholar.google.com/citations?user=wHEQKhoAAAAJ](https://scholar.google.com/citations?user=wHEQKhoAAAAJ)
+
