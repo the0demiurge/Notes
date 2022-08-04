@@ -76,6 +76,7 @@ class CVGenerator(object):
                 'internship': '实习经历',
                 'campus_proj': '学校项目',
                 'amateur': '业余项目',
+                'skills':'技能',
                 'misc': '自我评价'
 
             },
@@ -87,6 +88,7 @@ class CVGenerator(object):
                 'internship': 'Internship',
                 'campus_proj': 'Campus Projects',
                 'amateur': 'Amateur Projects',
+                'skills':'Skills',
                 'misc': 'Miscellaneous'
             },
         }[lang]
@@ -166,6 +168,17 @@ class CVGenerator(object):
     @property
     def amateur(self):
         return self._common_project_list('amateur')
+    @property
+    def skills(self):
+        if not self.cv_info.get('skills',None):
+            return []
+        result = ['## '+self.translation['skills'],'']
+        for skill in self.cv_info['skills']:
+            result.append(f"- **{skill['title']}**")
+            for item in skill['items']:
+                result.append(f"  - {item}")
+        result.append('')
+        return result
 
     @property
     def misc(self):
@@ -187,6 +200,7 @@ class CVGenerator(object):
             'internship',
             'campus_proj',
             'amateur',
+            'skills',
             'misc',
         ]:
             if hasattr(self, component):

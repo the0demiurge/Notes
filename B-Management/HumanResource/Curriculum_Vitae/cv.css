@@ -6,8 +6,10 @@ body {
     /* border: 1px #D3D3D3 solid; */
     background: white;
     font-family: Arial;
+    text-align: justify;
 }
-table{
+
+table {
     width: 80%;
     margin: auto;
 
@@ -20,10 +22,19 @@ table{
     text-align: center;
     vertical-align: center;
 }
-tr{
+
+tr {
     border-bottom: solid 1px black;
 }
-td, th{
+
+td,
+th {
     border-left: solid 1px black;
     border-right: solid 1px black;
+}
+
+ul,
+li {
+    text-indent: -2ch;
+    padding-left: 2ch;
 }
