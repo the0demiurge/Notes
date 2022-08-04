@@ -186,7 +186,7 @@ class CVGenerator(object):
             'work',
             'internship',
             'campus_proj',
-            'ameteur',
+            'amateur',
             'misc',
         ]:
             if hasattr(self, component):
