@@ -397,11 +397,13 @@ cv_example = {
 }
 
 
-def main(cv_info, *, lang='zh', private=True, education_misc=True):
+def main(cv_info, *, lang='zh', private=True, education_misc=True, ignore_crawler=False):
     cv_generator = CVGenerator(cv_info, lang=lang, private=private, education_misc=education_misc)
     cv_filler = CVFiller()
     cv = str(cv_generator)
-    return cv_filler.fill(cv)
+    if not ignore_crawler:
+        cv = cv_filler.fill(cv)
+    return cv
 
 
 def get_args():
@@ -411,6 +413,7 @@ def get_args():
     parser.add_argument('--lang', default='zh')
     parser.add_argument('--public', action='store_true', help='Show private information')
     parser.add_argument('--hide-education-misc', action='store_true', help='hide education misc information')
+    parser.add_argument('--ignore-crawler', action='store_true')
     return parser.parse_args()
 
 
@@ -425,4 +428,4 @@ if __name__ == '__main__':
         print('use --help argument to show help messages')
         exit(1)
     cv_json = json.load(open(os.path.abspath(os.path.expanduser(args.cv_json))))
-    print(main(cv_json, lang=args.lang, private=not args.public, education_misc=args.hide_education_misc))
+    print(main(cv_json, lang=args.lang, private=not args.public, education_misc=args.hide_education_misc, ignore_crawler=args.ignore_crawler))
