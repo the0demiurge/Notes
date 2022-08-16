@@ -23,7 +23,6 @@ jobs:
           sudo apt-get install -y python3 calibre xvfb
           npm install gitbook-cli -g
           npm install svgexport -g
-          npm install gitbook-plugin-mathjax-single-dollar
           gitbook install
 
       - name: Trigger personal build script
