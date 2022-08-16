@@ -28,7 +28,7 @@ P(w_o|w_c) = \frac{e^{\mathbf{u}_o^T\mathbf{v}_c}}{\sum\limits_ie^{\mathbf{u}_i^
 $$
 接下来，假设上下文的词汇相对于当前词汇条件独立：
 $$
-P(w_{o1},w_{o2},\dots|w_c) = P(w_{o1}|w_c)P(w_{o2}|w_c)\dots
+P(w_{o1},w_{o2}, \ldots |w_c) = P(w_{o1}|w_c)P(w_{o2}|w_c) \ldots
 $$
 那么对语料库滑窗获取数据集，并最大化Skip-Gram概率：
 $$

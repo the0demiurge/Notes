@@ -57,6 +57,9 @@
     * [Learning](A1-Computer_Science/Programming/Learning.md)
 - A 2 Machine Learning
   - Algorithms
+    - [Natrual Language Processing](A2-Machine_Learning/Algorithms/NatrualLanguageProcessing/README.md)
+      * [Transformer](A2-Machine_Learning/Algorithms/NatrualLanguageProcessing/transformer.md)
+      * [Word 2 Vec](A2-Machine_Learning/Algorithms/NatrualLanguageProcessing/word2vec.md)
     - Neural Network
       * [nn_mnist_static.py](A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist_static.py.md)
       * [nn_mnist.py](A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist.py.md)
@@ -112,28 +115,33 @@
   - [Optimal Control AA 203](A4-Control_Theory/OptimalControl_AA203/README.md)
     * [Lecture 01](A4-Control_Theory/OptimalControl_AA203/Lecture_01.md)
     * [Lecture 02](A4-Control_Theory/OptimalControl_AA203/Lecture_02.md)
-- B Economics
-  - [Principle](B-Economics/Principle/README.md)
-  - Quantitative Investment
-    * [PB PE](B-Economics/Quantitative_Investment/PB_PE.md)
-    * [基本概念](B-Economics/Quantitative_Investment/基本概念.md)
-- B Management
+- B 1 Management
   - Human Resource
-    - [Curriculum Vitae](B-Management/HumanResource/Curriculum_Vitae/README.md)
+    - [Curriculum Vitae](B1-Management/HumanResource/Curriculum_Vitae/README.md)
       - 2022
-        * [En](B-Management/HumanResource/Curriculum_Vitae/2022/en.md)
-        * [Zh](B-Management/HumanResource/Curriculum_Vitae/2022/zh.md)
-    - [Interview](B-Management/HumanResource/Interview/README.md)
-      * [2018ST实习收获](B-Management/HumanResource/Interview/2018ST实习收获.md)
-      * [2020面试总结](B-Management/HumanResource/Interview/2020面试总结.md)
-      * [Inwerviewer](B-Management/HumanResource/Interview/Inwerviewer.md)
-  - [Management By Object](B-Management/ManagementByObject/README.md)
-    * [OKR](B-Management/ManagementByObject/OKR.md)
-    * [Self Control](B-Management/ManagementByObject/Self-Control.md)
-    * [SMART](B-Management/ManagementByObject/SMART.md)
-- [C Traffic Control](C-Traffic_Control/README.md)
-  * [Objects](C-Traffic_Control/Objects.md)
-  * [Terms](C-Traffic_Control/Terms.md)
+        * [En](B1-Management/HumanResource/Curriculum_Vitae/2022/en.md)
+        * [Zh](B1-Management/HumanResource/Curriculum_Vitae/2022/zh.md)
+    - [Interview](B1-Management/HumanResource/Interview/README.md)
+      * [2018ST实习收获](B1-Management/HumanResource/Interview/2018ST实习收获.md)
+      * [2020面试总结](B1-Management/HumanResource/Interview/2020面试总结.md)
+      * [Inwerviewer](B1-Management/HumanResource/Interview/Inwerviewer.md)
+  - [Management By Object](B1-Management/ManagementByObject/README.md)
+    * [OKR](B1-Management/ManagementByObject/OKR.md)
+    * [Self Control](B1-Management/ManagementByObject/Self-Control.md)
+    * [SMART](B1-Management/ManagementByObject/SMART.md)
+- B 2 Economics
+  - [Principle](B2-Economics/Principle/README.md)
+  - Quantitative Investment
+    * [PB PE](B2-Economics/Quantitative_Investment/PB_PE.md)
+    * [基本概念](B2-Economics/Quantitative_Investment/基本概念.md)
+- C Traffic
+  - [1 Traffic Control](C-Traffic/1_Traffic_Control/README.md)
+    * [Objects](C-Traffic/1_Traffic_Control/Objects.md)
+    * [Terms](C-Traffic/1_Traffic_Control/Terms.md)
+  - [2 Autopilot](C-Traffic/2_Autopilot/README.md)
+    * [2 0 Planning](C-Traffic/2_Autopilot/2_0_Planning.md)
+    * [2 1 Search](C-Traffic/2_Autopilot/2_1_Search.md)
+    * [2 2 Sampling](C-Traffic/2_Autopilot/2_2_Sampling.md)
 - X Photography
   * [1-纽约摄影学院三原则](X-Photography/1-纽约摄影学院三原则.md)
 - [Y Academic](Y-Academic/README.md)

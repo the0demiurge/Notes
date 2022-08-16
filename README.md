@@ -93,6 +93,10 @@ Notes
 │       └── Learning.md
 ├── A2-Machine_Learning
 │   ├── Algorithms
+│   │   ├── NatrualLanguageProcessing
+│   │   │   ├── README.md
+│   │   │   ├── transformer.md
+│   │   │   └── word2vec.md
 │   │   ├── NeuralNetwork
 │   │   │   ├── nn_mnist.py.md
 │   │   │   └── nn_mnist_static.py.md
@@ -160,13 +164,7 @@ Notes
 │       ├── Lecture_02.md
 │       ├── mrac.pdf
 │       └── README.md
-├── B-Economics
-│   ├── Principle
-│   │   └── README.md
-│   └── Quantitative_Investment
-│       ├── PB_PE.md
-│       └── 基本概念.md
-├── B-Management
+├── B1-Management
 │   ├── HumanResource
 │   │   ├── Curriculum_Vitae
 │   │   │   ├── 2022
@@ -185,10 +183,22 @@ Notes
 │       ├── README.md
 │       ├── Self-Control.md
 │       └── SMART.md
-├── C-Traffic_Control
-│   ├── Objects.md
-│   ├── README.md
-│   └── Terms.md
+├── B2-Economics
+│   ├── Principle
+│   │   └── README.md
+│   └── Quantitative_Investment
+│       ├── PB_PE.md
+│       └── 基本概念.md
+├── C-Traffic
+│   ├── 1_Traffic_Control
+│   │   ├── Objects.md
+│   │   ├── README.md
+│   │   └── Terms.md
+│   └── 2_Autopilot
+│       ├── 2_0_Planning.md
+│       ├── 2_1_Search.md
+│       ├── 2_2_Sampling.md
+│       └── README.md
 ├── X-Photography
 │   └── 1-纽约摄影学院三原则.md
 ├── Y-Academic
@@ -204,5 +214,5 @@ Notes
 ├── README.md
 └── SUMMARY.md
 
-53 directories, 129 files
+56 directories, 136 files
 ```
