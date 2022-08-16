@@ -118,13 +118,13 @@ The algorithm above will return the sequence of states from the initial state to
 
 
 # 多次运行下面的cell可以看每次迭代所得到的Q表更新效果
-采取的更新方案为$$\epsilon$$-greedy,可以通过调整$$\epsilon$$实现或上面的greedy，或随机采样。
+采取的更新方案为$\epsilon$-greedy,可以通过调整$\epsilon$实现或上面的greedy，或随机采样。
 
 For epoch in max_epoches:
 
 1. 随机选取一个state
 2. 在选取的state下选定一个可行的动作（在本例中，不可行的动作回报为"-1")
-3. 按照公式 $$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$$计算Q值
+3. 按照公式 $Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all actions)]$计算Q值
 4. 采取2中选定的动作，将state更新到下一个state
 5. 如果运动到终点则中断
 

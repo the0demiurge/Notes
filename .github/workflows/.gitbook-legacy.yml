@@ -14,20 +14,34 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+
       - name: Install dependency
         run: |
           sudo apt-get -qq update
-          sudo apt-get install -y python3
+          sudo apt-get install -y python3 calibre xvfb
+          npm install gitbook-cli -g
+          npm install svgexport -g
+          gitbook install
+
       - name: Trigger personal build script
         run: |
           cat HEADER|tee README.md
           python3 toc.py
+          if [ ! -d books ];then mkdir books;fi
+          gitbook build
+          gitbook epub . books/CharlesNotes.epub
+          gitbook mobi . books/CharlesNotes.mobi
+          cp -r books _book
+          rm _book/.gitignore
+
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: .
+          build_dir: _book
           fqdn: ${{secrets.CUSTOM_DOMAIN}}
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
