@@ -22,12 +22,14 @@ jobs:
         run: |
           cat HEADER|tee README.md
           python3 toc.py
+          mkdir build
+          cp -r $(ls|grep -v build) build/
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: ./
+          build_dir: build
           fqdn: ${{secrets.CUSTOM_DOMAIN}}
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
