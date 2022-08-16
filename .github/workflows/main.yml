@@ -20,20 +20,19 @@ jobs:
       - name: Install dependency
         run: |
           sudo apt-get -qq update
-          sudo apt-get install -y tree calibre xvfb
+          sudo apt-get install -y tree python3
           npm install gitbook-cli -g
-          npm install gitbook-summary -g
           npm install svgexport -g
           gitbook install
 
       - name: Trigger personal build script
         run: |
-          book sm -i node_modules -s '-' -d
           cat HEADER|tee README.md
           echo "\`\`\`" |tee -a README.md
           echo "Notes" |tee -a README.md
           tree --dirsfirst -I '__pycache__|node_modules|*.png|*.gif|_book|*.json|*.jpg'|grep -v '^\.$'|tee -a README.md
           echo "\`\`\`" |tee -a README.md
+          python3 toc.py
           if [ ! -d books ];then mkdir books;fi
           gitbook build
           gitbook epub . books/CharlesNotes.epub
