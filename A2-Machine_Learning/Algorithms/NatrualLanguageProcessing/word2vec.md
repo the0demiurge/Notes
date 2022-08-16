@@ -23,20 +23,27 @@ Skip-Gram推导比较简单，据说性能也比CBOW好，此处就略过CBOW。
 所以，就可以定义矩阵$$W$$，其中one-hot编码的词向量$$w^T  W= \mathbf{v}$$
 
 然后定义词汇之间的条件概率，给定$$w_c$$的条件下$$w_o$$发生的概率（其实就是先算余弦相似度然后连上softmax）：
+
 $$
 P(w_o|w_c) = \frac{e^{\mathbf{u}_o^T\mathbf{v}_c}}{\sum\limits_ie^{\mathbf{u}_i^T\mathbf{v}_c}}
 $$
+
 接下来，假设上下文的词汇相对于当前词汇条件独立：
+
 $$
 P(w_{o1},w_{o2}, \ldots |w_c) = P(w_{o1}|w_c)P(w_{o2}|w_c) \ldots
 $$
+
 那么对语料库滑窗获取数据集，并最大化Skip-Gram概率：
+
 $$
 \prod \limits_{t} \prod \limits _{-m\leq j \leq m}P(w^{t+j}|w^t)
 $$
+
 这里我没说$$j\neq0$$，因为当j=0时P=1，写不写都讲等价。
 
 用极大似然法最大化这个概率，取对数后加负号，得到：
+
 $$
 J=-\sum\limits_t\sum\limits_{-m\leq j \leq m} logP(w^{t+j}|w^t)
 $$

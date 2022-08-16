@@ -19,9 +19,9 @@
   - Programming
     - Front End
       - HTML
-        * [split_panes.html](A1-Computer_Science/Programming/Front_End/HTML/split_panes.html.md)
+        * [Split Panes Html](A1-Computer_Science/Programming/Front_End/HTML/split_panes_html.md)
       - 热力图
-        * [FrontEnd.html](A1-Computer_Science/Programming/Front_End/热力图/FrontEnd.html.md)
+        * [Front End Html](A1-Computer_Science/Programming/Front_End/热力图/FrontEnd_html.md)
         * [百度api获取城市坐标.py](A1-Computer_Science/Programming/Front_End/热力图/百度api获取城市坐标.py.md)
     - Language
       - [C Or C](A1-Computer_Science/Programming/Language/C_or_C++/README.md)
