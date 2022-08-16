@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 
-basepath = os.path.dirname(__file__)
+basepath = os.path.abspath(os.path.expanduser(os.path.dirname(__file__)))
 proj_name = 'CharlesNotes'
 
 
