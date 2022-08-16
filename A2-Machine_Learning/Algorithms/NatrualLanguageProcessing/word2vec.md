@@ -12,7 +12,7 @@
 类别：
 
 - Continuous Bag of Words: 上下文 -> 自己
-- Skip-Gram: 自己 -> 上下文（其实也等价于自己->整个句子，毕竟P(x|x)=1）
+- Skip-Gram: 自己 -> 上下文（其实也等价于自己->整个句子，毕竟$P(x|x)=1$）
 
 Skip-Gram推导比较简单，据说性能也比CBOW好，此处就略过CBOW。
 
@@ -40,7 +40,7 @@ $$
 \prod \limits_{t} \prod \limits _{-m\leq j \leq m}P(w^{t+j}|w^t)
 $$
 
-这里我没说$j\neq0$，因为当j=0时P=1，写不写都讲等价。
+这里我没说$j\neq0$，因为当$j=0$时$P=1$，写不写都讲等价。
 
 用极大似然法最大化这个概率，取对数后加负号，得到：
 
