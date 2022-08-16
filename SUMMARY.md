@@ -119,8 +119,8 @@
   - Human Resource
     - [Curriculum Vitae](B1-Management/HumanResource/Curriculum_Vitae/README.md)
       - 2022
-        * [En](B1-Management/HumanResource/Curriculum_Vitae/2022/en.md)
-        * [Zh](B1-Management/HumanResource/Curriculum_Vitae/2022/zh.md)
+        * [2022.en](B1-Management/HumanResource/Curriculum_Vitae/2022/2022.en.md)
+        * [2022.zh](B1-Management/HumanResource/Curriculum_Vitae/2022/2022.zh.md)
     - [Interview](B1-Management/HumanResource/Interview/README.md)
       * [2018ST实习收获](B1-Management/HumanResource/Interview/2018ST实习收获.md)
       * [2020面试总结](B1-Management/HumanResource/Interview/2020面试总结.md)
