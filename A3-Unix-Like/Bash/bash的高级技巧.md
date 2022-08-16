@@ -68,7 +68,7 @@
       #do any other else.
   fi
   CTRL+D
-  /> ./test2.sh 
+  /> ./test2.sh
   Usage: ./test2.sh -d debug_level
   /> ./test2.sh -d 1
   The current debug level is 1.
@@ -114,7 +114,7 @@
   为了简化问题和突出重点，这里我们假设脚本的输入参数一定为合法的整数类型，因而在脚本内部将不再进行参数的合法性判断。
   /> cat > test4.sh
   #!/bin/sh
-  #1. 这里的重点主要是sed命令中正则表达式的写法，它将原有的数字拆分为两个模式(用圆括号拆分)，一个前面的所有高位数字，另一个是最后一位低位数字，之后再用替换符的方式(\2)，将原有数字替换为只有最后一位的数字，最后将结果返回为last_digit变量。 
+  #1. 这里的重点主要是sed命令中正则表达式的写法，它将原有的数字拆分为两个模式(用圆括号拆分)，一个前面的所有高位数字，另一个是最后一位低位数字，之后再用替换符的方式(\2)，将原有数字替换为只有最后一位的数字，最后将结果返回为last_digit变量。
   last_digit=`echo $1 | sed 's/\(.*\)\(.\)$/\2/'`
   #2. 如果last_digit的值为0,2,4,6,8，就表示其为偶数，否则为奇数。
   case $last_digit in
@@ -279,7 +279,7 @@
   上面的方法只是解决了该问题，然而却带来了一些新问题，比如临时文件的产生容易导致性能问题，以及在脚本异常退出时未能及时删除当前使用的临时文件，从而导致生成过多的垃圾文件等。下面将再介绍一种方法，该方法将同时解决以上两种方法同时存在的问题。该方法是通过HERE-Document的方式来替代之前的临时文件方法。
   /> cat > test8_3.sh
   #!/bin/sh
-  #1. 将命令的结果传给一个变量    
+  #1. 将命令的结果传给一个变量
   OUTFILE=`ls -l | grep -v total`
   while read line
   do
@@ -400,7 +400,7 @@
 ```
 
 十二、模拟简单的top命令：
-​    
+​
 ```bash
   这里用脚本实现了一个极为简单的top命令。为了演示方便，我们在脚本中将很多参数都写成硬代码，你可以根据需要更换这些参数，或者用更为灵活的方式替换现有的实现。
   /> cat > test12.sh
@@ -421,7 +421,7 @@
       ps aux | sed -e 1d | sort -k3nr -k1,1 -k2n | head -n 20
       sleep 5
   done
-  CTRL+D    
+  CTRL+D
   /> ./test12.sh
   21:55:07 up 13:42,  2 users,  load average: 0.00, 0.00, 0.00
   USER       PID %CPU %MEM    VSZ   RSS   TTY      STAT START   TIME   COMMAND
@@ -554,7 +554,7 @@
   #!/bin/sh
   echo -n "Enter your input: "
   read input
-  #1. 事实上，这里的巧妙之处就是先用sed替换了非法部分，之后再将替换后的结果与原字符串比较。这种写法也比较容易扩展。    
+  #1. 事实上，这里的巧妙之处就是先用sed替换了非法部分，之后再将替换后的结果与原字符串比较。这种写法也比较容易扩展。
   parsed_input=`echo $input | sed 's/[^[:alnum:]]//g'`
   if [ "$parsed_input" != "$input" ]; then
       echo "Your input must consist of only letters and numbers."
@@ -606,7 +606,7 @@
   2. 可以同时整除4和400的年一定是闰年；
   3. 可以整除4和100，但是不能整除400的年，不是闰年；
   4. 其他可以整除的年都是闰年。
-  #!/bin/sh    
+  #!/bin/sh
   year=$1
   if [ "$((year % 4))" -ne 0 ]; then
       echo "This is not a leap year."
@@ -631,7 +631,7 @@
 十八、将单列显示转换为多列显示：
 
 ```bash
-  我们经常会在显示时将单行的输出，格式化为多行的输出，通常情况下，为了完成该操作，我们将加入更多的代码，将输出的结果存入数组或临时文件，之后再重新遍历它们，从而实现单行转多行的目的。在这里我们介绍一个使用xargs命令的技巧，可以用更简单、更高效的方式来完成该功能。    
+  我们经常会在显示时将单行的输出，格式化为多行的输出，通常情况下，为了完成该操作，我们将加入更多的代码，将输出的结果存入数组或临时文件，之后再重新遍历它们，从而实现单行转多行的目的。在这里我们介绍一个使用xargs命令的技巧，可以用更简单、更高效的方式来完成该功能。
   /> cat > test18.sh
   #!/bin/sh
   #1. passwd文件中，有可能在一行内出现一个或者多个空格字符，因此在直接使用cat命令的结果时，for循环会被空格字符切开，从而导致一行的文本被当做多次for循环的输入，这样我们不得不在sed命令中，将cat输出的每行文本进行全局替换，将空格字符替换为%20。事实上，我们当然可以将cat /etc/passwd的输出以管道的形式传递给cut命令，这里之所以这样写，主要是为了演示一旦出现类似的问题该如果巧妙的处理。
@@ -672,7 +672,7 @@
   在这个技巧中，不仅包含了如何获取和文件相关的详细信息，如行数，字符等，而且还可以让文件按照指定的宽度输出。这种应用在输出帮助信息、License相关信息时还是比较有用的。
   /> cat > test19.sh
   #!/bin/sh
-  #1. 这里我们将缺省宽度设置为75，如果超过该宽度，将考虑折行显示，否则直接在一行中全部打印输出。这里只是为了演示方便，事实上，你完全可以将该值作为脚本或函数的参数传入，那样你将会得到更高的灵活性。    
+  #1. 这里我们将缺省宽度设置为75，如果超过该宽度，将考虑折行显示，否则直接在一行中全部打印输出。这里只是为了演示方便，事实上，你完全可以将该值作为脚本或函数的参数传入，那样你将会得到更高的灵活性。
   my_width=75
   #2. for循环的读取列表来自于脚本的参数。
   #3. 在获取lines和chars变量时，sed命令用于过滤掉多余的空格字符。
@@ -735,7 +735,7 @@
             awk '{ sum += $7 } END { print sum / (1024*1024) " MB" }'
   done | awk "\$9 > $limited_quota { print \$0 }"
   CTRL+D
-  /> ./test20.sh    
+  /> ./test20.sh
 ```
 
 二十一、编写一个更具可读性的df命令输出脚本：
@@ -744,9 +744,9 @@
   这里我们将以awk脚本的方式来实现df -h的功能。
   /> cat > test21.sh
   #!/bin/sh
-  #1. $$表示当前Shell进程的pid。    
+  #1. $ 表示当前Shell进程的pid。
   #2. trap信号捕捉是为了保证在Shell正常或异常退出时，仍然能够将该脚本创建的临时awk脚本文件删除。
-  awk_script_file="/tmp/scf_tmp.$$"
+  awk_script_file="/tmp/scf_tmp.$"
   trap "rm -f $awk_script_file" EXIT
   #3. 首先需要说明的是，'EOF'中的单引号非常重要，如果忽略他将无法通过编译，这是因为awk的命令动作必须要用单引号扩住。
   #4. awk脚本的show函数中，int(mb * 100) / 100这个技巧是为了保证输出时保留小数点后两位。
@@ -794,12 +794,12 @@
   之所以在这里选择这个脚本，没有更多的用意，只是感觉这里的有些技巧和常识还是需要了解的，如/etc/passwd、/etc/shadow、/etc/group的文件格式等。
   /> cat > test22.sh
   #!/bin/sh
-  #1. 初始化和用户添加相关的变量。    
+  #1. 初始化和用户添加相关的变量。
   passwd_file="/etc/passwd"
   shadow_file="/etc/shadow"
   group_file="/etc/group"
   home_root_dir="/home"
-  #2. 只有root用户可以执行该脚本。    
+  #2. 只有root用户可以执行该脚本。
   if [ "$(whoami)" != "root" ]; then
       echo "Error: You must be roor to run this command." >&2
       exit 1
@@ -924,7 +924,7 @@
   Your input is Y.
   /> ./test24.sh
   Please type[y/n/yes/no]: n
-  Your input is N.  
+  Your input is N.
 ```
 
 二十五、通过FTP下载指定的文件：
@@ -933,7 +933,7 @@
   相比于手工调用FTP命令下载文件，该脚本提供了更为方便的操作方式。
   /> cat > test25.sh
   #!/bin/sh
-  #1. 测试脚本参数数量的有效性。    
+  #1. 测试脚本参数数量的有效性。
   if [ $# -ne 2 ]; then
       echo "Usage: $0 ftp://... username" >&2
       exit 1
@@ -1054,7 +1054,7 @@
   tmpfs                  504M  100K  504M   1% /dev/shm
   /dev/sda1              49M   36M   11M  77% /boot
   /dev/sda3              15G  172M   14G   2% /home
-  我们也可以在执行的过程中通过pidstat命令监控脚本进程的每秒读写块数。    
+  我们也可以在执行的过程中通过pidstat命令监控脚本进程的每秒读写块数。
 ```
 
 二十八、统计当前系统中不同运行状态的进程数量：
@@ -1147,32 +1147,32 @@
           fi
       fi
       return 0
-  }    
+  }
   if validfloat $1 ; then
       echo "$1 is a valid floating-point value."
   fi
   exit 0
   CTRL+D
-  /> ./test29.sh 47895       
+  /> ./test29.sh 47895
   47895 is a valid floating-point value.
   /> ./test29.sh 47895.33
   47895.33 is a valid floating-point value.
   /> ./test29.sh 47895.3e
   fractionalpart is not valid integer.
   /> ./test29.sh 4789t.34
-  decimalpart is not valid integer.   
+  decimalpart is not valid integer.
 ```
 
 
 三十、统计英文文章中每个单词出现的频率：
-​    
+​
 ```bash
   这个技巧的主要目的是显示如何更好的使用awk命令的脚本。
   /> cat > test30.sh
   #!/bin/sh
   #1. 通过当前脚本的pid，生成awk脚本的临时文件名。
   #2. 捕捉信号，在脚本退出时删除该临时文件，以免造成大量的垃圾临时文件。
-  awk_script_file="/tmp/scf_tmp.$$"
+  awk_script_file="/tmp/scf_tmp.$"
   trap "rm -f $awk_script_file" EXIT
   #3. while循环将以当前目录下的testfile作为输入并逐行读取，在读取到末尾时退出循环。
   #4. getline读取到每一行将作为awk的正常输入。在内层的for循环中，i要从1开始，因为$0表示整行。NF表示域字段的数量。
@@ -1202,34 +1202,3 @@
   word = stephen count = 1
   word = liu         count = 3
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

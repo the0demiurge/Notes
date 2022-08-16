@@ -1,6 +1,6 @@
 
 # SMO Simple
-The "Simple" means randomly choose lagrange complixier $$\alpha_i$$ and $$\alpha_j$$
+The "Simple" means randomly choose lagrange complixier $\alpha_i$ and $\alpha_j$
 
 
 ```python
@@ -15,7 +15,7 @@ pylab.ion()
 
 Synthesised data -- decision boundary:
 
-$$x + 0.3 y = 0.1$$
+$x + 0.3 y = 0.1$
 
 
 ```python
@@ -53,43 +53,43 @@ pylab.legend(handles=[patch1, patch2])
 
 # SMO
 
-## Optimize $$a_j$$
+## Optimize $a_j$
 
-$$a_j := aj - \frac{y^{(j)}(E_i-E_j)}{\eta}$$
+$a_j := aj - \frac{y^{(j)}(E_i-E_j)}{\eta}$
 
 where
 
-$$E_k = f(x^{(k)}) - y^{(k)}$$
+$E_k = f(x^{(k)}) - y^{(k)}$
 
-$$\eta = 2 x^{(i)}\bullet x^{(j)} - x^{(i)}\bullet x^{(i)} - x^{(j)}\bullet x^{(j)} $$
+$\eta = 2 x^{(i)}\bullet x^{(j)} - x^{(i)}\bullet x^{(i)} - x^{(j)}\bullet x^{(j)} $
 
-## Clip $$a_j$$
+## Clip $a_j$
 
-$$If y^{(i)} \neq y^{(j)}$$, $$L=max(0, a_j - a_i)$$, $$H = min(C, C + a_j - a_i)$$
+$If y^{(i)} \neq y^{(j)}$, $L=max(0, a_j - a_i)$, $H = min(C, C + a_j - a_i)$
 
-$$If y^{(i)} = y^{(j)}$$, $$L=max(0, a_i + a_j - C)$$, $$H = min(C, a_i + a_j)$$
+$If y^{(i)} = y^{(j)}$, $L=max(0, a_i + a_j - C)$, $H = min(C, a_i + a_j)$
 
-## $$a_i$$
-$$a_i:=a_i+y^{(i)}y^{(j)}(a_j^{(old)}-a_j)$$
+## $a_i$
+$a_i:=a_i+y^{(i)}y^{(j)}(a_j^{(old)}-a_j)$
 
-## $$b$$
-$$b$$ is optimized refering to Machine Learning (Zhou Zhihua, (6.18) P125), Where $$S$$ is subscript of support vector, and we choose the final $$i$$ and $$j$$.
+## $b$
+$b$ is optimized refering to Machine Learning (Zhou Zhihua, (6.18) P125), Where $S$ is subscript of support vector, and we choose the final $i$ and $j$.
 
-$$b = \frac{1}{|S|}\sum\limits_{s\in S}{(1/y_s-\sum\limits_{k\in S}\alpha_ky_k x_k \bullet x_s)}$$
+$b = \frac{1}{|S|}\sum\limits_{s\in S}{(1/y_s-\sum\limits_{k\in S}\alpha_ky_k x_k \bullet x_s)}$
 
 or
 
-$$b_1 = b - E_i - y{(i)}(\alpha_i - \alpha_i^{(old)})x^{(i)}\bullet x^{(i)} - y^{(j)}(\alpha_j-\alpha_j^{(old)}) x^{(i)}\bullet x^{(j)}$$
+$b_1 = b - E_i - y{(i)}(\alpha_i - \alpha_i^{(old)})x^{(i)}\bullet x^{(i)} - y^{(j)}(\alpha_j-\alpha_j^{(old)}) x^{(i)}\bullet x^{(j)}$
 
-$$b_2 = b - E_j - y{(i)}(\alpha_i - \alpha_i^{(old)})x^{(i)}\bullet x^{(j)} - y^{(j)}(\alpha_j-\alpha_j^{(old)}) x^{(j)}\bullet x^{(j)}$$
+$b_2 = b - E_j - y{(i)}(\alpha_i - \alpha_i^{(old)})x^{(i)}\bullet x^{(j)} - y^{(j)}(\alpha_j-\alpha_j^{(old)}) x^{(j)}\bullet x^{(j)}$
 
-$$b:=$$
+$b:=$
 
-$$b_1, if 0 < ai < C$$
+$b_1, if 0 < ai < C$
 
-$$b_2, if 0 < aj < C$$
+$b_2, if 0 < aj < C$
 
-$$(b_i + b_j) / 2, otherwise$$
+$(b_i + b_j) / 2, otherwise$
 
 
 ```python
@@ -165,7 +165,7 @@ def update(i, j, a, b, x, y):
     ajj = aj(a[j], etaij, Ei, Ej, y[j])
     ajj = clipj(ajj, a[i], a[j], y[i], y[j], C)
     aii = ai(a[i], y[i], y[j], a[j], ajj)
-    
+
     b = b12(b, Ei, Ej, x[i], x[j], y[i], y[j], aii, ajj, a[i], a[j], C)
     a[i] = aii
     a[j] = ajj
@@ -196,7 +196,7 @@ b = 0#np.random.randn()
 a, b = train(1000, a, b, x, y)
 
 print(np.sum(np.equal(predict(a, b, x, y), y)) / NUM_DATA)
-predict(a, b, x, y) 
+predict(a, b, x, y)
 
 
 
@@ -256,4 +256,3 @@ print(b)
 
     [ 19.2305594   -7.21861262]
     31.6032171919
-

@@ -106,11 +106,8 @@ $$Q(state, action) = R(state, action) + \gamma \times Max[Q(next state, all acti
 Algorithm to utilize the Q matrix:
 
 1. Set current state = initial state.
-
 2. From current state, find the action with the highest Q value.
-
 3. Set current state = next state.
-
 4. Repeat Steps 2 and 3 until current state = goal state.
 
 The algorithm above will return the sequence of states from the initial state to the goal state.

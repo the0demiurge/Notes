@@ -7,7 +7,7 @@ $$
 S^{-1}_\omega = V\Sigma^{-1}U^T
 $$
 
-使用奇异值分解，实际$$S^{-1}$$直接用pinv就行(psedu invert)
+使用奇异值分解，实际$S^{-1}$直接用pinv就行(psedu invert)
 
 $$
 S_\omega = \Sigma_0 + \Sigma_1
@@ -43,9 +43,9 @@ def variance(x, u):
 def lda2(x, y):
     x0, x1 = mat(x[y.T[0] == 0]), mat(x[y.T[0] == 1])
     u0, u1 = x0.mean(axis=0), x1.mean(axis=0)
-    
+
     sigma0, sigma1 = reduce(lambda x, y: x + y, [variance(i, u0) for i in x0]), reduce(lambda x, y: x + y, [variance(i, u1) for i in x1])
-    
+
     w = (u0 - u1).dot(pinv(sigma0 / x0.shape[0] + sigma1 / x1.shape[0]))
     return w
 

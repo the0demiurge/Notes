@@ -8,7 +8,7 @@ $$
 \hat{y}=\mathbf{\theta}^T\mathbf{z}+\epsilon
 $$
 
-现在有数据集$$y_1, \ldots, y_N$$, $$z_1, \ldots, z_N$$，
+现在有数据集$y_1, \ldots, y_N$, $z_1, \ldots, z_N$，
 
 使用平方损失函数
 $$
@@ -27,9 +27,9 @@ $$
 
 ### 一阶线性模型参数辨识
 
-状态转移模型：$$x_{t+1}=ax_t+bu_t+\epsilon$$
+状态转移模型：$x_{t+1}=ax_t+bu_t+\epsilon$
 
-线性回归模型：$$z_t=[x_t, u_t]$$；$$y=x_{t+1}$$；$$\mathbf{\theta}=[a,b]$$
+线性回归模型：$z_t=[x_t, u_t]$；$y=x_{t+1}$；$\mathbf{\theta}=[a,b]$
 
 收集数据求解即可，其实就是个回归问题，用其他模型也ok
 
