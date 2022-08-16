@@ -25,6 +25,7 @@ jobs:
           mkdir .public
           cp -r * .public
           mv .public public
+          touch public/.nojekyll
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
