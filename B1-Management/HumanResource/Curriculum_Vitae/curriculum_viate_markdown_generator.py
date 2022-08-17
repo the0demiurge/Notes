@@ -61,11 +61,12 @@ class CVFiller(object):
 
 
 class CVGenerator(object):
-    def __init__(self, cv_info, *, lang='zh', private=True, education_misc=True):
+    def __init__(self, cv_info, *, lang='zh', private=True, education_misc=True, skills_first=False):
         self.cv_info = deepcopy(cv_info)
         self.lang = lang
         self.private = private
         self.education_misc = education_misc
+        self.skills_first = skills_first
         self._process_sensitive(private)
         self.translation = {
             'zh': {
@@ -76,7 +77,7 @@ class CVGenerator(object):
                 'internship': '实习经历',
                 'campus_proj': '学校项目',
                 'amateur': '业余项目',
-                'skills':'技能',
+                'skills': '技能',
                 'misc': '自我评价'
 
             },
@@ -88,7 +89,7 @@ class CVGenerator(object):
                 'internship': 'Internship',
                 'campus_proj': 'Campus Projects',
                 'amateur': 'Amateur Projects',
-                'skills':'Skills',
+                'skills': 'Skills',
                 'misc': 'Miscellaneous'
             },
         }[lang]
@@ -168,11 +169,12 @@ class CVGenerator(object):
     @property
     def amateur(self):
         return self._common_project_list('amateur')
+
     @property
     def skills(self):
-        if not self.cv_info.get('skills',None):
+        if not self.cv_info.get('skills', None):
             return []
-        result = ['## '+self.translation['skills'],'']
+        result = ['## ' + self.translation['skills'], '']
         for skill in self.cv_info['skills']:
             result.append(f"- **{skill['title']}**")
             for item in skill['items']:
@@ -192,19 +194,18 @@ class CVGenerator(object):
 
     def __str__(self):
         result = []
-        for component in [
-            'title',
-            'contact',
-            'education',
-            'work',
-            'internship',
-            'campus_proj',
-            'amateur',
-            'skills',
-            'misc',
-        ]:
-            if hasattr(self, component):
-                comp = getattr(self, component)
+        head = ['title', 'contact', 'education']
+        proj = ['work', 'internship', 'campus_proj']
+        skill = ['skills']
+        misc = ['misc']
+        if self.skills_first:
+            component = head + skill + proj + misc
+        else:
+            component = head + proj + skill + misc
+
+        for item in component:
+            if hasattr(self, item):
+                comp = getattr(self, item)
                 if comp:
                     result.extend(comp)
         return '\n'.join(result)
@@ -302,6 +303,7 @@ class CVGenerator(object):
             result.extend(self._project(proj, proj_level))
         return result
 
+
 cv_example = {
     'contact': {
         'name': '姓名',
@@ -397,8 +399,8 @@ cv_example = {
 }
 
 
-def main(cv_info, *, lang='zh', private=True, education_misc=True, ignore_crawler=False):
-    cv_generator = CVGenerator(cv_info, lang=lang, private=private, education_misc=education_misc)
+def main(cv_info, *, lang='zh', private=True, education_misc=True, ignore_crawler=False, skills_first=False):
+    cv_generator = CVGenerator(cv_info, lang=lang, private=private, education_misc=education_misc, skills_first=skills_first)
     cv_filler = CVFiller()
     cv = str(cv_generator)
     if not ignore_crawler:
@@ -414,6 +416,7 @@ def get_args():
     parser.add_argument('--public', action='store_true', help='Show private information')
     parser.add_argument('--hide-education-misc', action='store_true', help='hide education misc information')
     parser.add_argument('--ignore-crawler', action='store_true')
+    parser.add_argument('--skills-first', action='store_true', help='Show skills before projects')
     return parser.parse_args()
 
 
@@ -428,4 +431,4 @@ if __name__ == '__main__':
         print('use --help argument to show help messages')
         exit(1)
     cv_json = json.load(open(os.path.abspath(os.path.expanduser(args.cv_json))))
-    print(main(cv_json, lang=args.lang, private=not args.public, education_misc=args.hide_education_misc, ignore_crawler=args.ignore_crawler))
+    print(main(cv_json, lang=args.lang, private=not args.public, education_misc=args.hide_education_misc, ignore_crawler=args.ignore_crawler, skills_first=args.skills_first))
