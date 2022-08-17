@@ -110,6 +110,7 @@
       - [SECURITY](A3-Unix-Like/Server_Maintenance/SECURITY.md)
     - Tools
       - [ffmpeg](A3-Unix-Like/Tools/ffmpeg.md)
+      - [git](A3-Unix-Like/Tools/git.md)
   - [Arch_Linux_Installation](A3-Unix-Like/Arch_Linux_Installation.md)
   - [macOS](A3-Unix-Like/macOS.md)
 - A4-Control_Theory

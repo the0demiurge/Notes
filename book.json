@@ -2,7 +2,7 @@
     "title": "CharlesNotes",
     "author": "Charles Xu",
     "plugins": [
-        "katex-pro",
+        "katex-ng",
         "copy-code-button",
         "viz",
         "disqus",
