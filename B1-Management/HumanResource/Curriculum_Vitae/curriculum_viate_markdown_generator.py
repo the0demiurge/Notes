@@ -195,7 +195,7 @@ class CVGenerator(object):
     def __str__(self):
         result = []
         head = ['title', 'contact', 'education']
-        proj = ['work', 'internship', 'campus_proj']
+        proj = ['work', 'internship', 'campus_proj', 'amateur']
         skill = ['skills']
         misc = ['misc']
         if self.skills_first:
