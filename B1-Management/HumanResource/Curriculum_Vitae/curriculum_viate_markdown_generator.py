@@ -111,7 +111,7 @@ class CVGenerator(object):
         header = ['Email', 'TEL']
         info = ['[{email}](mailto:{email})'.format(email=self.cv_info['contact']['email']), self.cv_info['contact']['tel']]
         if self.cv_info['contact'].get('github_user', None):
-            header.append('GitHub({github_followers,' + self.cv_info['contact']['github_user'] + '} followers)')
+            header.append('GitHub ({github_followers,' + self.cv_info['contact']['github_user'] + '} followers)')
             info.append("[github.com/{github_user}](https://github.com/{github_user}/)".format(github_user=self.cv_info['contact']['github_user']))
         result = [f'## {self.translation["contact"]}', '', ]
         result.append(self._to_table_line(header))
