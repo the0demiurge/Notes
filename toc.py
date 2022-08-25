@@ -14,7 +14,7 @@ def format_line(name, link=None, level=0):
     return line
 
 
-def traverse(path=basepath, level=-2):
+def traverse(path=basepath, level=-1):
     files = list()
     folders = list()
     readme = False
@@ -35,7 +35,7 @@ def traverse(path=basepath, level=-2):
     if level >= 0:
         yield format_line(os.path.basename(root), os.path.join(root, 'README.md') if readme else None, level=level)
     for folder in folders:
-        yield from traverse(os.path.join(path, folder), level=level + 2)
+        yield from traverse(os.path.join(path, folder), level=level + 1)
     if level >= 0:
         for file in files:
             yield format_line(os.path.splitext(file)[0], os.path.join(root, file), level=level + 1)
