@@ -13,7 +13,7 @@ namespace show {
 template <typename T>
 void show(vector<T> data, bool ln = true) {
     cout << '[';
-    for (auto i : data) cout << i << ", ";
+    for (auto item : data) cout << item << ", ";
     cout << ']';
     if (ln) cout << endl;
 }
@@ -26,13 +26,12 @@ template <typename T>
 vector<T> merge(const vector<T>& arr1, const vector<T> arr2) {
     vector<T> result;
     int i = 0, j = 0;
-    while (i < arr1.size() && j < arr2.size()) {
-        if (arr1[i] <= arr2[j]) {
+    while (i < arr1.size() && j < arr2.size())
+        if (arr1[i] <= arr2[j])
             result.push_back(arr1[i++]);
-        } else {
+        else
             result.push_back(arr2[j++]);
-        }
-    }
+
     while (i < arr1.size()) result.push_back(arr1[i++]);
     while (j < arr2.size()) result.push_back(arr2[j++]);
 
@@ -62,9 +61,9 @@ void quicksort(vector<T>& arr, int lo = 0, int hi = -1) {
         while (lo < hi && arr[lo] <= pivot) lo++;
         arr[hi] = arr[lo];
     }
-    arr[lo] = pivot;
+    arr[hi++] = pivot;
     quicksort(arr, lo_, lo);
-    quicksort(arr, hi + 1, hi_);
+    quicksort(arr, hi, hi_);
 }
 
 }  // namespace algorithm
