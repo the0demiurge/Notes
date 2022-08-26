@@ -1,5 +1,9 @@
-# QuickSort and MergeSort
-## Code
+# Sort in Python
+
+## QuickSort and MergeSort
+
+### Code
+
 ```python
 import random
 import sys
@@ -60,14 +64,17 @@ start = time.time()
 sorted(data)
 print('timsort in C', time.time() - start)
 ```
-## Result
+### Result
+
 ```
 quicksort 0.06924867630004883
 mergesort 0.10277152061462402
 timsort in C 0.0060214996337890625
 ```
-# BinaryTreeSort
-## Code
+## BinaryTreeSort
+
+### Code
+
 ```python
 import random
 from dsr import BinaryTreeNode as Node
@@ -112,7 +119,8 @@ tree = BinarySortTree(data)
 print(tree)
 print(tree.traverse())
 ```
-## Result
+### Result
+
 ```
 [36, 43, 26, 9, 73, 76, 73, 72, 31, 19]
                     (36)                           
