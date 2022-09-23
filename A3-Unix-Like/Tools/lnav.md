@@ -15,7 +15,7 @@
     - `tab` 日志筛选器，使用`i/o`创建正向或反向筛选，`D`删掉筛选器
     - `Ctrl+F` toggle
   - `m/M/C` 标记，对于标记的内容可以进行文件操作，这个非常好用
-    - `:append-to`, `write-to`, `write-csv-to`, `write-json-to`, `pipe-to`, `pipe-line-to`
+    - `:append-to`, `:write-to`, `:write-csv-to`, `:write-json-to`, `:pipe-to`, `:pipe-line-to`
   - 显示
     - `P` pretty print
     - `Ctrl+L` 拷贝模式
