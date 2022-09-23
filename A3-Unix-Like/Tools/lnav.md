@@ -36,4 +36,4 @@
 ## 其他命令
 
 - `:unix-time <secs-or-date>`, `:current-time`转换 timestamp
-- `:tag`, `:untag`, `:delete-tags`
+- `:comment`, `:clear-comment`, `:tag`, `:untag`, `:delete-tags`
