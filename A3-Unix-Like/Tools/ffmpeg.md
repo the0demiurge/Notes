@@ -4,3 +4,4 @@
 - 裁减视频：
   - `ffmpeg -ss 00:30:00 -i vid.mp4 -t 60 -c copy out.mp4`
   - `ffmpeg -ss 00:30:00 -i vid.mp4 -to 00:31:00 -c copy out.mp4`
+
