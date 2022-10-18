@@ -40,10 +40,10 @@ $$
 这个算法是基于前面算法思想的改进，Adagrad的s通过不断累计会不断上升，导致梯度会逐渐收敛到0，而且噪声越大收敛越快。RMSProp 使用梯度平方的指数平滑，不再向正无穷累积：
 
 $$
-\begin{split}\begin{aligned}
+\begin{aligned}
     \mathbf{s}_t & \leftarrow \gamma \mathbf{s}_{t-1} + (1 - \gamma) \mathbf{g}_t^2, \\
     \mathbf{x}_t & \leftarrow \mathbf{x}_{t-1} - \frac{\eta}{\sqrt{\mathbf{s}_t + \epsilon}} \odot \mathbf{g}_t.
-\end{aligned}\end{split}
+\end{aligned}
 $$
 ## Adadelta
 
@@ -53,9 +53,9 @@ $$
 \end{aligned}
 $$
 $$
-\begin{split}\begin{aligned}
+\begin{aligned}
     \mathbf{g}_t' & = \frac{\sqrt{\Delta\mathbf{x}_{t-1} + \epsilon}}{\sqrt{{\mathbf{s}_t + \epsilon}}} \odot \mathbf{g}_t, \\
-\end{aligned}\end{split}
+\end{aligned}
 $$
 $$
 \begin{aligned}
@@ -63,9 +63,9 @@ $$
 \end{aligned}
 $$
 $$
-\begin{split}\begin{aligned}
+\begin{aligned}
     \mathbf{x}_t  & = \mathbf{x}_{t-1} - \mathbf{g}_t'. \\
-\end{aligned}\end{split}
+\end{aligned}
 $$
 总的来说和前面几个算法差别不大，只是分成两步，进一步进行平滑了，实践中我很少用这个算法，以前对比测试的时候也没感觉到有什么突出的地方。
 
@@ -75,10 +75,10 @@ $$
 
 该算法首先对梯度和梯度平方指数平滑，平滑系数通常取$$\beta_1 = 0.9$$与$$\beta_2 = 0.999$$:
 $$
-\begin{split}\begin{aligned}
+\begin{aligned}
     \mathbf{v}_t & \leftarrow \beta_1 \mathbf{v}_{t-1} + (1 - \beta_1) \mathbf{g}_t, \\
     \mathbf{s}_t & \leftarrow \beta_2 \mathbf{s}_{t-1} + (1 - \beta_2) \mathbf{g}_t^2.
-\end{aligned}\end{split}
+\end{aligned}
 $$
 
 然后还需要估计$$v_0, s_0$$:
