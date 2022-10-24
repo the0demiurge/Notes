@@ -21,7 +21,7 @@ $$
 
 ## AdaGrad
 
-现在加入一个新的需求，希望学习率随着迭代步数以$$\mathcal{O}(t^{-\frac{1}{2}})$$的速度收敛。但现在存在一个问题：数据分布不均衡。因此我们希望常见的特征梯度参数收敛快，不常见的特征梯度参数收敛慢。这里我们使用变量 $$\mathbf{s}_t$$ 记录每一维特征累计的梯度方差，如下所示（下面的操作都是按位置进行的操作pair-wise）：
+现在加入一个新的需求，希望学习率随着迭代步数以$\mathcal{O}(t^{-\frac{1}{2}})$的速度收敛。但现在存在一个问题：数据分布不均衡。因此我们希望常见的特征梯度参数收敛快，不常见的特征梯度参数收敛慢。这里我们使用变量 $\mathbf{s}_t$ 记录每一维特征累计的梯度方差，如下所示（下面的操作都是按位置进行的操作pair-wise）：
 
 $$
 \begin{split}\begin{aligned}
@@ -54,7 +54,7 @@ $$
 $$
 $$
 \begin{aligned}
-    \mathbf{g}_t' & = \frac{\sqrt{\Delta\mathbf{x}_{t-1} + \epsilon}}{\sqrt{{\mathbf{s}_t + \epsilon}}} \odot \mathbf{g}_t, \\
+    \mathbf{g}_t' & = \frac{\sqrt{\Delta\mathbf{x}_{t-1} + \epsilon} }{\sqrt{ {\mathbf{s}_t + \epsilon} } } \odot \mathbf{g}_t, \\
 \end{aligned}
 $$
 $$
@@ -73,7 +73,7 @@ $$
 
 目前最受欢迎的算法，结合了前面各种算法的特点，不过有时会因为方差控制不良导致发散。我在实践中并没有感受到该算法相比RMSProp的优势，反而常常比不过RMSProp。想让这个算法好用还需要进行预热，不如RMSProp方便。
 
-该算法首先对梯度和梯度平方指数平滑，平滑系数通常取$$\beta_1 = 0.9$$与$$\beta_2 = 0.999$$:
+该算法首先对梯度和梯度平方指数平滑，平滑系数通常取$\beta_1 = 0.9$与$\beta_2 = 0.999$:
 $$
 \begin{aligned}
     \mathbf{v}_t & \leftarrow \beta_1 \mathbf{v}_{t-1} + (1 - \beta_1) \mathbf{g}_t, \\
@@ -81,7 +81,7 @@ $$
 \end{aligned}
 $$
 
-然后还需要估计$$v_0, s_0$$:
+然后还需要估计$v_0, s_0$:
 
 $$
 \hat{\mathbf{v}}_0 = \frac{\mathbf{v}_0}{1 - \beta_1^0} \text{ and } \hat{\mathbf{s}}_0 = \frac{\mathbf{s}_0}{1 - \beta_2^0}.

@@ -12,6 +12,8 @@
     - [Dynamic_Programming](A1-Computer_Science/Algorithm/Dynamic_Programming.md)
     - [Eight_Queen.py](A1-Computer_Science/Algorithm/Eight_Queen.py.md)
     - [FullBinaryTreeHeap.py](A1-Computer_Science/Algorithm/FullBinaryTreeHeap.py.md)
+    - [bisect.cc](A1-Computer_Science/Algorithm/bisect.cc.md)
+    - [sort.cc](A1-Computer_Science/Algorithm/sort.cc.md)
     - [sort.py](A1-Computer_Science/Algorithm/sort.py.md)
     - [swap](A1-Computer_Science/Algorithm/swap.md)
   - Network
@@ -29,6 +31,7 @@
           - [argv.cc](A1-Computer_Science/Programming/Language/C_or_C++/Gramma/argv.cc.md)
           - [inherit.cc](A1-Computer_Science/Programming/Language/C_or_C++/Gramma/inherit.cc.md)
         - [STL](A1-Computer_Science/Programming/Language/C_or_C++/STL/README.md)
+          - [heap.cc](A1-Computer_Science/Programming/Language/C_or_C++/STL/heap.cc.md)
         - [pthread](A1-Computer_Science/Programming/Language/C_or_C++/pthread.md)
       - Python
         - DevTools
@@ -45,6 +48,7 @@
           - [ctypes](A1-Computer_Science/Programming/Language/Python/Example/ctypes.md)
           - [cython](A1-Computer_Science/Programming/Language/Python/Example/cython.md)
           - [keyboard-mouse](A1-Computer_Science/Programming/Language/Python/Example/keyboard-mouse.md)
+          - [logging](A1-Computer_Science/Programming/Language/Python/Example/logging.md)
           - [ncurses_example.py](A1-Computer_Science/Programming/Language/Python/Example/ncurses_example.py.md)
           - [pandas](A1-Computer_Science/Programming/Language/Python/Example/pandas.md)
           - [qrcode_example.py](A1-Computer_Science/Programming/Language/Python/Example/qrcode_example.py.md)
@@ -85,6 +89,7 @@
     - SupportVectorMachine
       - [SMO_Simple](A2-Machine_Learning/Algorithms/SupportVectorMachine/SMO_Simple.md)
     - [LDA.py](A2-Machine_Learning/Algorithms/LDA.py.md)
+  - [Optimizers](A2-Machine_Learning/Optimizers/README.md)
   - Problems
     - [Imbalance](A2-Machine_Learning/Problems/Imbalance.md)
   - Tools
@@ -114,6 +119,7 @@
   - Tools
     - [ffmpeg](A3-Unix-Like/Tools/ffmpeg.md)
     - [git](A3-Unix-Like/Tools/git.md)
+    - [lnav](A3-Unix-Like/Tools/lnav.md)
   - [Arch_Linux_Installation](A3-Unix-Like/Arch_Linux_Installation.md)
   - [macOS](A3-Unix-Like/macOS.md)
 - A4-Control_Theory

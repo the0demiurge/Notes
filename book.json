@@ -2,7 +2,7 @@
     "title": "CharlesNotes",
     "author": "Charles Xu",
     "plugins": [
-        "mathjax-single-dollar",
+        "katex-pro",
         "copy-code-button",
         "viz",
         "disqus",
