@@ -4,4 +4,5 @@
 - 裁减视频：
   - `ffmpeg -ss 00:30:00 -i vid.mp4 -t 60 -c copy out.mp4`
   - `ffmpeg -ss 00:30:00 -i vid.mp4 -to 00:31:00 -c copy out.mp4`
+- Kazam 转码: `ffmpeg -y -i input_file.mp4 -c:v libx264 -c:a aac -strict experimental -tune fastdecode -pix_fmt yuv420p -b:a 192k -ar 48000 output_file.mp4`
 
