@@ -15,26 +15,26 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: "10.x"
+          node-version: "14.x"
 
       - name: Install dependency
         run: |
           sudo apt-get -qq update
           sudo apt-get install -y python3 calibre xvfb
-          npm install gitbook-cli -g
+          npm install @gitbook-ng/gitbook -g
           npm install gitbook-plugin-katex-pro
           #npm install gitbook-plugin-mathjax-single-dollar
           npm install svgexport -g
-          gitbook install
+          npx gitbook install
 
       - name: Trigger personal build script
         run: |
           cat HEADER|tee README.md
           python3 toc.py
           if [ ! -d books ];then mkdir books;fi
-          gitbook build
-          gitbook epub . books/CharlesNotes.epub
-          gitbook mobi . books/CharlesNotes.mobi
+          npx gitbook build
+          npx gitbook epub . books/CharlesNotes.epub
+          npx gitbook mobi . books/CharlesNotes.mobi
           cp -r books _book
           rm _book/.gitignore
 

@@ -6,8 +6,8 @@
 3. 使用`mount -afv`测试一下 fstab 有没有错误，如果有错的话系统将无法启动。
 4. 重新挂载硬盘`mount -o remount,usrquota,grpquota sdX`
 5. 创建配额文件: `quotacheck -amvugc`
-6. 编辑一个配额配置: `edquota -u $user` or `edquota -g group`
-7. 为其他用户复制`$user`的配额信息： `for i in $(ls /home);do if [[ -d /home/$i ]];then echo quota $i;edquota -p $user $i; fi;done`，其中`user`就是上一步修改过配额的用户
+6. 编辑一个配额配置: `edquota -u ￥user` or `edquota -g group`
+7. 为其他用户复制`￥user`的配额信息： `for i in ￥(ls /home);do if [[ -d /home/￥i ]];then echo quota ￥i;edquota -p ￥user ￥i; fi;done`，其中`user`就是上一步修改过配额的用户
 
 ## 报告配额使用状况
 `repquota -as`
