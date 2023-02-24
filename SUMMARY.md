@@ -12,6 +12,7 @@
     - [Dynamic_Programming](A1-Computer_Science/Algorithm/Dynamic_Programming.md)
     - [Eight_Queen.py](A1-Computer_Science/Algorithm/Eight_Queen.py.md)
     - [FullBinaryTreeHeap.py](A1-Computer_Science/Algorithm/FullBinaryTreeHeap.py.md)
+    - [Trajetory_Search.py](A1-Computer_Science/Algorithm/Trajetory_Search.py.md)
     - [bisect.cc](A1-Computer_Science/Algorithm/bisect.cc.md)
     - [sort.cc](A1-Computer_Science/Algorithm/sort.cc.md)
     - [sort.py](A1-Computer_Science/Algorithm/sort.py.md)
