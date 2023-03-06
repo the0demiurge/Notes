@@ -19,7 +19,10 @@ class Map(object):
                 if isinstance(item, int) and item != 0:
                     elem = termcolor.colored(elem, 'red')
                 if isinstance(item, str):
-                    elem = termcolor.colored(elem, 'green')
+                    if item == '.':
+                        elem = termcolor.colored(elem, 'blue')
+                    else:
+                        elem = termcolor.colored(elem, 'green')
                 result.append(elem)
             result.append('\n')
         return ''.join(result)
@@ -142,6 +145,8 @@ if __name__ == '__main__':
         start = time.time()
         distance, traj, loops, visited = search_method(problem, departure, destination)
         end = time.time()
+        for v in visited:
+            problem[v] = '.'
         for i, p in enumerate(traj):
             problem[p] = str(i)
         problem[departure] = 'DP'
