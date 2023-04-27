@@ -39,7 +39,7 @@ gdb 族有很多工具，经过我的测试，比较好用的有如下几个：
 
 首先把常用命令先写到文件中
 
-```gdb
+```
 # debug_file.gdb
 
 b some_namespace::SomeClass::some_func
