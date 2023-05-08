@@ -16,6 +16,7 @@
     - [bisect.cc](A1-Computer_Science/Algorithm/bisect.cc.md)
     - [sort.cc](A1-Computer_Science/Algorithm/sort.cc.md)
     - [sort.py](A1-Computer_Science/Algorithm/sort.py.md)
+    - [sum](A1-Computer_Science/Algorithm/sum.md)
     - [swap](A1-Computer_Science/Algorithm/swap.md)
   - Network
     - [OSI](A1-Computer_Science/Network/OSI.md)
@@ -33,6 +34,8 @@
           - [inherit.cc](A1-Computer_Science/Programming/Language/C_or_C++/Gramma/inherit.cc.md)
         - [STL](A1-Computer_Science/Programming/Language/C_or_C++/STL/README.md)
           - [heap.cc](A1-Computer_Science/Programming/Language/C_or_C++/STL/heap.cc.md)
+        - [debug](A1-Computer_Science/Programming/Language/C_or_C++/debug/README.md)
+          - [gdb](A1-Computer_Science/Programming/Language/C_or_C++/debug/gdb.md)
         - [pthread](A1-Computer_Science/Programming/Language/C_or_C++/pthread.md)
       - Python
         - DevTools

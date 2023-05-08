@@ -25,7 +25,7 @@ gdb 族有很多工具，经过我的测试，比较好用的有如下几个：
   - `gdb <executable-file>`
 - 启动后，连接到正在运行的进程
   - 基于进程号：`sudo gdb --pid <pid>`
-  - 基于命令名称：`sudo gdb --pid $(pgrep -n <command name>)`
+  - 基于命令名称：`sudo gdb --pid ￥(pgrep -n <command name>)`
 - 远程调试
   - 启动远程调试服务：`sudo gdbserver --multi :9999 --attach <pid>`
   - 连接到远程调试服务：既然都用远程调试了，当然是为了使用 IDE 自带的功能连上
@@ -61,7 +61,7 @@ cgdb 使用 `Esc` 进入源码窗口，使用空格给当前行加断点，使�
 - 进程 / 线程
   - `i proc`：看进程、可知性文件情况
   - `i threads`：看线程，注意这里面的线程编号并不是操作系统的线程号
-  - `p $_thread`：看断点所在线程
+  - `p ￥_thread`：看断点所在线程
   - `thread <thread-id-by-gdb>` 切换到某线程
   - `thread apply all <command>`：每个线程都运行某指令
 - 函数运行状况
