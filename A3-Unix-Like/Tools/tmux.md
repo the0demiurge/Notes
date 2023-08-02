@@ -2,8 +2,10 @@
 
 - new session: `tmux new-session -d -s <session-name>`
 - kill session: `tmux kill-session -t <session-name>`
+- new window:`tmux new-window -n <window-name>`
+- select window: `tmux select-window -t <window-number>`
 - split window: `tmux split-window -h -t <session-name>:<window-number>`
-- select pane: `tmux select-pane -t <session-name>:<window-number>.<pane-number>`
+- select pane: `tmux select-pane -t <session-name>:<window-number>.<pane-number>`,`tmux select-pane -L/-R/-U/-D`
 - run command: `tmux send-keys -t <session-name>:<window-number>.<pane-number>`
 
 ```bash
