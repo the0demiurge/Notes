@@ -4,7 +4,7 @@ This is my notes, powered by GitBook, GitHub Pages, Travis CI.
 
 Book Source: [CharlesNotes](https://github.com/the0demiurge/Notes)
 
-Online Reading: [notes.pythonic.life](https://notes.pythonic.life)
+Online Reading: [notes.love-y.eu](https://notes.love-y.eu)
 
 ![GitBook-Legacy to GitHub Pages](https://github.com/the0demiurge/Notes/workflows/GitBook-Legacy%20to%20GitHub%20Pages/badge.svg)
 
