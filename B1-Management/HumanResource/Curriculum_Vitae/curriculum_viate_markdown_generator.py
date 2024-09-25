@@ -152,10 +152,12 @@ class CVGenerator(object):
     @property
     def work(self):
         result = [f"## {self.translation['work']}", '']
-        for work in self.cv_info['work']:
-            result.extend((f"### {work['company']} {work['position']} {self._align_right(work['time'])}", ''))
+        for i, work in enumerate(self.cv_info['work']):
+            result.extend((f"### {work['company']}  -  {work['position']} {self._align_right(work['time'])}", ''))
             for proj in work['projects']:
                 result.extend(self._project(proj, 4))
+            if i < len(self.cv_info['work']) - 1:
+                result.extend(['---', ''])
         return result
 
     @property
