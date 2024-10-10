@@ -65,7 +65,7 @@ actor_loss = -torch.mean(self.critic(states, self.actor(states)))
 
 
 # sac
-next_actions, log_prob = self.actor(next_states)
+next_actions, log_prob = self.actor(next_states)  # 这里面 next_actions 是动作的概率密度，梯度能传播到 q_value 并最终传到 actor loss
 entropy = -log_prob
 q1_value = self.target_critic_1(next_states, next_actions)
 q2_value = self.target_critic_2(next_states, next_actions)
