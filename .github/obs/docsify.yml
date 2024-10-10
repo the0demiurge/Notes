@@ -1,0 +1,37 @@
+name: GitBook-Legacy to GitHub Pages
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+env:
+  TZ: "Asia/Shanghai"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+      - name: Install dependency
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get install -y python3
+      - name: Trigger personal build script
+        run: |
+          cat HEADER|tee README.md
+          python3 toc.py
+          mkdir .public
+          cp -r * .public
+          mv .public public
+          touch public/.nojekyll
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: public
+          fqdn: ${{secrets.CUSTOM_DOMAIN}}
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
