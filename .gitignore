@@ -215,3 +215,5 @@ _book
 package-lock.json
 books/
 package.json
+.trash
+.obsidian
