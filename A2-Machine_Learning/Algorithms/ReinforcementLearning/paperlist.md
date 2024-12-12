@@ -26,3 +26,6 @@
 ## 训练方法
 
 - 使用RL训练模型池后用Dagger蒸馏到单个模型，效果特别好，当前使用RL落地的best pratice，可以保证可靠性，避开了RL最大的劣势
+
+## Tricks
+- Loss of Plasticity in Deep Continual Learning: 从感知训练RL的时候，需要进行数据增强，不然会出现可塑性下降
