@@ -1,0 +1,2856 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>word2vec · CharlesNotes</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="@gitbook-ng/gitbook 3.3.6">
+        <meta name="author" content="Charles Xu">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex-pro/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="transformer.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    A0-Mathmatics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../A0-Mathmatics/Matrix_Calculus.html">
+            
+                <a href="../../../A0-Mathmatics/Matrix_Calculus.html">
+            
+                    
+                    Matrix_Calculus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../A0-Mathmatics/attractor.py.html">
+            
+                <a href="../../../A0-Mathmatics/attractor.py.html">
+            
+                    
+                    attractor.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    A1-Computer_Science
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Algorithm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../A1-Computer_Science/Algorithm/Bit_Manipulation.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Bit_Manipulation.html">
+            
+                    
+                    Bit_Manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../A1-Computer_Science/Algorithm/Calculator_AST.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Calculator_AST.py.html">
+            
+                    
+                    Calculator_AST.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../A1-Computer_Science/Algorithm/DFS-BFS.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/DFS-BFS.html">
+            
+                    
+                    DFS-BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../A1-Computer_Science/Algorithm/Diffie_Hellman_Key_Exchange.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Diffie_Hellman_Key_Exchange.html">
+            
+                    
+                    Diffie_Hellman_Key_Exchange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../../A1-Computer_Science/Algorithm/Dynamic_Programming.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Dynamic_Programming.html">
+            
+                    
+                    Dynamic_Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../../A1-Computer_Science/Algorithm/Eight_Queen.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Eight_Queen.py.html">
+            
+                    
+                    Eight_Queen.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../../A1-Computer_Science/Algorithm/FullBinaryTreeHeap.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/FullBinaryTreeHeap.py.html">
+            
+                    
+                    FullBinaryTreeHeap.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../../A1-Computer_Science/Algorithm/Trajetory_Search.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Trajetory_Search.py.html">
+            
+                    
+                    Trajetory_Search.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../../A1-Computer_Science/Algorithm/bisect.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/bisect.cc.html">
+            
+                    
+                    bisect.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../../../A1-Computer_Science/Algorithm/sort.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/sort.cc.html">
+            
+                    
+                    sort.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="../../../A1-Computer_Science/Algorithm/sort.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/sort.py.html">
+            
+                    
+                    sort.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="../../../A1-Computer_Science/Algorithm/sum.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/sum.html">
+            
+                    
+                    sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="../../../A1-Computer_Science/Algorithm/swap.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/swap.html">
+            
+                    
+                    swap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Network
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../A1-Computer_Science/Network/OSI.html">
+            
+                <a href="../../../A1-Computer_Science/Network/OSI.html">
+            
+                    
+                    OSI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    Programming
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" >
+            
+                <span>
+            
+                    
+                    Front_End
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.1" >
+            
+                <span>
+            
+                    
+                    HTML
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.1.1" data-path="../../../A1-Computer_Science/Programming/Front_End/HTML/split_panes_html.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Front_End/HTML/split_panes_html.html">
+            
+                    
+                    split_panes_html
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.1.2" >
+            
+                <span>
+            
+                    
+                    热力图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.2.1" data-path="../../../A1-Computer_Science/Programming/Front_End/热力图/FrontEnd_html.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Front_End/热力图/FrontEnd_html.html">
+            
+                    
+                    FrontEnd_html
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.1.2.2" data-path="../../../A1-Computer_Science/Programming/Front_End/热力图/百度api获取城市坐标.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Front_End/热力图/百度api获取城市坐标.py.html">
+            
+                    
+                    百度api获取城市坐标.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" >
+            
+                <span>
+            
+                    
+                    Language
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/">
+            
+                    
+                    C_or_C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1.1" >
+            
+                <span>
+            
+                    
+                    Gramma
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1.1.1" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/Gramma/argv.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/Gramma/argv.cc.html">
+            
+                    
+                    argv.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.1.1.2" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/Gramma/inherit.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/Gramma/inherit.cc.html">
+            
+                    
+                    inherit.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.1.2" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/STL/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/STL/">
+            
+                    
+                    STL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1.2.1" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/STL/heap.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/STL/heap.cc.html">
+            
+                    
+                    heap.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.1.3" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/debug/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/debug/">
+            
+                    
+                    debug
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1.3.1" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/debug/gdb.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/debug/gdb.html">
+            
+                    
+                    gdb
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.1.4" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/pthread.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/pthread.html">
+            
+                    
+                    pthread
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.2.1" >
+            
+                <span>
+            
+                    
+                    DevTools
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.2.1.1" data-path="../../../A1-Computer_Science/Programming/Language/Python/DevTools/crash_on_ipy.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/DevTools/crash_on_ipy.py.html">
+            
+                    
+                    crash_on_ipy.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.1.2" data-path="../../../A1-Computer_Science/Programming/Language/Python/DevTools/jupyter_hide_code.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/DevTools/jupyter_hide_code.py.html">
+            
+                    
+                    jupyter_hide_code.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2" >
+            
+                <span>
+            
+                    
+                    Example
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/">
+            
+                    
+                    sendmail
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1.1" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/attachment.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/attachment.py.html">
+            
+                    
+                    attachment.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1.2" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/pic.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/pic.py.html">
+            
+                    
+                    pic.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1.3" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/qq_smtp.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/qq_smtp.py.html">
+            
+                    
+                    qq_smtp.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1.4" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/sendmail.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/sendmail.py.html">
+            
+                    
+                    sendmail.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.2" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/argparse_example.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/argparse_example.py.html">
+            
+                    
+                    argparse_example.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.3" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/create_epubook.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/create_epubook.py.html">
+            
+                    
+                    create_epubook.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.4" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/ctypes.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/ctypes.html">
+            
+                    
+                    ctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.5" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/cython.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/cython.html">
+            
+                    
+                    cython
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.6" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/keyboard-mouse.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/keyboard-mouse.html">
+            
+                    
+                    keyboard-mouse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.7" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/logging.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/logging.html">
+            
+                    
+                    logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.8" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/ncurses_example.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/ncurses_example.py.html">
+            
+                    
+                    ncurses_example.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.9" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/pandas.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/pandas.html">
+            
+                    
+                    pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.10" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/qrcode_example.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/qrcode_example.py.html">
+            
+                    
+                    qrcode_example.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.11" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/socket.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/socket.html">
+            
+                    
+                    socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.12" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/动态修改幻灯片内容.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/动态修改幻灯片内容.html">
+            
+                    
+                    动态修改幻灯片内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.3" data-path="../../../A1-Computer_Science/Programming/Language/Regular_Expression.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Regular_Expression.html">
+            
+                    
+                    Regular_Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" >
+            
+                <span>
+            
+                    
+                    Software_Engineering
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.3.1" data-path="../../../A1-Computer_Science/Programming/Software_Engineering/Design/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Software_Engineering/Design/">
+            
+                    
+                    Design
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.3.1.1" data-path="../../../A1-Computer_Science/Programming/Software_Engineering/Design/Factory_Pattern.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Software_Engineering/Design/Factory_Pattern.html">
+            
+                    
+                    Factory_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../../../A1-Computer_Science/Programming/Learning.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Learning.html">
+            
+                    
+                    Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    A2-Machine_Learning
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    Algorithms
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    NatrualLanguageProcessing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1" >
+            
+                <span>
+            
+                    
+                    Attention
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1.1" data-path="Attention/1_Nadaraya_Watson_Kernel_Regression.html">
+            
+                <a href="Attention/1_Nadaraya_Watson_Kernel_Regression.html">
+            
+                    
+                    1_Nadaraya_Watson_Kernel_Regression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.1.2" data-path="Attention/2_attention.html">
+            
+                <a href="Attention/2_attention.html">
+            
+                    
+                    2_attention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.2" data-path="transformer.html">
+            
+                <a href="transformer.html">
+            
+                    
+                    transformer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.1.3" data-path="word2vec.html">
+            
+                <a href="word2vec.html">
+            
+                    
+                    word2vec
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" >
+            
+                <span>
+            
+                    
+                    NeuralNetwork
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1" data-path="../NeuralNetwork/nn_mnist.py.html">
+            
+                <a href="../NeuralNetwork/nn_mnist.py.html">
+            
+                    
+                    nn_mnist.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.2" data-path="../NeuralNetwork/nn_mnist_static.py.html">
+            
+                <a href="../NeuralNetwork/nn_mnist_static.py.html">
+            
+                    
+                    nn_mnist_static.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../ReinforcementLearning/">
+            
+                <a href="../ReinforcementLearning/">
+            
+                    
+                    ReinforcementLearning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/">
+            
+                    
+                    Deep_Reinforcement_Learning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1.1" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1.1.1" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Q-Learning.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Q-Learning.html">
+            
+                    
+                    Q-Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.1.2" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Value_Based.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Value_Based.html">
+            
+                    
+                    Value_Based
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.1.3" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Variance.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Variance.html">
+            
+                    
+                    Variance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.2" >
+            
+                <span>
+            
+                    
+                    Policy_Gradient
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1.2.1" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/karpathy-pg-pong.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/karpathy-pg-pong.py.html">
+            
+                    
+                    karpathy-pg-pong.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.2.2" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/kvfrans-ddpg.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/kvfrans-ddpg.py.html">
+            
+                    
+                    kvfrans-ddpg.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.2.3" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/my_simple_PG.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/my_simple_PG.py.html">
+            
+                    
+                    my_simple_PG.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.2.4" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/replay_buffer.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/replay_buffer.py.html">
+            
+                    
+                    replay_buffer.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.3" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Fine_Tuning.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Fine_Tuning.html">
+            
+                    
+                    Fine_Tuning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.4" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/OU-process.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/OU-process.html">
+            
+                    
+                    OU-process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.5" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/cheatsheet.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/cheatsheet.py.html">
+            
+                    
+                    cheatsheet.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.6" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/step_by_step_q_learning.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/step_by_step_q_learning.html">
+            
+                    
+                    step_by_step_q_learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2" >
+            
+                <span>
+            
+                    
+                    bandit
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.3" data-path="../ReinforcementLearning/Thinking.html">
+            
+                <a href="../ReinforcementLearning/Thinking.html">
+            
+                    
+                    Thinking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.4" data-path="../ReinforcementLearning/paperlist.html">
+            
+                <a href="../ReinforcementLearning/paperlist.html">
+            
+                    
+                    paperlist
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" >
+            
+                <span>
+            
+                    
+                    SupportVectorMachine
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.4.1" data-path="../SupportVectorMachine/SMO_Simple.html">
+            
+                <a href="../SupportVectorMachine/SMO_Simple.html">
+            
+                    
+                    SMO_Simple
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../LDA.py.html">
+            
+                <a href="../LDA.py.html">
+            
+                    
+                    LDA.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Optimizers/">
+            
+                <a href="../../Optimizers/">
+            
+                    
+                    Optimizers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    Problems
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Problems/Imbalance.html">
+            
+                <a href="../../Problems/Imbalance.html">
+            
+                    
+                    Imbalance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    Tools
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../Tools/JAX/">
+            
+                <a href="../../Tools/JAX/">
+            
+                    
+                    JAX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../Tools/PyTorch/">
+            
+                <a href="../../Tools/PyTorch/">
+            
+                    
+                    PyTorch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.2.1" data-path="../../Tools/PyTorch/Example.html">
+            
+                <a href="../../Tools/PyTorch/Example.html">
+            
+                    
+                    Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" >
+            
+                <span>
+            
+                    
+                    SciKit-Learn
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.3.1" data-path="../../Tools/SciKit-Learn/tsne.py.html">
+            
+                <a href="../../Tools/SciKit-Learn/tsne.py.html">
+            
+                    
+                    tsne.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../Tools/TensorFlow/">
+            
+                <a href="../../Tools/TensorFlow/">
+            
+                    
+                    TensorFlow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.4.1" >
+            
+                <span>
+            
+                    
+                    TensorBoard
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.4.1.1" data-path="../../Tools/TensorFlow/TensorBoard/mnist_with_summaries.py.html">
+            
+                <a href="../../Tools/TensorFlow/TensorBoard/mnist_with_summaries.py.html">
+            
+                    
+                    mnist_with_summaries.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4.1.2" data-path="../../Tools/TensorFlow/TensorBoard/tensorboard_advanced.py.html">
+            
+                <a href="../../Tools/TensorFlow/TensorBoard/tensorboard_advanced.py.html">
+            
+                    
+                    tensorboard_advanced.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4.2" data-path="../../Tools/TensorFlow/1-TensorFlow_Cheatsheet.html">
+            
+                <a href="../../Tools/TensorFlow/1-TensorFlow_Cheatsheet.html">
+            
+                    
+                    1-TensorFlow_Cheatsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4.3" data-path="../../Tools/TensorFlow/Distributed_tensorflow.py.html">
+            
+                <a href="../../Tools/TensorFlow/Distributed_tensorflow.py.html">
+            
+                    
+                    Distributed_tensorflow.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4.4" data-path="../../Tools/TensorFlow/Duplicate_a_tensorflow_graph.html">
+            
+                <a href="../../Tools/TensorFlow/Duplicate_a_tensorflow_graph.html">
+            
+                    
+                    Duplicate_a_tensorflow_graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    A3-Unix-Like
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../A3-Unix-Like/Bash/">
+            
+                <a href="../../../A3-Unix-Like/Bash/">
+            
+                    
+                    Bash
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../../A3-Unix-Like/Bash/bash的高级技巧.html">
+            
+                <a href="../../../A3-Unix-Like/Bash/bash的高级技巧.html">
+            
+                    
+                    bash的高级技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    Server_Maintenance
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/">
+            
+                    
+                    scripts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1.1" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/backup_server_data.py.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/backup_server_data.py.html">
+            
+                    
+                    backup_server_data.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.1.2" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/charles-adduser.sh.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/charles-adduser.sh.html">
+            
+                    
+                    charles-adduser.sh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.1.3" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/mv2cron.bash.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/mv2cron.bash.html">
+            
+                    
+                    mv2cron.bash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.1.4" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/sendlog.py.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/sendlog.py.html">
+            
+                    
+                    sendlog.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../../A3-Unix-Like/Server_Maintenance/AUTO_UPGRADE.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/AUTO_UPGRADE.html">
+            
+                    
+                    AUTO_UPGRADE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../../A3-Unix-Like/Server_Maintenance/QUOTA.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/QUOTA.html">
+            
+                    
+                    QUOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../../../A3-Unix-Like/Server_Maintenance/SECURITY.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/SECURITY.html">
+            
+                    
+                    SECURITY
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    Tools
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../../A3-Unix-Like/Tools/ffmpeg.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/ffmpeg.html">
+            
+                    
+                    ffmpeg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../../A3-Unix-Like/Tools/git.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/git.html">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../../A3-Unix-Like/Tools/lnav.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/lnav.html">
+            
+                    
+                    lnav
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../../../A3-Unix-Like/Tools/netcat.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/netcat.html">
+            
+                    
+                    netcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../../../A3-Unix-Like/Tools/tmux.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/tmux.html">
+            
+                    
+                    tmux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../../A3-Unix-Like/Arch_Linux_Installation.html">
+            
+                <a href="../../../A3-Unix-Like/Arch_Linux_Installation.html">
+            
+                    
+                    Arch_Linux_Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../../A3-Unix-Like/macOS.html">
+            
+                <a href="../../../A3-Unix-Like/macOS.html">
+            
+                    
+                    macOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    A4-Control_Theory
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../../A4-Control_Theory/OptimalControl_AA203/">
+            
+                <a href="../../../A4-Control_Theory/OptimalControl_AA203/">
+            
+                    
+                    OptimalControl_AA203
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../../A4-Control_Theory/OptimalControl_AA203/Lecture_01.html">
+            
+                <a href="../../../A4-Control_Theory/OptimalControl_AA203/Lecture_01.html">
+            
+                    
+                    Lecture_01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../../A4-Control_Theory/OptimalControl_AA203/Lecture_02.html">
+            
+                <a href="../../../A4-Control_Theory/OptimalControl_AA203/Lecture_02.html">
+            
+                    
+                    Lecture_02
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    B1-Management
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    HumanResource
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../../B1-Management/HumanResource/Curriculum_Vitae/">
+            
+                <a href="../../../B1-Management/HumanResource/Curriculum_Vitae/">
+            
+                    
+                    Curriculum_Vitae
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1.1" >
+            
+                <span>
+            
+                    
+                    2022
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1.1.1" data-path="../../../B1-Management/HumanResource/Curriculum_Vitae/2022/2022.en.html">
+            
+                <a href="../../../B1-Management/HumanResource/Curriculum_Vitae/2022/2022.en.html">
+            
+                    
+                    2022.en
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.1.1.2" data-path="../../../B1-Management/HumanResource/Curriculum_Vitae/2022/2022.zh.html">
+            
+                <a href="../../../B1-Management/HumanResource/Curriculum_Vitae/2022/2022.zh.html">
+            
+                    
+                    2022.zh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.1.2" >
+            
+                <span>
+            
+                    
+                    2024
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1.2.1" data-path="../../../B1-Management/HumanResource/Curriculum_Vitae/2024/2024.zh.html">
+            
+                <a href="../../../B1-Management/HumanResource/Curriculum_Vitae/2024/2024.zh.html">
+            
+                    
+                    2024.zh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../../B1-Management/HumanResource/Interview/">
+            
+                <a href="../../../B1-Management/HumanResource/Interview/">
+            
+                    
+                    Interview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.2.1" data-path="../../../B1-Management/HumanResource/Interview/2018ST实习收获.html">
+            
+                <a href="../../../B1-Management/HumanResource/Interview/2018ST实习收获.html">
+            
+                    
+                    2018ST实习收获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2.2" data-path="../../../B1-Management/HumanResource/Interview/2020面试总结.html">
+            
+                <a href="../../../B1-Management/HumanResource/Interview/2020面试总结.html">
+            
+                    
+                    2020面试总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2.3" data-path="../../../B1-Management/HumanResource/Interview/Inwerviewer.html">
+            
+                <a href="../../../B1-Management/HumanResource/Interview/Inwerviewer.html">
+            
+                    
+                    Inwerviewer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../../B1-Management/ManagementByObject/">
+            
+                <a href="../../../B1-Management/ManagementByObject/">
+            
+                    
+                    ManagementByObject
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../../B1-Management/ManagementByObject/OKR.html">
+            
+                <a href="../../../B1-Management/ManagementByObject/OKR.html">
+            
+                    
+                    OKR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../../B1-Management/ManagementByObject/SMART.html">
+            
+                <a href="../../../B1-Management/ManagementByObject/SMART.html">
+            
+                    
+                    SMART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../../B1-Management/ManagementByObject/Self-Control.html">
+            
+                <a href="../../../B1-Management/ManagementByObject/Self-Control.html">
+            
+                    
+                    Self-Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    B2-Economics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../../B2-Economics/Principle/">
+            
+                <a href="../../../B2-Economics/Principle/">
+            
+                    
+                    Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    Quantitative_Investment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../../B2-Economics/Quantitative_Investment/PB_PE.html">
+            
+                <a href="../../../B2-Economics/Quantitative_Investment/PB_PE.html">
+            
+                    
+                    PB_PE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="../../../B2-Economics/Quantitative_Investment/基本概念.html">
+            
+                <a href="../../../B2-Economics/Quantitative_Investment/基本概念.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    C-Traffic
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../C-Traffic/1_Traffic_Control/">
+            
+                <a href="../../../C-Traffic/1_Traffic_Control/">
+            
+                    
+                    1_Traffic_Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../../../C-Traffic/1_Traffic_Control/Objects.html">
+            
+                <a href="../../../C-Traffic/1_Traffic_Control/Objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../../../C-Traffic/1_Traffic_Control/Terms.html">
+            
+                <a href="../../../C-Traffic/1_Traffic_Control/Terms.html">
+            
+                    
+                    Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../../C-Traffic/2_Autopilot/">
+            
+                <a href="../../../C-Traffic/2_Autopilot/">
+            
+                    
+                    2_Autopilot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../../../C-Traffic/2_Autopilot/2_0_Planning.html">
+            
+                <a href="../../../C-Traffic/2_Autopilot/2_0_Planning.html">
+            
+                    
+                    2_0_Planning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../../../C-Traffic/2_Autopilot/2_1_Search.html">
+            
+                <a href="../../../C-Traffic/2_Autopilot/2_1_Search.html">
+            
+                    
+                    2_1_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../../../C-Traffic/2_Autopilot/2_2_Sampling.html">
+            
+                <a href="../../../C-Traffic/2_Autopilot/2_2_Sampling.html">
+            
+                    
+                    2_2_Sampling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    X-Photography
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../../X-Photography/1-纽约摄影学院三原则.html">
+            
+                <a href="../../../X-Photography/1-纽约摄影学院三原则.html">
+            
+                    
+                    1-纽约摄影学院三原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../../Y-Academic/">
+            
+                <a href="../../../Y-Academic/">
+            
+                    
+                    Y-Academic
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../../Y-Academic/论文写作.html">
+            
+                <a href="../../../Y-Academic/论文写作.html">
+            
+                    
+                    论文写作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../../Y-Academic/论文阅读.html">
+            
+                <a href="../../../Y-Academic/论文阅读.html">
+            
+                    
+                    论文阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Z-Sundry
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../../Z-Sundry/DPT-RP1_Config.html">
+            
+                <a href="../../../Z-Sundry/DPT-RP1_Config.html">
+            
+                    
+                    DPT-RP1_Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >word2vec</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="word2vec"><a href="http://zh.d2l.ai/chapter_natural-language-processing-pretraining/word2vec.html" target="_blank">Word2Vec</a></h1>
+<p>&#x539F;&#x56E0;&#xFF1A;</p>
+<ol>
+<li>one-hot&#x7684;&#x4F59;&#x5F26;&#x76F8;&#x4F3C;&#x5EA6;&#x6CA1;&#x6709;&#x610F;&#x4E49;</li>
+<li>&#x964D;&#x7EF4;</li>
+</ol>
+<p>&#x539F;&#x7406;&#xFF1A;</p>
+<ul>
+<li>&#x6316;&#x6398;&#x9884;&#x6599;&#x4E2D;&#x8BCD;&#x6C47;&#x51FA;&#x73B0;&#x987A;&#x5E8F;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x8054;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;word2vec&#x53EA;&#x5173;&#x6CE8;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x5173;&#x8054;&#x6027;&#xFF0C;&#x5BF9;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x4E00;&#x89C6;&#x540C;&#x4EC1;&#x3002;</li>
+</ul>
+<p>&#x7C7B;&#x522B;&#xFF1A;</p>
+<ul>
+<li>Continuous Bag of Words: &#x4E0A;&#x4E0B;&#x6587; -&gt; &#x81EA;&#x5DF1;</li>
+<li>Skip-Gram: &#x81EA;&#x5DF1; -&gt; &#x4E0A;&#x4E0B;&#x6587;&#xFF08;&#x5176;&#x5B9E;&#x4E5F;&#x7B49;&#x4EF7;&#x4E8E;&#x81EA;&#x5DF1;-&gt;&#x6574;&#x4E2A;&#x53E5;&#x5B50;&#xFF0C;&#x6BD5;&#x7ADF;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mi mathvariant="normal">&#x2223;</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">P(x|x)=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mord">&#x2223;</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>&#xFF09;</li>
+</ul>
+<p>Skip-Gram&#x63A8;&#x5BFC;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x636E;&#x8BF4;&#x6027;&#x80FD;&#x4E5F;&#x6BD4;CBOW&#x597D;&#xFF0C;&#x6B64;&#x5904;&#x5C31;&#x7565;&#x8FC7;CBOW&#x3002;</p>
+<h2 id="&#x7B97;&#x6CD5;&#x7EC6;&#x8282;">&#x7B97;&#x6CD5;&#x7EC6;&#x8282;</h2>
+<p>&#x9996;&#x5148;&#x5B9A;&#x4E49;&#x8BCD;&#x5411;&#x91CF;&#x76F8;&#x4F3C;&#x5EA6;&#x4E3A;&#x4F59;&#x5F26;&#x76F8;&#x4F3C;&#x5EA6;&#xFF0C;&#x5047;&#x8BBE;&#x8BCD;&#x5411;&#x91CF;&#x7684;&#x6A21;&#x76F8;&#x540C;&#xFF08;&#x8D77;&#x7801;&#x968F;&#x673A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6A21;&#x7684;&#x8303;&#x56F4;&#x5DEE;&#x522B;&#x4E0D;&#x4F1A;&#x592A;&#x5927;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x7B49;&#x4EF7;&#x4E0E;&#x7B97;&#x5411;&#x91CF;&#x5185;&#x79EF;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi mathvariant="bold">u</mi><mi>o</mi><mi>T</mi></msubsup><msub><mi mathvariant="bold">v</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf{u}_o^T\mathbf{v}_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0883em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathbf">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.016em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x77E9;&#x9635;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span>&#xFF0C;&#x5176;&#x4E2D;one-hot&#x7F16;&#x7801;&#x7684;&#x8BCD;&#x5411;&#x91CF;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>w</mi><mi>T</mi></msup><mi>W</mi><mo>=</mo><mi mathvariant="bold">v</mi></mrow><annotation encoding="application/x-tex">w^T  W= \mathbf{v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4444em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span></p>
+<p>&#x7136;&#x540E;&#x5B9A;&#x4E49;&#x8BCD;&#x6C47;&#x4E4B;&#x95F4;&#x7684;&#x6761;&#x4EF6;&#x6982;&#x7387;&#xFF0C;&#x7ED9;&#x5B9A;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">w_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&#x7684;&#x6761;&#x4EF6;&#x4E0B;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>o</mi></msub></mrow><annotation encoding="application/x-tex">w_o</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&#x53D1;&#x751F;&#x7684;&#x6982;&#x7387;&#xFF08;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5148;&#x7B97;&#x4F59;&#x5F26;&#x76F8;&#x4F3C;&#x5EA6;&#x7136;&#x540E;&#x8FDE;&#x4E0A;softmax&#xFF09;&#xFF1A;</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><msub><mi>w</mi><mi>o</mi></msub><mi mathvariant="normal">&#x2223;</mi><msub><mi>w</mi><mi>c</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mfrac><msup><mi>e</mi><mrow><msubsup><mi mathvariant="bold">u</mi><mi>o</mi><mi>T</mi></msubsup><msub><mi mathvariant="bold">v</mi><mi>c</mi></msub></mrow></msup><mrow><munder><mo>&#x2211;</mo><mi>i</mi></munder><msup><mi>e</mi><mrow><msubsup><mi mathvariant="bold">u</mi><mi>i</mi><mi>T</mi></msubsup><msub><mi mathvariant="bold">v</mi><mi>c</mi></msub></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+P(w_o|w_c) = \frac{e^{\mathbf{u}_o^T\mathbf{v}_c}}{\sum\limits_ie^{\mathbf{u}_i^T\mathbf{v}_c}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.4674em;vertical-align:-1.784em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6834em;"><span style="top:-2.2em;"><span class="pstrut" style="height:3.0064em;"></span><span class="mord"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.75em;"><span style="top:-2.1223em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop op-symbol small-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.9777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9164em;"><span style="top:-3.0333em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathbf mtight">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8329em;"><span style="top:-2.1777em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-2.8448em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.3223em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathbf mtight" style="margin-right:0.01597em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1645em;"><span style="top:-2.357em;margin-left:-0.016em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.2364em;"><span class="pstrut" style="height:3.0064em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.6834em;"><span class="pstrut" style="height:3.0064em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0064em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathbf mtight">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9191em;"><span style="top:-2.214em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">o</span></span></span><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathbf mtight" style="margin-right:0.01597em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1645em;"><span style="top:-2.357em;margin-left:-0.016em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.784em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5047;&#x8BBE;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x8BCD;&#x6C47;&#x76F8;&#x5BF9;&#x4E8E;&#x5F53;&#x524D;&#x8BCD;&#x6C47;&#x6761;&#x4EF6;&#x72EC;&#x7ACB;&#xFF1A;</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><msub><mi>w</mi><mrow><mi>o</mi><mn>1</mn></mrow></msub><mo separator="true">,</mo><msub><mi>w</mi><mrow><mi>o</mi><mn>2</mn></mrow></msub><mo separator="true">,</mo><mo>&#x2026;</mo><mi mathvariant="normal">&#x2223;</mi><msub><mi>w</mi><mi>c</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo stretchy="false">(</mo><msub><mi>w</mi><mrow><mi>o</mi><mn>1</mn></mrow></msub><mi mathvariant="normal">&#x2223;</mi><msub><mi>w</mi><mi>c</mi></msub><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><msub><mi>w</mi><mrow><mi>o</mi><mn>2</mn></mrow></msub><mi mathvariant="normal">&#x2223;</mi><msub><mi>w</mi><mi>c</mi></msub><mo stretchy="false">)</mo><mo>&#x2026;</mo></mrow><annotation encoding="application/x-tex">
+P(w_{o1},w_{o2}, \ldots |w_c) = P(w_{o1}|w_c)P(w_{o2}|w_c) \ldots
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">&#x2026;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">&#x2223;</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">o</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">&#x2026;</span></span></span></span></span></p>
+<p>&#x90A3;&#x4E48;&#x5BF9;&#x8BED;&#x6599;&#x5E93;&#x6ED1;&#x7A97;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x5E76;&#x6700;&#x5927;&#x5316;Skip-Gram&#x6982;&#x7387;&#xFF1A;</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munder><mo>&#x220F;</mo><mi>t</mi></munder><munder><mo>&#x220F;</mo><mrow><mo>&#x2212;</mo><mi>m</mi><mo>&#x2264;</mo><mi>j</mi><mo>&#x2264;</mo><mi>m</mi></mrow></munder><mi>P</mi><mo stretchy="false">(</mo><msup><mi>w</mi><mrow><mi>t</mi><mo>+</mo><mi>j</mi></mrow></msup><mi mathvariant="normal">&#x2223;</mi><msup><mi>w</mi><mi>t</mi></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+\prod \limits_{t} \prod \limits _{-m\leq j \leq m}P(w^{t+j}|w^t)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4638em;vertical-align:-1.4138em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.9em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x220F;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathnormal mtight">m</span><span class="mrel mtight">&#x2264;</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">&#x2264;</span><span class="mord mathnormal mtight">m</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x220F;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.4138em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8436em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x6CA1;&#x8BF4;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo mathvariant="normal">&#x2260;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">j\neq0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel">&#xE020;</span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>&#xFF0C;&#x56E0;&#x4E3A;&#x5F53;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">j=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>&#x65F6;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">P=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>&#xFF0C;&#x5199;&#x4E0D;&#x5199;&#x90FD;&#x8BB2;&#x7B49;&#x4EF7;&#x3002;</p>
+<p>&#x7528;&#x6781;&#x5927;&#x4F3C;&#x7136;&#x6CD5;&#x6700;&#x5927;&#x5316;&#x8FD9;&#x4E2A;&#x6982;&#x7387;&#xFF0C;&#x53D6;&#x5BF9;&#x6570;&#x540E;&#x52A0;&#x8D1F;&#x53F7;&#xFF0C;&#x5F97;&#x5230;&#xFF1A;</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>J</mi><mo>=</mo><mo>&#x2212;</mo><munder><mo>&#x2211;</mo><mi>t</mi></munder><munder><mo>&#x2211;</mo><mrow><mo>&#x2212;</mo><mi>m</mi><mo>&#x2264;</mo><mi>j</mi><mo>&#x2264;</mo><mi>m</mi></mrow></munder><mi>l</mi><mi>o</mi><mi>g</mi><mi>P</mi><mo stretchy="false">(</mo><msup><mi>w</mi><mrow><mi>t</mi><mo>+</mo><mi>j</mi></mrow></msup><mi mathvariant="normal">&#x2223;</mi><msup><mi>w</mi><mi>t</mi></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+J=-\sum\limits_t\sum\limits_{-m\leq j \leq m} logP(w^{t+j}|w^t)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4638em;vertical-align:-1.4138em;"></span><span class="mord">&#x2212;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.9em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathnormal mtight">m</span><span class="mrel mtight">&#x2264;</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">&#x2264;</span><span class="mord mathnormal mtight">m</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.4138em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8436em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>log</mi><mo>&#x2061;</mo><mi>P</mi><mo stretchy="false">(</mo><msub><mi>w</mi><mi>o</mi></msub><mo>&#x2223;</mo><msub><mi>w</mi><mi>c</mi></msub><mo stretchy="false">)</mo><mo>=</mo><msubsup><mi mathvariant="bold">u</mi><mi>o</mi><mi>T</mi></msubsup><msub><mi mathvariant="bold">v</mi><mi>c</mi></msub><mo>&#x2212;</mo><mi>log</mi><mo>&#x2061;</mo><mrow><mo fence="true">(</mo><munder><mo>&#x2211;</mo><mi>i</mi></munder><msup><mi>e</mi><mrow><msubsup><mi mathvariant="bold">u</mi><mi>i</mi><mi mathvariant="normal">&#x22A4;</mi></msubsup><msub><mi mathvariant="bold">v</mi><mi>c</mi></msub></mrow></msup><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+\log P(w_o \mid w_c) =\mathbf{u}_o^T \mathbf{v}_c - \log\left(\sum_{i} e^{\mathbf{u}_i^\top \mathbf{v}_c}\right)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&#x2223;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1383em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathbf">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.016em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:3.0277em;vertical-align:-1.2777em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0619em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathbf mtight">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.927em;"><span style="top:-2.214em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">&#x22A4;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathbf mtight" style="margin-right:0.01597em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1645em;"><span style="top:-2.357em;margin-left:-0.016em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">)</span></span></span></span></span></span></span></p>
+<p>&#x6B64;&#x5904;i&#x662F;&#x5BF9;&#x6240;&#x6709;&#x8BCD;&#x5411;&#x91CF;&#x52A0;&#x548C;&#xFF0C;&#x6BCF;&#x6B21;&#x7B97;&#x68AF;&#x5EA6;&#x8981;&#x904D;&#x5386;&#x6240;&#x6709;&#x8BCD;&#x5411;&#x91CF;&#x6BD4;&#x8F83;&#x8D35;&#xFF0C;&#x6240;&#x4EE5;&#x7528;&#x8D1F;&#x91C7;&#x6837;&#xFF08;&#x611F;&#x89C9;&#x4E5F;&#x53EF;&#x4EE5;&#x53EB;&#x6B20;&#x91C7;&#x6837;&#xFF09;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x516C;&#x5F0F;&#x540E;&#x9762;&#x90A3;&#x9879;&#x4E0D;&#x662F;&#x6C42;&#x4E0E;&#x6240;&#x6709;&#x5411;&#x91CF;&#x76F8;&#x4F3C;&#x5EA6;&#x4E4B;&#x548C;&#xFF0C;&#x800C;&#x662F;&#x6C42;&#x968F;&#x673A;n&#x4E2A;&#x5411;&#x91CF;&#x76F8;&#x4F3C;&#x5EA6;&#x4E4B;&#x548C;&#xFF0C;&#x6E10;&#x8FDB;&#x610F;&#x4E49;&#x4E0A;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF08;&#x5176;&#x5B9E;&#x4E5F;&#x4E0D;&#x7B49;&#x4EF7;&#xFF0C;&#x8FD8;&#x8981;&#x4E58;&#x4E0A;n_words/n&#xFF09;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="transformer.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: transformer">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"word2vec","level":"1.4.1.1.3","depth":4,"next":{"title":"NeuralNetwork","level":"1.4.1.2","depth":3,"ref":"","articles":[{"title":"nn_mnist.py","level":"1.4.1.2.1","depth":4,"path":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist.py.md","ref":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist.py.md","articles":[]},{"title":"nn_mnist_static.py","level":"1.4.1.2.2","depth":4,"path":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist_static.py.md","ref":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist_static.py.md","articles":[]}]},"previous":{"title":"transformer","level":"1.4.1.1.2","depth":4,"path":"A2-Machine_Learning/Algorithms/NatrualLanguageProcessing/transformer.md","ref":"A2-Machine_Learning/Algorithms/NatrualLanguageProcessing/transformer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex-pro","copy-code-button","viz","disqus","expandable-chapters","edit-link-plus"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"notes-pythonic-life"},"viz":{},"search":{},"edit-link-plus":{"label":"View Source","base":"https://github.com/the0demiurge/Notes/blob/master/"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Charles Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CharlesNotes","gitbook":"*"},"file":{"path":"A2-Machine_Learning/Algorithms/NatrualLanguageProcessing/word2vec.md","mtime":"2025-04-02T02:06:26.657Z","type":"markdown"},"gitbook":{"version":"3.3.6","time":"2025-04-02T02:08:53.711Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-katex-pro/katex.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@gitbook-ng/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

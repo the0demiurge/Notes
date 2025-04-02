@@ -1,0 +1,32 @@
+digraph paper_reading{
+    node[shape=box]
+    resolution=480
+    fontname=SimHei
+    dpi=320
+    splines=ortho
+
+    start[label="用 keywords 及 review papers 找出最相关的 30～40 篇论文，\n并略读 Abstract 及 Introduction 判断这些文献的相关性与类别"]
+    getrefs[label="根据各派论文后面的 references 将该派文献补齐"]
+    1[label="（1）逐派细读各论文之 Abstract 及 Introduction，标定该派特点与关键论文"]
+    2[label="（2）锁定最相关的一派，略读各论文 main body，标定各论文阅读次序"]
+    3[label="（3）初读 main body，标定各论文主要假设、优点（创意）、应用公式与流程"]
+    4[label="（4）该派读完后，综合整理该派特点、有点、局\n限与可能缺点，标定最具价值之创意与论文"]
+    focus[label="锁定次相关之流派，在该派内重复前述工作"]
+    5[label="（5）综合签署资料，归纳这些领域的问题特性，以更公用的 keywords 搜寻补齐文献"]
+    6[label="（6）综合整理各派优缺点、主要创意与关键论文。根据“方法与应用场合\n特性表”分析问题关键与突破的可能性，锁定最关键论文，进行以下工作。"]
+    7[label="(7)针对最关键论文，深入分析其优点成立的前提，问这前提可不\n可以再拓宽；再深入分析其缺点的起因，看在哪些条件下可以回避。"]
+    8[label="（8）整理前述分析结果，试图提出自己的方法，综合前人优点，回\n避缺点，以突破改善问题瓶颈（计算效率、稳定度、可靠度等）"]
+
+    start -> getrefs
+    getrefs -> 1
+    1 -> 2
+    2 -> 3
+    3 -> 4
+    4 -> focus
+    focus -> 5
+    focus -> 2:e
+    5 -> 6
+    5 -> 3
+    6 -> 7
+    7 -> 8
+}

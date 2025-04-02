@@ -1,0 +1,2909 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>nn_mnist.py · CharlesNotes</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="@gitbook-ng/gitbook 3.3.6">
+        <meta name="author" content="Charles Xu">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex-pro/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="nn_mnist_static.py.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    A0-Mathmatics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../A0-Mathmatics/Matrix_Calculus.html">
+            
+                <a href="../../../A0-Mathmatics/Matrix_Calculus.html">
+            
+                    
+                    Matrix_Calculus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../A0-Mathmatics/attractor.py.html">
+            
+                <a href="../../../A0-Mathmatics/attractor.py.html">
+            
+                    
+                    attractor.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    A1-Computer_Science
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Algorithm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../A1-Computer_Science/Algorithm/Bit_Manipulation.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Bit_Manipulation.html">
+            
+                    
+                    Bit_Manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../A1-Computer_Science/Algorithm/Calculator_AST.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Calculator_AST.py.html">
+            
+                    
+                    Calculator_AST.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../A1-Computer_Science/Algorithm/DFS-BFS.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/DFS-BFS.html">
+            
+                    
+                    DFS-BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../A1-Computer_Science/Algorithm/Diffie_Hellman_Key_Exchange.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Diffie_Hellman_Key_Exchange.html">
+            
+                    
+                    Diffie_Hellman_Key_Exchange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../../A1-Computer_Science/Algorithm/Dynamic_Programming.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Dynamic_Programming.html">
+            
+                    
+                    Dynamic_Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../../A1-Computer_Science/Algorithm/Eight_Queen.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Eight_Queen.py.html">
+            
+                    
+                    Eight_Queen.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../../A1-Computer_Science/Algorithm/FullBinaryTreeHeap.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/FullBinaryTreeHeap.py.html">
+            
+                    
+                    FullBinaryTreeHeap.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../../A1-Computer_Science/Algorithm/Trajetory_Search.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/Trajetory_Search.py.html">
+            
+                    
+                    Trajetory_Search.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../../A1-Computer_Science/Algorithm/bisect.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/bisect.cc.html">
+            
+                    
+                    bisect.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../../../A1-Computer_Science/Algorithm/sort.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/sort.cc.html">
+            
+                    
+                    sort.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="../../../A1-Computer_Science/Algorithm/sort.py.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/sort.py.html">
+            
+                    
+                    sort.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="../../../A1-Computer_Science/Algorithm/sum.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/sum.html">
+            
+                    
+                    sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="../../../A1-Computer_Science/Algorithm/swap.html">
+            
+                <a href="../../../A1-Computer_Science/Algorithm/swap.html">
+            
+                    
+                    swap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Network
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../A1-Computer_Science/Network/OSI.html">
+            
+                <a href="../../../A1-Computer_Science/Network/OSI.html">
+            
+                    
+                    OSI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    Programming
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" >
+            
+                <span>
+            
+                    
+                    Front_End
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.1" >
+            
+                <span>
+            
+                    
+                    HTML
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.1.1" data-path="../../../A1-Computer_Science/Programming/Front_End/HTML/split_panes_html.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Front_End/HTML/split_panes_html.html">
+            
+                    
+                    split_panes_html
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.1.2" >
+            
+                <span>
+            
+                    
+                    热力图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1.2.1" data-path="../../../A1-Computer_Science/Programming/Front_End/热力图/FrontEnd_html.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Front_End/热力图/FrontEnd_html.html">
+            
+                    
+                    FrontEnd_html
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.1.2.2" data-path="../../../A1-Computer_Science/Programming/Front_End/热力图/百度api获取城市坐标.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Front_End/热力图/百度api获取城市坐标.py.html">
+            
+                    
+                    百度api获取城市坐标.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" >
+            
+                <span>
+            
+                    
+                    Language
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/">
+            
+                    
+                    C_or_C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1.1" >
+            
+                <span>
+            
+                    
+                    Gramma
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1.1.1" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/Gramma/argv.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/Gramma/argv.cc.html">
+            
+                    
+                    argv.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.1.1.2" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/Gramma/inherit.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/Gramma/inherit.cc.html">
+            
+                    
+                    inherit.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.1.2" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/STL/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/STL/">
+            
+                    
+                    STL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1.2.1" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/STL/heap.cc.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/STL/heap.cc.html">
+            
+                    
+                    heap.cc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.1.3" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/debug/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/debug/">
+            
+                    
+                    debug
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.1.3.1" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/debug/gdb.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/debug/gdb.html">
+            
+                    
+                    gdb
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.1.4" data-path="../../../A1-Computer_Science/Programming/Language/C_or_C++/pthread.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/C_or_C++/pthread.html">
+            
+                    
+                    pthread
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.2.1" >
+            
+                <span>
+            
+                    
+                    DevTools
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.2.1.1" data-path="../../../A1-Computer_Science/Programming/Language/Python/DevTools/crash_on_ipy.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/DevTools/crash_on_ipy.py.html">
+            
+                    
+                    crash_on_ipy.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.1.2" data-path="../../../A1-Computer_Science/Programming/Language/Python/DevTools/jupyter_hide_code.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/DevTools/jupyter_hide_code.py.html">
+            
+                    
+                    jupyter_hide_code.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2" >
+            
+                <span>
+            
+                    
+                    Example
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/">
+            
+                    
+                    sendmail
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1.1" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/attachment.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/attachment.py.html">
+            
+                    
+                    attachment.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1.2" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/pic.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/pic.py.html">
+            
+                    
+                    pic.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1.3" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/qq_smtp.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/qq_smtp.py.html">
+            
+                    
+                    qq_smtp.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.1.4" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/sendmail.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/sendmail/sendmail.py.html">
+            
+                    
+                    sendmail.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.2" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/argparse_example.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/argparse_example.py.html">
+            
+                    
+                    argparse_example.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.3" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/create_epubook.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/create_epubook.py.html">
+            
+                    
+                    create_epubook.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.4" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/ctypes.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/ctypes.html">
+            
+                    
+                    ctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.5" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/cython.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/cython.html">
+            
+                    
+                    cython
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.6" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/keyboard-mouse.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/keyboard-mouse.html">
+            
+                    
+                    keyboard-mouse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.7" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/logging.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/logging.html">
+            
+                    
+                    logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.8" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/ncurses_example.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/ncurses_example.py.html">
+            
+                    
+                    ncurses_example.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.9" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/pandas.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/pandas.html">
+            
+                    
+                    pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.10" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/qrcode_example.py.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/qrcode_example.py.html">
+            
+                    
+                    qrcode_example.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.11" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/socket.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/socket.html">
+            
+                    
+                    socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.2.2.12" data-path="../../../A1-Computer_Science/Programming/Language/Python/Example/动态修改幻灯片内容.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Python/Example/动态修改幻灯片内容.html">
+            
+                    
+                    动态修改幻灯片内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.3" data-path="../../../A1-Computer_Science/Programming/Language/Regular_Expression.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Language/Regular_Expression.html">
+            
+                    
+                    Regular_Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" >
+            
+                <span>
+            
+                    
+                    Software_Engineering
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.3.1" data-path="../../../A1-Computer_Science/Programming/Software_Engineering/Design/">
+            
+                <a href="../../../A1-Computer_Science/Programming/Software_Engineering/Design/">
+            
+                    
+                    Design
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.3.1.1" data-path="../../../A1-Computer_Science/Programming/Software_Engineering/Design/Factory_Pattern.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Software_Engineering/Design/Factory_Pattern.html">
+            
+                    
+                    Factory_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../../../A1-Computer_Science/Programming/Learning.html">
+            
+                <a href="../../../A1-Computer_Science/Programming/Learning.html">
+            
+                    
+                    Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    A2-Machine_Learning
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    Algorithms
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../NatrualLanguageProcessing/">
+            
+                <a href="../NatrualLanguageProcessing/">
+            
+                    
+                    NatrualLanguageProcessing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1" >
+            
+                <span>
+            
+                    
+                    Attention
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1.1" data-path="../NatrualLanguageProcessing/Attention/1_Nadaraya_Watson_Kernel_Regression.html">
+            
+                <a href="../NatrualLanguageProcessing/Attention/1_Nadaraya_Watson_Kernel_Regression.html">
+            
+                    
+                    1_Nadaraya_Watson_Kernel_Regression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.1.2" data-path="../NatrualLanguageProcessing/Attention/2_attention.html">
+            
+                <a href="../NatrualLanguageProcessing/Attention/2_attention.html">
+            
+                    
+                    2_attention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.2" data-path="../NatrualLanguageProcessing/transformer.html">
+            
+                <a href="../NatrualLanguageProcessing/transformer.html">
+            
+                    
+                    transformer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.3" data-path="../NatrualLanguageProcessing/word2vec.html">
+            
+                <a href="../NatrualLanguageProcessing/word2vec.html">
+            
+                    
+                    word2vec
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" >
+            
+                <span>
+            
+                    
+                    NeuralNetwork
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1.2.1" data-path="nn_mnist.py.html">
+            
+                <a href="nn_mnist.py.html">
+            
+                    
+                    nn_mnist.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.2" data-path="nn_mnist_static.py.html">
+            
+                <a href="nn_mnist_static.py.html">
+            
+                    
+                    nn_mnist_static.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../ReinforcementLearning/">
+            
+                <a href="../ReinforcementLearning/">
+            
+                    
+                    ReinforcementLearning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/">
+            
+                    
+                    Deep_Reinforcement_Learning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1.1" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1.1.1" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Q-Learning.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Q-Learning.html">
+            
+                    
+                    Q-Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.1.2" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Value_Based.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Value_Based.html">
+            
+                    
+                    Value_Based
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.1.3" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Variance.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Basics/Variance.html">
+            
+                    
+                    Variance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.2" >
+            
+                <span>
+            
+                    
+                    Policy_Gradient
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1.2.1" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/karpathy-pg-pong.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/karpathy-pg-pong.py.html">
+            
+                    
+                    karpathy-pg-pong.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.2.2" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/kvfrans-ddpg.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/kvfrans-ddpg.py.html">
+            
+                    
+                    kvfrans-ddpg.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.2.3" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/my_simple_PG.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/my_simple_PG.py.html">
+            
+                    
+                    my_simple_PG.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.2.4" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/replay_buffer.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Policy_Gradient/replay_buffer.py.html">
+            
+                    
+                    replay_buffer.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.3" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/Fine_Tuning.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/Fine_Tuning.html">
+            
+                    
+                    Fine_Tuning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.4" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/OU-process.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/OU-process.html">
+            
+                    
+                    OU-process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.5" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/cheatsheet.py.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/cheatsheet.py.html">
+            
+                    
+                    cheatsheet.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.1.6" data-path="../ReinforcementLearning/Deep_Reinforcement_Learning/step_by_step_q_learning.html">
+            
+                <a href="../ReinforcementLearning/Deep_Reinforcement_Learning/step_by_step_q_learning.html">
+            
+                    
+                    step_by_step_q_learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2" >
+            
+                <span>
+            
+                    
+                    bandit
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.3" data-path="../ReinforcementLearning/Thinking.html">
+            
+                <a href="../ReinforcementLearning/Thinking.html">
+            
+                    
+                    Thinking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.4" data-path="../ReinforcementLearning/paperlist.html">
+            
+                <a href="../ReinforcementLearning/paperlist.html">
+            
+                    
+                    paperlist
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" >
+            
+                <span>
+            
+                    
+                    SupportVectorMachine
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.4.1" data-path="../SupportVectorMachine/SMO_Simple.html">
+            
+                <a href="../SupportVectorMachine/SMO_Simple.html">
+            
+                    
+                    SMO_Simple
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../LDA.py.html">
+            
+                <a href="../LDA.py.html">
+            
+                    
+                    LDA.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Optimizers/">
+            
+                <a href="../../Optimizers/">
+            
+                    
+                    Optimizers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    Problems
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Problems/Imbalance.html">
+            
+                <a href="../../Problems/Imbalance.html">
+            
+                    
+                    Imbalance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    Tools
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../Tools/JAX/">
+            
+                <a href="../../Tools/JAX/">
+            
+                    
+                    JAX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../Tools/PyTorch/">
+            
+                <a href="../../Tools/PyTorch/">
+            
+                    
+                    PyTorch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.2.1" data-path="../../Tools/PyTorch/Example.html">
+            
+                <a href="../../Tools/PyTorch/Example.html">
+            
+                    
+                    Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" >
+            
+                <span>
+            
+                    
+                    SciKit-Learn
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.3.1" data-path="../../Tools/SciKit-Learn/tsne.py.html">
+            
+                <a href="../../Tools/SciKit-Learn/tsne.py.html">
+            
+                    
+                    tsne.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../Tools/TensorFlow/">
+            
+                <a href="../../Tools/TensorFlow/">
+            
+                    
+                    TensorFlow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.4.1" >
+            
+                <span>
+            
+                    
+                    TensorBoard
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.4.1.1" data-path="../../Tools/TensorFlow/TensorBoard/mnist_with_summaries.py.html">
+            
+                <a href="../../Tools/TensorFlow/TensorBoard/mnist_with_summaries.py.html">
+            
+                    
+                    mnist_with_summaries.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4.1.2" data-path="../../Tools/TensorFlow/TensorBoard/tensorboard_advanced.py.html">
+            
+                <a href="../../Tools/TensorFlow/TensorBoard/tensorboard_advanced.py.html">
+            
+                    
+                    tensorboard_advanced.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4.2" data-path="../../Tools/TensorFlow/1-TensorFlow_Cheatsheet.html">
+            
+                <a href="../../Tools/TensorFlow/1-TensorFlow_Cheatsheet.html">
+            
+                    
+                    1-TensorFlow_Cheatsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4.3" data-path="../../Tools/TensorFlow/Distributed_tensorflow.py.html">
+            
+                <a href="../../Tools/TensorFlow/Distributed_tensorflow.py.html">
+            
+                    
+                    Distributed_tensorflow.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4.4" data-path="../../Tools/TensorFlow/Duplicate_a_tensorflow_graph.html">
+            
+                <a href="../../Tools/TensorFlow/Duplicate_a_tensorflow_graph.html">
+            
+                    
+                    Duplicate_a_tensorflow_graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    A3-Unix-Like
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../A3-Unix-Like/Bash/">
+            
+                <a href="../../../A3-Unix-Like/Bash/">
+            
+                    
+                    Bash
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../../A3-Unix-Like/Bash/bash的高级技巧.html">
+            
+                <a href="../../../A3-Unix-Like/Bash/bash的高级技巧.html">
+            
+                    
+                    bash的高级技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    Server_Maintenance
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/">
+            
+                    
+                    scripts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1.1" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/backup_server_data.py.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/backup_server_data.py.html">
+            
+                    
+                    backup_server_data.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.1.2" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/charles-adduser.sh.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/charles-adduser.sh.html">
+            
+                    
+                    charles-adduser.sh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.1.3" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/mv2cron.bash.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/mv2cron.bash.html">
+            
+                    
+                    mv2cron.bash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.1.4" data-path="../../../A3-Unix-Like/Server_Maintenance/scripts/sendlog.py.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/scripts/sendlog.py.html">
+            
+                    
+                    sendlog.py
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../../A3-Unix-Like/Server_Maintenance/AUTO_UPGRADE.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/AUTO_UPGRADE.html">
+            
+                    
+                    AUTO_UPGRADE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../../A3-Unix-Like/Server_Maintenance/QUOTA.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/QUOTA.html">
+            
+                    
+                    QUOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../../../A3-Unix-Like/Server_Maintenance/SECURITY.html">
+            
+                <a href="../../../A3-Unix-Like/Server_Maintenance/SECURITY.html">
+            
+                    
+                    SECURITY
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    Tools
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../../A3-Unix-Like/Tools/ffmpeg.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/ffmpeg.html">
+            
+                    
+                    ffmpeg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../../A3-Unix-Like/Tools/git.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/git.html">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../../A3-Unix-Like/Tools/lnav.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/lnav.html">
+            
+                    
+                    lnav
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../../../A3-Unix-Like/Tools/netcat.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/netcat.html">
+            
+                    
+                    netcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../../../A3-Unix-Like/Tools/tmux.html">
+            
+                <a href="../../../A3-Unix-Like/Tools/tmux.html">
+            
+                    
+                    tmux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../../A3-Unix-Like/Arch_Linux_Installation.html">
+            
+                <a href="../../../A3-Unix-Like/Arch_Linux_Installation.html">
+            
+                    
+                    Arch_Linux_Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../../A3-Unix-Like/macOS.html">
+            
+                <a href="../../../A3-Unix-Like/macOS.html">
+            
+                    
+                    macOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    A4-Control_Theory
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../../A4-Control_Theory/OptimalControl_AA203/">
+            
+                <a href="../../../A4-Control_Theory/OptimalControl_AA203/">
+            
+                    
+                    OptimalControl_AA203
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../../A4-Control_Theory/OptimalControl_AA203/Lecture_01.html">
+            
+                <a href="../../../A4-Control_Theory/OptimalControl_AA203/Lecture_01.html">
+            
+                    
+                    Lecture_01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../../A4-Control_Theory/OptimalControl_AA203/Lecture_02.html">
+            
+                <a href="../../../A4-Control_Theory/OptimalControl_AA203/Lecture_02.html">
+            
+                    
+                    Lecture_02
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    B1-Management
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    HumanResource
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../../B1-Management/HumanResource/Curriculum_Vitae/">
+            
+                <a href="../../../B1-Management/HumanResource/Curriculum_Vitae/">
+            
+                    
+                    Curriculum_Vitae
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1.1" >
+            
+                <span>
+            
+                    
+                    2022
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1.1.1" data-path="../../../B1-Management/HumanResource/Curriculum_Vitae/2022/2022.en.html">
+            
+                <a href="../../../B1-Management/HumanResource/Curriculum_Vitae/2022/2022.en.html">
+            
+                    
+                    2022.en
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.1.1.2" data-path="../../../B1-Management/HumanResource/Curriculum_Vitae/2022/2022.zh.html">
+            
+                <a href="../../../B1-Management/HumanResource/Curriculum_Vitae/2022/2022.zh.html">
+            
+                    
+                    2022.zh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.1.2" >
+            
+                <span>
+            
+                    
+                    2024
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1.2.1" data-path="../../../B1-Management/HumanResource/Curriculum_Vitae/2024/2024.zh.html">
+            
+                <a href="../../../B1-Management/HumanResource/Curriculum_Vitae/2024/2024.zh.html">
+            
+                    
+                    2024.zh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../../B1-Management/HumanResource/Interview/">
+            
+                <a href="../../../B1-Management/HumanResource/Interview/">
+            
+                    
+                    Interview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.2.1" data-path="../../../B1-Management/HumanResource/Interview/2018ST实习收获.html">
+            
+                <a href="../../../B1-Management/HumanResource/Interview/2018ST实习收获.html">
+            
+                    
+                    2018ST实习收获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2.2" data-path="../../../B1-Management/HumanResource/Interview/2020面试总结.html">
+            
+                <a href="../../../B1-Management/HumanResource/Interview/2020面试总结.html">
+            
+                    
+                    2020面试总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2.3" data-path="../../../B1-Management/HumanResource/Interview/Inwerviewer.html">
+            
+                <a href="../../../B1-Management/HumanResource/Interview/Inwerviewer.html">
+            
+                    
+                    Inwerviewer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../../B1-Management/ManagementByObject/">
+            
+                <a href="../../../B1-Management/ManagementByObject/">
+            
+                    
+                    ManagementByObject
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../../B1-Management/ManagementByObject/OKR.html">
+            
+                <a href="../../../B1-Management/ManagementByObject/OKR.html">
+            
+                    
+                    OKR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../../B1-Management/ManagementByObject/SMART.html">
+            
+                <a href="../../../B1-Management/ManagementByObject/SMART.html">
+            
+                    
+                    SMART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../../B1-Management/ManagementByObject/Self-Control.html">
+            
+                <a href="../../../B1-Management/ManagementByObject/Self-Control.html">
+            
+                    
+                    Self-Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    B2-Economics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../../B2-Economics/Principle/">
+            
+                <a href="../../../B2-Economics/Principle/">
+            
+                    
+                    Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    Quantitative_Investment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../../B2-Economics/Quantitative_Investment/PB_PE.html">
+            
+                <a href="../../../B2-Economics/Quantitative_Investment/PB_PE.html">
+            
+                    
+                    PB_PE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="../../../B2-Economics/Quantitative_Investment/基本概念.html">
+            
+                <a href="../../../B2-Economics/Quantitative_Investment/基本概念.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    C-Traffic
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../../C-Traffic/1_Traffic_Control/">
+            
+                <a href="../../../C-Traffic/1_Traffic_Control/">
+            
+                    
+                    1_Traffic_Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../../../C-Traffic/1_Traffic_Control/Objects.html">
+            
+                <a href="../../../C-Traffic/1_Traffic_Control/Objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../../../C-Traffic/1_Traffic_Control/Terms.html">
+            
+                <a href="../../../C-Traffic/1_Traffic_Control/Terms.html">
+            
+                    
+                    Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../../C-Traffic/2_Autopilot/">
+            
+                <a href="../../../C-Traffic/2_Autopilot/">
+            
+                    
+                    2_Autopilot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../../../C-Traffic/2_Autopilot/2_0_Planning.html">
+            
+                <a href="../../../C-Traffic/2_Autopilot/2_0_Planning.html">
+            
+                    
+                    2_0_Planning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../../../C-Traffic/2_Autopilot/2_1_Search.html">
+            
+                <a href="../../../C-Traffic/2_Autopilot/2_1_Search.html">
+            
+                    
+                    2_1_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../../../C-Traffic/2_Autopilot/2_2_Sampling.html">
+            
+                <a href="../../../C-Traffic/2_Autopilot/2_2_Sampling.html">
+            
+                    
+                    2_2_Sampling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    X-Photography
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../../X-Photography/1-纽约摄影学院三原则.html">
+            
+                <a href="../../../X-Photography/1-纽约摄影学院三原则.html">
+            
+                    
+                    1-纽约摄影学院三原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../../Y-Academic/">
+            
+                <a href="../../../Y-Academic/">
+            
+                    
+                    Y-Academic
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../../Y-Academic/论文写作.html">
+            
+                <a href="../../../Y-Academic/论文写作.html">
+            
+                    
+                    论文写作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../../Y-Academic/论文阅读.html">
+            
+                <a href="../../../Y-Academic/论文阅读.html">
+            
+                    
+                    论文阅读
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Z-Sundry
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../../Z-Sundry/DPT-RP1_Config.html">
+            
+                <a href="../../../Z-Sundry/DPT-RP1_Config.html">
+            
+                    
+                    DPT-RP1_Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >nn_mnist.py</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x8FD8;&#x6709;&#x5C0F;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E0D;&#x60F3;&#x6574;&#x4E86;
+&#x95EE;&#x9898;1&#xFF1A;&#x91CC;&#x9762;&#x4E0D;&#x8BE5;&#x7528;numpy array&#xFF0C;&#x800C;&#x662F;&#x5E94;&#x8BE5;&#x7528;mat&#xFF0C;&#x5426;&#x5219;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x6709;&#x4E9B;&#x5730;&#x65B9;&#x4F1A;&#x5F88;&#x4EE4;&#x4EBA;&#x56F0;&#x60D1;
+&#x95EE;&#x9898;2&#xFF1A;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x597D;&#x50CF;&#x6709;&#x5730;&#x65B9;&#x5199;&#x7684;&#x4E0D;&#x5BF9;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x9690;&#x542B;&#x5C42;&#x5C31;&#x4F1A;&#x4E0D;&#x6536;&#x655B;
+&#x95EE;&#x9898;3&#xFF1A;&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#xFF0C;&#x4E00;&#x76F4;&#x6CA1;&#x6709;&#x89E3;&#x51B3;
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span> pdb
+<span class="hljs-keyword">from</span> pylab <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">from</span> tensorflow.examples.tutorials <span class="hljs-keyword">import</span> mnist
+
+data = mnist.input_data.read_data_sets(<span class="hljs-string">&apos;MNIST_data&apos;</span>, one_hot=<span class="hljs-keyword">True</span>)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_pic</span><span class="hljs-params">(image_data, index)</span>:</span>
+    <span class="hljs-keyword">if</span> len(image_data.shape) == <span class="hljs-number">2</span>:
+        imshow(reshape(image_data[index, :], [<span class="hljs-number">28</span>, <span class="hljs-number">28</span>]))
+    <span class="hljs-keyword">elif</span> len(image_data.shape) == <span class="hljs-number">1</span>:
+        imshow(reshape(image_data, [<span class="hljs-number">28</span>, <span class="hljs-number">28</span>]))
+    <span class="hljs-keyword">elif</span> len(image_data.shape) == <span class="hljs-number">3</span>:
+        imshow(image_data[index, :, :])
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">mnist_net</span><span class="hljs-params">(object)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, shape, data)</span>:</span>
+        self.data = data
+        self.shape = shape
+        self.weights = [<span class="hljs-number">0.1</span> * randn(a, b) <span class="hljs-keyword">for</span> a, b <span class="hljs-keyword">in</span> zip(shape[:<span class="hljs-number">-1</span>], shape[<span class="hljs-number">1</span>:])]
+        self.biases = [zeros([<span class="hljs-number">1</span>, a]) <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> shape[<span class="hljs-number">1</span>:]]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sigmoid</span><span class="hljs-params">(self, z, derivative=False)</span>:</span>
+        sig = <span class="hljs-number">1</span> / (<span class="hljs-number">1</span> + exp(-z))
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> derivative:
+            <span class="hljs-keyword">return</span> sig
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> sig * (<span class="hljs-number">1</span> - sig)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fp</span><span class="hljs-params">(self, inputs)</span>:</span>
+        ai = inputs
+        self.z = []
+        self.a = []
+        <span class="hljs-keyword">for</span> w, b <span class="hljs-keyword">in</span> zip(self.weights, self.biases):
+            self.a.append(ai)
+            zi = ai.dot(w) + b
+            self.z.append(zi)
+            ai = self.sigmoid(zi)
+        <span class="hljs-keyword">return</span> ai
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bp_step</span><span class="hljs-params">(self, batch=<span class="hljs-number">1</span>, learning_rate=<span class="hljs-number">0.01</span>)</span>:</span>
+        self.delta = []
+        inputs, t = self.data.train.next_batch(batch)
+        y = self.fp(inputs)
+        d = -(y - t) * self.sigmoid(y, derivative=<span class="hljs-keyword">True</span>)
+        d = ones([<span class="hljs-number">1</span>, batch]).dot(d) / batch
+
+        <span class="hljs-keyword">for</span> w, b, z, a <span class="hljs-keyword">in</span> zip(self.weights[::<span class="hljs-number">-1</span>], self.biases[::<span class="hljs-number">-1</span>], self.z[::<span class="hljs-number">-1</span>], self.a[::<span class="hljs-number">-1</span>]):
+            self.delta.insert(<span class="hljs-number">0</span>, d)
+            d = d.dot(w.T) * self.sigmoid(a, derivative=<span class="hljs-keyword">True</span>)
+            d = ones([<span class="hljs-number">1</span>, batch]).dot(d) / batch
+
+        self.gradw = []
+        self.gradb = []
+        <span class="hljs-keyword">for</span> a, d <span class="hljs-keyword">in</span> zip(self.a, self.delta):
+            self.gradw.append(ones([<span class="hljs-number">1</span>, batch]).dot(a).T.dot(d) / batch)
+            self.gradb.append(d)
+
+        <span class="hljs-keyword">for</span> i, (gw, gb) <span class="hljs-keyword">in</span> enumerate(zip(self.gradw, self.gradb)):
+            self.weights[i] += learning_rate * gw
+            self.biases[i] += learning_rate * gb
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">training</span><span class="hljs-params">(self, times=<span class="hljs-number">150</span>, batch=<span class="hljs-number">1</span>, learning_rate=<span class="hljs-number">0.1</span>)</span>:</span>
+        correct_prediction = equal(argmax(self.fp(data.test.images), <span class="hljs-number">1</span>), argmax(data.test.labels, <span class="hljs-number">1</span>))
+        accuracy = mean(correct_prediction, axis=<span class="hljs-number">0</span>)
+        print(accuracy)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(times):
+            self.bp_step(batch, learning_rate)
+            <span class="hljs-keyword">if</span> i % <span class="hljs-number">50</span> == <span class="hljs-number">0</span>:
+                correct_prediction = equal(argmax(self.fp(data.test.images), <span class="hljs-number">1</span>), argmax(data.test.labels, <span class="hljs-number">1</span>))
+            accuracy_test = mean(correct_prediction, axis=<span class="hljs-number">0</span>)
+            correct_prediction = equal(argmax(self.fp(data.train.images), <span class="hljs-number">1</span>), argmax(data.train.labels, <span class="hljs-number">1</span>))
+            accuracy_train = mean(correct_prediction, axis=<span class="hljs-number">0</span>)
+            print(<span class="hljs-string">&apos;%2.1f&apos;</span>%(i*<span class="hljs-number">100</span>/times), accuracy_train, accuracy_test)
+
+
+net = mnist_net([<span class="hljs-number">784</span>, <span class="hljs-number">15</span>, <span class="hljs-number">10</span>], data)
+net.training()
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> net.gradw:
+    print(i)
+    print(i.shape)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">s</span><span class="hljs-params">(data)</span>:</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> data:
+        print(i.shape)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="nn_mnist_static.py.html" class="navigation navigation-next navigation-unique" aria-label="Next page: nn_mnist_static.py">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"nn_mnist.py","level":"1.4.1.2.1","depth":4,"next":{"title":"nn_mnist_static.py","level":"1.4.1.2.2","depth":4,"path":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist_static.py.md","ref":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist_static.py.md","articles":[]},"previous":{"title":"NeuralNetwork","level":"1.4.1.2","depth":3,"ref":"","articles":[{"title":"nn_mnist.py","level":"1.4.1.2.1","depth":4,"path":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist.py.md","ref":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist.py.md","articles":[]},{"title":"nn_mnist_static.py","level":"1.4.1.2.2","depth":4,"path":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist_static.py.md","ref":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist_static.py.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["katex-pro","copy-code-button","viz","disqus","expandable-chapters","edit-link-plus"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"notes-pythonic-life"},"viz":{},"search":{},"edit-link-plus":{"label":"View Source","base":"https://github.com/the0demiurge/Notes/blob/master/"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Charles Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CharlesNotes","gitbook":"*"},"file":{"path":"A2-Machine_Learning/Algorithms/NeuralNetwork/nn_mnist.py.md","mtime":"2025-04-02T02:06:26.657Z","type":"markdown"},"gitbook":{"version":"3.3.6","time":"2025-04-02T02:08:53.711Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-katex-pro/katex.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@gitbook-ng/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
