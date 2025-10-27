@@ -1,0 +1,49 @@
+name: GitBook-Legacy to GitHub Pages
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+env:
+  TZ: "Asia/Shanghai"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+
+      - name: Install dependency
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get install -y python3 calibre xvfb
+          npm install @gitbook-ng/gitbook -g
+          npm install gitbook-plugin-katex-pro
+          #npm install gitbook-plugin-mathjax-single-dollar
+          npm install svgexport -g
+          npx gitbook install
+
+      - name: Trigger personal build script
+        run: |
+          cat HEADER|tee README.md
+          python3 toc.py
+          if [ ! -d books ];then mkdir books;fi
+          npx gitbook build
+          npx gitbook epub . books/CharlesNotes.epub
+          npx gitbook mobi . books/CharlesNotes.mobi
+          cp -r books _book
+          rm _book/.gitignore
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: _book
+          fqdn: ${{secrets.CUSTOM_DOMAIN}}
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

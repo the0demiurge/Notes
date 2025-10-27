@@ -1,0 +1,6 @@
+graph routing{
+    node[shape=circle]
+    root -- {0, 1}
+    0 -- {00, 01}
+    1 -- {10, 11}
+}
